@@ -27,7 +27,7 @@
     </li> -->
    
     <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-        <a href="#"><i class="fa fa-folder-open b-menu-1level-ico"></i>文件<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+        <a href="${BASE}/index/resource"><i class="fa fa-folder-open b-menu-1level-ico"></i>文件<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
     </li>
     
 </ul>

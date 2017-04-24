@@ -23,4 +23,9 @@ public class BlogIndex {
 	public String toPhotosList() {
 		return "/main_index/photos_lists";
 	}
+	
+	@RequestMapping(value="/resource")
+	public String toresourceIndex() {
+		return "/main_index/resource_index";
+	}
 }

@@ -9,23 +9,12 @@
 <title>Bolg</title>
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<script src="${BASE}/www/js/jquery/jquery-1.11.1.min.js"></script>
-		<link rel="icon" href="${BASE}/www/images/photosindex/favicon.ico">
-		<link rel="shortcut icon" href="${BASE}/www/images/photosindex/favicon.ico" />
-		<link rel="stylesheet" href="${BASE}/www/css/photosindex/style.css">
-		<link href='http://fonts.googleapis.com/css?family=Economica:700' rel='stylesheet' type='text/css'>		
-		<script src="${BASE}/www/js/photosindex/jquery-migrate-1.1.1.js"></script>
-		<script src="${BASE}/www/js/photosindex/script.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.ui.totop.js"></script>
-		<script src="${BASE}/www/js/photosindex/superfish.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.equalheights.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.mobilemenu.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.easing.1.3.js"></script>
-		<script>
-		$(document).ready(function(){
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		})
-		</script>
+		<link href="${BASE}/www/css/resource_index/common.css" type="text/css" rel="stylesheet">
+		<link href="${BASE}/www/css/resource_index/resourse.css" type="text/css" rel="stylesheet">
+		<script src="${BASE}/www/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="${BASE}/www/js/resource_index/all.js"></script>
+		<script type="text/javascript" src="${BASE}/www/js/resource_index/pagenav.js"></script>
+		<script type="text/javascript" src="${BASE}/www/js/resource_index/resourceList.js"></script>
 		
 		<!-- 头部和底部的css -->
 <link type="text/css" rel='stylesheet' href="${BASE}/www/css/bootstrap.min.css">
@@ -36,75 +25,49 @@
 </head>
 <body>
 <%@ include file="head.jsp"%>
- <div class="b-breadcrumbs f-breadcrumbs">
+ 	 <div class="b-breadcrumbs f-breadcrumbs">
         <div class="container">
             <ul>
-                <li><a href="#"><i class="fa fa-home"></i>相册</a></li>
-               <!--  <li><i class="fa fa-angle-right"></i><a href="#">Blog</a></li>
-                <li><i class="fa fa-angle-right"></i><span>Listing Left Sidebar</span></li> -->
+                <li><a href="#"><i class="fa fa-home"></i>资源</a></li>            
             </ul>
         </div>
     </div>
-<%--  <%@ include file="head.jsp"%>  --%>
-<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - December 30, 2013!</div>
-				<div class="container_12">
-					<div class="grid_6">
-						<div class="p1_box left cl1">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img1.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Boudoir Beauty <span>7 <br>images</span></a>
-						</div>
-						<div class="p1_box left cl2">
-							<div class="type"></div>
-							<div class="gray_block">
-								Go ahead and read more about this <span class="col1"><a href="http://sc.chinaz.com/?free-website-templates/" rel="nofollow">free theme</a></span> created by TemplateMonster.com.<br>
-								Wide variety of premium <span class="col1"><a href="http://sc.chinaz.com/?category/art-photography-website-templates/" rel="nofollow">Art &amp; Photography templates</a></span> is to be found in the same name category at our site.
+	<div class="content2">
+		<div class="schools border no-sha">
+			<div class="w_976">
+				<div class="w_976 classify">
+					<h1>资源中心<b>本类共<i id="count_1"></i>个文件</b></h1>
+					<div class="c_b">
+						<div class="all" id="queryParam">
+							<c:forEach items="${data.listArray}" var="listMap" varStatus="inx">
+								<dl data-name="${listMap.queryName}">	
+							        <dt>${listMap.propName}:</dt>
+							        <dd>
+								        <span class="current"><a href="javascript:void(0)" data-value="">全部</a></span>
+								        <c:forEach items="${listMap.list}" var="prop">
+									        <span data-value="${prop.dictName}"><a href="javascript:void(0)">${prop.dictName}</a></span>
+								        </c:forEach>
+							        </dd>				
+						        </dl>
+							</c:forEach>
+							<div class="search"><input type="text" class="search_txt" id="searchkeywords">
+				                <span id="on_sreach"><em></em><input type="button" class="search_btn"></span>
 							</div>
-							<a href="#" class="bot">Master Class<span>5 <br>comments</span></a>
 						</div>
-						<div class="p1_box left cl1 pos1">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img4.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Summer Lifestyle<span>10<br>images</span></a>
-						</div>
-						<div class="p1_box left cl3 pos1">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img6.jpg" alt="">
-							<a href="index-3.html" class="bot">Coexisting with Nature<span><strong class="fa-angle-right fa"></strong></span></a>
-						</div>
-					</div>
-					<div class="grid_6">
-						<div class="p1_box right cl1">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img2.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Pics of Nature <span>8 <br>images</span></a>
-						</div>
-						<div class="p1_box right cl3">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img3.jpg" alt="">
-							<a href="index-3.html" class="bot">Night Sky Video<span><strong class=" fa-angle-right fa"></strong></span></a>
-						</div>
-						<div class="p1_box right cl4">
-							<div class="type"></div>
-							<a href="#" class="bot">Inspirational Resources</a>
-						</div>
-						<div class="p1_box right cl5">
-							<div class="type"></div>
-							<blockquote>To me, photography is an art of observation. It’s about finding something interesting in an ordinary place... I’ve found it has little to do with the things you see and everything to do with the way you see them. </blockquote>
-							<a href="#" class="bot">Elliott Erwitt <span>8 <br>comments</span></a>
-						</div>
-						<div class="p1_box right cl2">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img7.jpg" alt="">
-							<a href="#" class="bot">My new project<span><strong class=" fa-angle-right fa"></strong></span></a>
-						</div>
-					</div>
-					<div class="clear"></div>
-					<div class="grid_12">
-						<a href="#" class="round"> Older Posts</a>
 					</div>
 				</div>
+				<div class="resource"></div>
 			</div>
+			<div class="s_news">
+				<div class="float">
+					<h1 class="c_title">下载排行</h1>
+					<div class="resource_rank">
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+	
  <%@ include file="foot.jsp"%>
 
 

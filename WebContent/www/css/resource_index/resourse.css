@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*资源中心*/
+.schools { padding: 29px 20px 20px 20px !important; }
+.w_976, .resource { width: 956px !important; float: left; margin: 0 20px 0 0; }
+.resource { min-height: 200px; }
+.n_title li { width: 224px; float: left; }
+.rank-all p .b_font { color: #999999; }
+.float .n_title { height: 400px; overflow: hidden; }
+.c_title { padding-bottom: 16px; }
+.cont .s_news { float: left; z-index: 999; background: #fff; }
+.float { position: fixed; z-index: 999; overflow: visible; width: 224px; }
+.s_news .rank-all { padding: 10px 2px 10px 4px; }
+.n_title li:hover { background: #e5e5e5; }
+.resource li { width: 100%; float: left; padding: 20px 0px 20px 12px; border-bottom: 1px dotted #c7c7c7; font-size: 12px; }
+.re_con span:hover { color: #009bdf; }
+.re_img { width: 46px; float: left; margin: 0 20px 0 0; padding: 2px 0 0 0; }
+.re_img img { width: 46px; height: 41px; display: block; float: left; }
+.re_con { max-width: 660px; float: left; }
+.re_con dl { float: left; width: 660px; }
+.re_con span { font-size: 14px; float: left; line-height: 22px; display: block; width: 100%; margin: 0 0 4px 0; }
+.re_con dl dd { float: left; margin: 0 30px 0 0; line-height: 20px; color: #999; }
+.re_r { float: right; margin: 12px 10px 0 0; width: 166px; }
+.re_r .re_bt { float: right; }
+.re_bt input { width: 62px; height: 32px; display: block; text-align: center; border-radius: 4px; float: left; margin: 0 0 0 20px; cursor: pointer; }
+.re_bt .bt_gray { border: 1px solid #c9c9c9; background: #f1f2f3; }
+.re_bt .bt_blue { border: 1px solid #009bdf; background: #009bdf; color: #fff; }
+.bt_gray:hover { background: #fff; }

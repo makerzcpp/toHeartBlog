@@ -16,7 +16,6 @@
 <link rel="stylesheet" href="${BASE}/www/css/blog_css/style.css" type="text/css" />
 <link rel="stylesheet" href="${BASE}/www/css/blog_css/prettyPhoto.css" type="text/css" />
 <link rel="stylesheet" href="${BASE}/www/css/blog_css/calendar.css" type="text/css" />
-<!-- MediaElements start -->
 <link rel="stylesheet" href="${BASE}/www/css/blog_css/mediaelementplayer.css" />
 <link rel="stylesheet" href="${BASE}/www/css/blog_css/flexslider.css" type="text/css" />
 <link rel="stylesheet" href="${BASE}/www/css/blog_css/jquery.ibutton.css" type="text/css" />
@@ -49,7 +48,7 @@
  <div class="b-breadcrumbs f-breadcrumbs">
         <div class="container">
             <ul>
-                <li><a href="#"><i class="fa fa-home"></i>相册</a></li>
+                <li><a href="#"><i class="fa fa-home"></i>文章</a></li>
                <!--  <li><i class="fa fa-angle-right"></i><a href="#">Blog</a></li>
                 <li><i class="fa fa-angle-right"></i><span>Listing Left Sidebar</span></li> -->
             </ul>

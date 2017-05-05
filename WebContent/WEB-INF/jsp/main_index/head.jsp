@@ -18,7 +18,7 @@
         
     </li>
     <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-        <a href="#"><i class="fa fa-code b-menu-1level-ico"></i>文章 <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+        <a href="${BASE}/index/test"><i class="fa fa-code b-menu-1level-ico"></i>文章 <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
         
     </li>
  <!--    <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">

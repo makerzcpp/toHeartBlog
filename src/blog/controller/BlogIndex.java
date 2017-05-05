@@ -28,4 +28,9 @@ public class BlogIndex {
 	public String toresourceIndex() {
 		return "/main_index/resource_index";
 	}
+	
+	@RequestMapping(value="/test")
+	public String totestIndex() {
+		return "/main_index/test_index";
+	}
 }

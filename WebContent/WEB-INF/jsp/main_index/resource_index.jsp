@@ -58,13 +58,7 @@
 				</div>
 				<div class="resource"></div>
 			</div>
-			<div class="s_news">
-				<div class="float">
-					<h1 class="c_title">下载排行</h1>
-					<div class="resource_rank">
-					</div>
-				</div> 
-			</div>
+			
 		</div>
 	</div>
 	

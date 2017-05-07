@@ -21,6 +21,7 @@
 	<mvc:resources mapping="/www/js/**" location="/www/js/" />
 	<mvc:resources mapping="/www/css/**" location="/www/css/" />
 	<mvc:resources mapping="/html/**" location="/html/" />
+	<mvc:resources mapping="/utf8jsp/**" location="/utf8jsp/" />
 
 
 

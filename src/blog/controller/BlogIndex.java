@@ -33,4 +33,9 @@ public class BlogIndex {
 	public String totestIndex() {
 		return "/main_index/test_index";
 	}
+	
+	@RequestMapping(value="/write")
+	public String toWriteIndex() {
+		return "/main_index/write_index";
+	}
 }

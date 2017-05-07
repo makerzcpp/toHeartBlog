@@ -38,4 +38,9 @@ public class BlogIndex {
 	public String toWriteIndex() {
 		return "/main_index/write_index";
 	}
+	
+	@RequestMapping(value="/login")
+	public String toLoginIndex() {
+		return "/main_index/login";
+	}
 }

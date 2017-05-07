@@ -15,7 +15,7 @@
 	<mvc:annotation-driven />
 
 	<!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理 -->
-	<mvc:resources mapping="/www/images/img/**" location="/www/images/img/" />
+	<mvc:resources mapping="/www/images/**" location="/www/images/" />
 	<mvc:resources mapping="/www/images/photos/**" location="/www/images/photos/" />
 	<mvc:resources mapping="/www/images/photosindex/**" location="/www/images/photosindex/" />
 	<mvc:resources mapping="/www/js/**" location="/www/js/" />

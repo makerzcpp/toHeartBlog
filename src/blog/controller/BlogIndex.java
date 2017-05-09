@@ -11,6 +11,7 @@ public class BlogIndex {
 	
 	@RequestMapping(value="/home")
 	public String toIndex() {
+		
 		return "/main_index/index";
 	}
 	

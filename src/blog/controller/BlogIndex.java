@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BlogIndex {
 	
 	@RequestMapping(value="/home")
-	public String toIndex() {
-		
+	public String toIndex() {		
 		return "/main_index/index";
 	}
 	

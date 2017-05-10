@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="BASE" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
-<c:set var="BASE" value="${pageContext.request.contextPath}"/>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -41,6 +41,17 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style type="text/css">
+a:{
+font-family : 微软雅黑;
+font-size : 0.1em;
+color : red;
+}
+
+</style>
+<script type="text/javascript">
+    var BASE="${BASE}";
+</script>
 </head>
 <body>
 		
@@ -104,26 +115,32 @@
 											<form action="#">
 												<div class="row form-group">
 													<div class="col-md-12">
-														<label for="username">邮箱</label>
+														<label for="email">邮箱</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="inemail"></a>
+														<input type="text" class="form-control" id="email">
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="username">用户名</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="inusername"></a>
 														<input type="text" class="form-control" id="username">
 													</div>
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
-														<label for="password">密码</label>
+														<label for="password">密码</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="inpassword"></a>
 														<input type="password" class="form-control" id="password">
 													</div>
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
-														<label for="password2">确认密码</label>
+														<label for="password2">确认密码</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="inpassword2"></a>
 														<input type="password" class="form-control" id="password2">
 													</div>
 												</div>
 
 												<div class="row form-group">
 													<div class="col-md-12">
-														<input type="submit" class="btn btn-primary" value="注册">
+														<input type="submit" class="btn btn-primary" id="register" value="注册">
 													</div>
 												</div>
 											</form>	
@@ -133,14 +150,14 @@
 											<form action="#">
 												<div class="row form-group">
 													<div class="col-md-12">
-														<label for="username">邮箱</label>
-														<input type="text" class="form-control" id="username">
+														<label for="username">用户名</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="loinusername"></a>
+														<input type="text" class="form-control" id="lousername">
 													</div>
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
-														<label for="password">密码</label>
-														<input type="password" class="form-control" id="password">
+														<label for="password">密码</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="loinpassword"></a>
+														<input type="password" class="form-control" id="lopassword">
 													</div>
 												</div>
 
@@ -167,9 +184,7 @@
 	
 
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
+	
 	</div>
 		</div>
 	<!-- jQuery -->
@@ -189,7 +204,8 @@
 	<script src="${BASE}/www/js/login/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="${BASE}/www/js/login/main.js"></script>
-
+	<!-- 登录 -->
+	<script src="${BASE}/www/js/login/login.js"></script>
 
 </body>
 </html>

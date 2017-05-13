@@ -97,8 +97,8 @@ $(function(){
 				data : {'email':email,'username':username,'password':password},
 				dataType : 'json',
 				success : function(result) {
-					if (result==1) {
-						alert(1);
+					if (result=='success') {
+						$("#inpassword").text("请输入6-20位字母或者数字");
 					}else{
 						alert(2);
 					}

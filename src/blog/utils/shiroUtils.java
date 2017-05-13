@@ -14,12 +14,13 @@ public class shiroUtils {
 		Object salt = new Md5Hash(saltSource);
 		int hashIterations = 1024;			
 		Object result = new SimpleHash(hashAlgorithmName, pass, salt, hashIterations);
-		return (String) result;
+		String password = result.toString();
+		return password;
 	}
 	
 	//生产UUID
 	public static String uuid(){
 		UUID uuid = UUID.randomUUID();
-		return uuid.toString();
+		return uuid.toString().replace("-", "");
 	}
 }

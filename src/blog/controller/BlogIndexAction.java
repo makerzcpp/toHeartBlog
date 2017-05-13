@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/index")
-public class BlogIndex {
+public class BlogIndexAction {
 	
 	@RequestMapping(value="/home")
 	public String toIndex() {		

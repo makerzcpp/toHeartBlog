@@ -15,7 +15,7 @@ import blog.utils.usuallyUtils;
 
 @Controller
 @RequestMapping("/login")
-public class Bloglogin {
+public class BlogloginAction {
 	@Autowired userService userservice;
 	
 	@ResponseBody
@@ -29,11 +29,11 @@ public class Bloglogin {
 		map.put("userpass",pass);
 		boolean success = userservice.addUser(map);
 		if(success){
-			try {
+			/*try {
 				usuallyUtils.sendEmail();
 			} catch (Exception e) {			
 				e.printStackTrace();
-			}
+			}*/
 			reslut = "success";
 			}
 		return reslut;

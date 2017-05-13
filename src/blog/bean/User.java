@@ -2,7 +2,7 @@ package blog.bean;
 
 import java.io.Serializable;
 
-public class user implements Serializable {
+public class User implements Serializable {
 private static final long serialVersionUID = -4287476886969445533L;
 
 private String userId;

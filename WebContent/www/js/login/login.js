@@ -97,7 +97,7 @@ $(function(){
 				data : {'email':email,'username':username,'password':password},
 				dataType : 'json',
 				success : function(result) {
-					if (result) {
+					if (result==1) {
 						alert(1);
 					}else{
 						alert(2);

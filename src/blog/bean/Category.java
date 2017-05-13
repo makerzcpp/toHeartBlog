@@ -2,7 +2,7 @@ package blog.bean;
 
 import java.io.Serializable;
 
-public class category implements Serializable{
+public class Category implements Serializable{
 private static final long serialVersionUID = 7857121030962151028L;
 
 private String categoryId; //类别ID

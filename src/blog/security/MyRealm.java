@@ -14,7 +14,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import blog.bean.user;
+import blog.bean.User;
 
 public class MyRealm extends AuthorizingRealm {
 	

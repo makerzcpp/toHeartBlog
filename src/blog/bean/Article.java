@@ -2,7 +2,7 @@ package blog.bean;
 
 import java.io.Serializable;
 
-public class article implements Serializable{
+public class Article implements Serializable{
 private static final long serialVersionUID = -5903450094896283406L;
 
 private String articleId; //文章Id

@@ -27,13 +27,13 @@
 	<!-- 2. mybatis的SqlSession的工厂: SqlSessionFactoryBean dataSource:引用数据源 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="typeAliasesPackage" value="com.xtc.bean" />
+		<property name="typeAliasesPackage" value="blog.bean" />
 	</bean>
 
 
 	<!-- 3. 自动扫描mybatis映射文件和接口的包 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="blog.bean"></property>
+		<property name="basePackage" value="blog.dao"></property>
 	</bean>
 
 	<!-- 4.配置事务管理 -->

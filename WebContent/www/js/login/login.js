@@ -96,11 +96,9 @@ $(function(){
 				url : BASE+"/login/register",
 				data : {'email':email,'username':username,'password':password},
 				dataType : 'json',
-				success : function(result) {
-					if (result=='success') {
-						$("#inpassword").text("请输入6-20位字母或者数字");
-					}else{
-						alert(2);
+				success : function(data) {
+					if(data.success){
+						showInfo("注册成功", function() { }, 3);
 					}
 				}
 			});

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import blog.service.userService;
+import blog.utils.Result;
 import blog.utils.shiroUtils;
-import blog.utils.usuallyUtils;
 
 @Controller
 @RequestMapping("/login")
@@ -20,22 +20,16 @@ public class BlogloginAction {
 	
 	@ResponseBody
 	@RequestMapping(value="/register", method={RequestMethod.POST})
-	public String toIndex(@RequestParam("email") String email,@RequestParam("username") String username,@RequestParam("password") String password) {
-		String reslut ="";
+	public Result toIndex(@RequestParam("email") String email,@RequestParam("username") String username,@RequestParam("password") String password) { 
 		String pass = shiroUtils.md5(password);
 		HashMap<String,Object> map = new HashMap<String,Object>();
 		map.put("email",email);
 		map.put("username",username);
 		map.put("userpass",pass);
 		boolean success = userservice.addUser(map);
-		if(success){
-			/*try {
-				usuallyUtils.sendEmail();
-			} catch (Exception e) {			
-				e.printStackTrace();
+		/*if(success){   
+		//发送邮件激活，暂时不做操作，后续加入
 			}*/
-			reslut = "success";
-			}
-		return reslut;
+		return new Result(success);
 	}
 }

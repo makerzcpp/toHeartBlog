@@ -188,6 +188,7 @@ color : red;
 	</div>
 		</div>
 	<!-- jQuery -->
+	<%@ include file="../script.jsp"%>
 	<script src="${BASE}/www/js/login/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="${BASE}/www/js/login/jquery.easing.1.3.js"></script>
@@ -206,6 +207,8 @@ color : red;
 	<script src="${BASE}/www/js/login/main.js"></script>
 	<!-- 登录 -->
 	<script src="${BASE}/www/js/login/login.js"></script>
+	
+
 
 </body>
 </html>

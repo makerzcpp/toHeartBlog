@@ -24,8 +24,8 @@ public class userServiceImpl implements userService {
 		String creatTime = sdf.format(date);
 		User user = new User();
 		String username = (String) map.get("username");
-		User finduser = userDao.findUser(username);
-		if(finduser==null){	
+		User finduser = userDao.findUser(username);	
+		if(finduser==null){			
 		user.setCreatTime(creatTime);	
 		user.setUserId(shiroUtils.uuid());	
 		user.setEmail((String) map.get("email"));

@@ -49,10 +49,10 @@ function sd_remove() {
 function showDialog(mode, msg, t, sd_width) {
 	var sd_width = sd_width ? sd_width : 400;
 	var mode = in_array(mode, ['confirm', 'window', 'info', 'loading']) ? mode : 'alert';
-	var t = t ? t : Reach.i18n('showDialog.tipinfo');
+	var t = t ? t : '提示信息';
 	var msg = msg ? msg : "";
-	var confirmtxt = confirmtxt ? confirmtxt : Reach.i18n('showDialog.confirm');
-	var canceltxt = canceltxt ? canceltxt : Reach.i18n('showDialog.cancel');
+	var confirmtxt = confirmtxt ? confirmtxt : '确定';
+	var canceltxt = canceltxt ? canceltxt : '取消';
 	//alert(mode+","+t+","+msg+","+confirmtxt+","+canceltxt);
 	sd_remove();
 	try {
@@ -91,7 +91,7 @@ function showDialog(mode, msg, t, sd_width) {
 		SD_html += "<a id='SD_confirm'>" + confirmtxt + "</a>";
 		SD_html += "<a id='SD_cancel'>" + canceltxt + "</a>";
 		SD_html += "</div></div>";
-		SD_html += "<a href='javascript:;' id='SD_close' title='"+Reach.i18n('showDialog.close')+"'></a>";
+		SD_html += "<a href='javascript:;' id='SD_close' title='"+'关闭'+"'></a>";
 		SD_html += "</td>";
 		SD_html += "<td class='SD_bg'></td></tr>";
 		SD_html += "<tr><td class='SD_bg'></td><td class='SD_bg'></td><td class='SD_bg'></td></tr></tbody></table>";
@@ -188,10 +188,10 @@ function showWindow(title, the_url, sd_width) {
 			showDialog("window", data, title, sd_width);
 		},
 		error		: function(data){
-			showDialog("alert", Reach.i18n('showDialog.read_data_false'));
+			showDialog("alert", '读取数据失败');
 		},
 		beforeSend	: function(data){
-			showDialog("loading", Reach.i18n('showDialog.read_dataing') + "...");
+			showDialog("loading",'正在读取数据' + "...");
 		}
 	});
 }

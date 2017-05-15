@@ -97,13 +97,38 @@ $(function(){
 				data : {'email':email,'username':username,'password':password},
 				dataType : 'json',
 				success : function(data) {
-					if(data.success){
+					if(data.success){						
 						showInfo("注册成功", function() { }, 3);
+						$("#button_login").click();
 					}
 				}
 			});
 		}
 	}
 	$("#register").click(register);
+	
+	//登录
+	var login = function(){
+		var lousername = $("#lousername").val();
+		var lopassword = $("#lopassword").val();	
+		if(lous&&lopass){
+			$.ajax({
+				type : "POST",
+				url : BASE+"/login/toHome",
+				data : {'username':lousername,'password':lopassword},
+				dataType : 'json',
+				success : function(data) {
+					if(data.success){						
+						showInfo("登录成功", function() { }, 3);
+						window.location.href=BASE+"/index/home"; 
+					}else{
+						showInfo("账号或密码错误，请重新输出", function() {}, 3);
+						$("#lopassword").val("");
+					}
+				}
+			});
+		}
+	}
+	$("#login").click(login);
 	
 })

@@ -15,10 +15,12 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import blog.bean.User;
+import blog.dao.userDao;
 
 public class MyRealm extends AuthorizingRealm {
 	
-
+	@Autowired userDao userDao;
+	
 	String pass;
 
 	/**
@@ -48,23 +50,22 @@ public class MyRealm extends AuthorizingRealm {
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(
 			AuthenticationToken token) throws AuthenticationException {
-		System.out.println(token.getPrincipal());
-		System.out.println(token.getCredentials());
+		System.out.println("-----"+token.getPrincipal());
 		
 		
 		//1. token 中获取登录的 username! 注意不需要获取password.
 		Object principal = token.getPrincipal();
-				
-		/*//2. 利用 username 查询数据库得到用户的信息. 
-		user user=userdao.findbyname((String) principal);
+		
+		//2. 利用 username 查询数据库得到用户的信息. 
+		User user = userDao.findUser((String) principal);	
+		System.out.println(user+"--"+user.getUserPass());
 		if(user!=null){
-			pass=user.getPass();
-		}*/
+			pass=user.getUserPass();
+		}
 		String credentials = pass;
 		//3.设置盐值 ，（加密的调料，让加密出来的东西更具安全性，一般是通过数据库查询出来的）
-		String source = "abcdefg";
+		String source = "blog";
 		ByteSource credentialsSalt = new Md5Hash(source);
-		System.out.println(credentialsSalt); 
 		
 		//当前 Realm �? name
 		String realmName = getName();
@@ -88,7 +89,7 @@ public class MyRealm extends AuthorizingRealm {
 	
 	
 	//用来测试的算出密码password颜值加密后的结果，下面方法用于新增用户添加到数据库操作的，我这里就直接用main获得，直接数据库添加了，省时间
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		String saltSource = "abcdefg";	
 		String hashAlgorithmName = "MD5";
 		String credentials = "password";
@@ -96,6 +97,6 @@ public class MyRealm extends AuthorizingRealm {
 		int hashIterations = 1024;			
 		Object result = new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations);
 		System.out.println(result);
-	}
+	}*/
 
 }

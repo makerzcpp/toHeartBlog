@@ -15,7 +15,7 @@
 	<meta name="author" content="" />
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-	
+	<link rel="stylesheet" type="text/css" href="${BASE}/www/css/showDialog/showDialog.css" />
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="${BASE}/www/css/login_css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -66,12 +66,12 @@ color : red;
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">首页 <em>.</em></a></div>
+					<div id="gtco-logo"><a href="${BASE}/index/home">首页 <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="features.html">推荐</a></li>
-						<li><a href="tour.html">微服务</a></li>
+						<li><a href="#">推荐</a></li>
+						<li><a href="#">微服务</a></li>
 						<!-- <li class="has-dropdown">
 							<a href="#">Dropdown</a>
 							<ul class="dropdown">
@@ -108,7 +108,7 @@ color : red;
 								<div class="tab">
 									<ul class="tab-menu">
 										<li class="active gtco-first"><a href="#" data-tab="signup">注册</a></li>
-										<li class="gtco-second"><a href="#" data-tab="login">登录</a></li>
+										<li class="gtco-second"><a href="#" data-tab="login" id="button_login">登录</a></li>
 									</ul>
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
@@ -163,7 +163,7 @@ color : red;
 
 												<div class="row form-group">
 													<div class="col-md-12">
-														<input type="submit" class="btn btn-primary" value="登录">
+														<input type="submit" class="btn btn-primary" id="login" value="登录">
 													</div>
 												</div>
 											</form>	

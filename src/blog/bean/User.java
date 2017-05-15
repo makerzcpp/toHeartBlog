@@ -78,6 +78,12 @@ public void setHeadImg(String headImg) {
 public static long getSerialversionuid() {
 	return serialVersionUID;
 }
+@Override
+public String toString() {
+	return "User [userId=" + userId + ", userName=" + userName + ", userPass=" + userPass + ", creatTime=" + creatTime
+			+ ", blogName=" + blogName + ", friendId=" + friendId + ", Email=" + Email + ", Phone=" + Phone
+			+ ", Authentication=" + Authentication + ", headImg=" + headImg + "]";
+}
 
 
 

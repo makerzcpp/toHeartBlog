@@ -2,8 +2,13 @@ package blog.utils;
 
 import java.util.UUID;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.subject.Subject;
+
+
+import blog.bean.User;
 
 public class shiroUtils {
 
@@ -17,10 +22,17 @@ public class shiroUtils {
 		String password = result.toString();
 		return password;
 	}
+		
 	
-	//生产UUID
-	public static String uuid(){
-		UUID uuid = UUID.randomUUID();
-		return uuid.toString().replace("-", "");
+	//获取当前登录对象
+	public static String getUserName(){
+	String shiroUser = null;
+	Subject currentUser = SecurityUtils.getSubject();
+	shiroUser = (String) currentUser.getPrincipal();
+	if (shiroUser == null) {
+		 shiroUser = "游客";
+	}	
+	return shiroUser;
 	}
 }
+

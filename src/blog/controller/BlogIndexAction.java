@@ -1,17 +1,32 @@
 package blog.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import blog.bean.Category;
+import blog.bean.User;
+import blog.service.categoryService;
+import blog.utils.shiroUtils;
 
 
 
 @Controller
 @RequestMapping("/index")
 public class BlogIndexAction {
+	@Autowired categoryService categoryservice;
 	
 	@RequestMapping(value="/home")
-	public String toIndex() {		
-		return "/main_index/index";
+	public ModelAndView toIndex() {	
+        ModelAndView modelAndView = new ModelAndView("/main_index/index");
+		String userName = shiroUtils.getUserName();		
+		List<Category> cglist = categoryservice.findCategoryList(userName);
+		modelAndView.addObject("user", userName);
+		modelAndView.addObject("cglist", cglist);	
+		return modelAndView;
 	}
 	
 	@RequestMapping(value="/photos")

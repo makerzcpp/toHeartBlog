@@ -120,38 +120,12 @@
         <div class="b-categories-filter">
             <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">博客类别</h4>
             <ul>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Web Design</a>
-        <span class="b-categories-filter_count f-categories-filter_count">12</span>
-    </li>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Smart Phone</a>
-        <span class="b-categories-filter_count f-categories-filter_count">23</span>
-    </li>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Latop</a>
-        <span class="b-categories-filter_count f-categories-filter_count">12</span>
-    </li>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Apple Store</a>
-        <span class="b-categories-filter_count f-categories-filter_count">23</span>
-    </li>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Wordpress Theme</a>
-        <span class="b-categories-filter_count f-categories-filter_count">12</span>
-    </li>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Web Design</a>
-        <span class="b-categories-filter_count f-categories-filter_count">23</span>
-    </li>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Sport</a>
-        <span class="b-categories-filter_count f-categories-filter_count">12</span>
-    </li>
-    <li>
-        <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> Fashion</a>
-        <span class="b-categories-filter_count f-categories-filter_count">23</span>
-    </li>
+              <c:forEach var="cg" items="${cglist}" varStatus="name"  begin="0" end="8" >
+                  <li>
+        			<a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i>${cg.categoryName}</a>
+       				<span class="b-categories-filter_count f-categories-filter_count">${cg.articleNum}</span>
+   				 </li>
+              </c:forEach>  
 </ul>
         </div>
     </div>

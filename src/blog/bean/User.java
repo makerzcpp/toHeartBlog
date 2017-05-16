@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class User implements Serializable {
 private static final long serialVersionUID = -4287476886969445533L;
 
-private String userId;
+
 private String userName;
 private String userPass;
 private String creatTime;
@@ -15,12 +15,29 @@ private String Email;
 private String Phone;
 private String Authentication;//是否认证
 private String headImg;//头像
-public String getUserId() {
-	return userId;
+
+
+public User(String userId, String userName, String userPass, String creatTime, String blogName, String friendId,
+		String email, String phone, String authentication, String headImg) {
+	super();
+	this.userName = userName;
+	this.userPass = userPass;
+	this.creatTime = creatTime;
+	this.blogName = blogName;
+	this.friendId = friendId;
+	Email = email;
+	Phone = phone;
+	Authentication = authentication;
+	this.headImg = headImg;
 }
-public void setUserId(String userId) {
-	this.userId = userId;
+
+
+public User() {
+	super();
 }
+
+
+
 public String getUserName() {
 	return userName;
 }
@@ -80,7 +97,7 @@ public static long getSerialversionuid() {
 }
 @Override
 public String toString() {
-	return "User [userId=" + userId + ", userName=" + userName + ", userPass=" + userPass + ", creatTime=" + creatTime
+	return "User [ userName=" + userName + ", userPass=" + userPass + ", creatTime=" + creatTime
 			+ ", blogName=" + blogName + ", friendId=" + friendId + ", Email=" + Email + ", Phone=" + Phone
 			+ ", Authentication=" + Authentication + ", headImg=" + headImg + "]";
 }

@@ -1,6 +1,7 @@
 package blog.utils;
 
 import java.util.Properties;
+import java.util.UUID;
 
 import javax.mail.Message;
 import javax.mail.Session;
@@ -34,4 +35,10 @@ public class usuallyUtils {
 		trans.connect("***", "*****"); // 邮件的账号密码
 		trans.sendMessage(msg, msg.getAllRecipients());
 	}
+	
+	//生产UUID
+		public static String uuid(){
+			UUID uuid = UUID.randomUUID();
+			return uuid.toString().replace("-", "");
+		}
 }

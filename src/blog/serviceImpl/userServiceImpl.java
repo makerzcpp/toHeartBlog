@@ -26,8 +26,7 @@ public class userServiceImpl implements userService {
 		String username = (String) map.get("username");
 		User finduser = userDao.findUser(username);	
 		if(finduser==null){			
-		user.setCreatTime(creatTime);	
-		user.setUserId(shiroUtils.uuid());	
+		user.setCreatTime(creatTime);			
 		user.setEmail((String) map.get("email"));
 		user.setUserName(username);
 		user.setUserPass((String) map.get("userpass"));

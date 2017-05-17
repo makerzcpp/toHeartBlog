@@ -22,10 +22,12 @@
 		<script src="${BASE}/www/js/photosindex/jquery.mobilemenu.js"></script>
 		<script src="${BASE}/www/js/photosindex/jquery.easing.1.3.js"></script>
 		<script>
+		BASE = '${BASE}';
 		$(document).ready(function(){
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		})
 		</script>
+		
 		
 		<!-- 头部和底部的css -->
 <link type="text/css" rel='stylesheet' href="${BASE}/www/css/bootstrap.min.css">
@@ -40,6 +42,7 @@
         <div class="container">
             <ul>
                 <li><a href="#"><i class="fa fa-home"></i>相册</a></li>
+                <li><a id="creat"><i class="fa fa-home"></i>新建相册</a></li>
                <!--  <li><i class="fa fa-angle-right"></i><a href="#">Blog</a></li>
                 <li><i class="fa fa-angle-right"></i><span>Listing Left Sidebar</span></li> -->
             </ul>
@@ -54,49 +57,53 @@
 							<img src="${BASE}/www/images/photosindex/page1_img1.jpg" alt="">
 							<a href="${BASE}/index/photoslist" class="bot">Boudoir Beauty <span>7 <br>images</span></a>
 						</div>
-						<div class="p1_box left cl2">
+						<div class="p1_box left cl1">
+							<div class="type"></div>
+							<img src="${BASE}/www/images/photosindex/page1_img1.jpg" alt="">
+							<a href="${BASE}/index/photoslist" class="bot">Boudoir Beauty <span>7 <br>images</span></a>
+						</div>
+						
+						<!-- <div class="p1_box left cl2">
 							<div class="type"></div>
 							<div class="gray_block">
 								Go ahead and read more about this <span class="col1"><a href="http://sc.chinaz.com/?free-website-templates/" rel="nofollow">free theme</a></span> created by TemplateMonster.com.<br>
 								Wide variety of premium <span class="col1"><a href="http://sc.chinaz.com/?category/art-photography-website-templates/" rel="nofollow">Art &amp; Photography templates</a></span> is to be found in the same name category at our site.
 							</div>
 							<a href="#" class="bot">Master Class<span>5 <br>comments</span></a>
-						</div>
+						</div> -->
 						<div class="p1_box left cl1 pos1">
 							<div class="type"></div>
 							<img src="${BASE}/www/images/photosindex/page1_img4.jpg" alt="">
 							<a href="${BASE}/index/photoslist" class="bot">Summer Lifestyle<span>10<br>images</span></a>
 						</div>
-						<div class="p1_box left cl3 pos1">
+				
+						
+						<%-- <div class="p1_box left cl3 pos1">
 							<div class="type"></div>
 							<img src="${BASE}/www/images/photosindex/page1_img6.jpg" alt="">
 							<a href="index-3.html" class="bot">Coexisting with Nature<span><strong class="fa-angle-right fa"></strong></span></a>
-						</div>
+						</div> --%>
 					</div>
 					<div class="grid_6">
-						<div class="p1_box right cl1">
+						<%-- <div class="p1_box right cl1">
 							<div class="type"></div>
 							<img src="${BASE}/www/images/photosindex/page1_img2.jpg" alt="">
 							<a href="${BASE}/index/photoslist" class="bot">Pics of Nature <span>8 <br>images</span></a>
+						</div> --%>
+						<div class="p1_box right cl1 pos1">
+							<div class="type"></div>
+							<img src="${BASE}/www/images/photosindex/page1_img4.jpg" alt="">
+							<a href="${BASE}/index/photoslist" class="bot">Summer Lifestyle<span>10<br>images</span></a>
 						</div>
 						<div class="p1_box right cl3">
 							<div class="type"></div>
 							<img src="${BASE}/www/images/photosindex/page1_img3.jpg" alt="">
 							<a href="index-3.html" class="bot">Night Sky Video<span><strong class=" fa-angle-right fa"></strong></span></a>
 						</div>
-						<div class="p1_box right cl4">
+						<div class="p1_box right cl3">
 							<div class="type"></div>
-							<a href="#" class="bot">Inspirational Resources</a>
-						</div>
-						<div class="p1_box right cl5">
-							<div class="type"></div>
-							<blockquote>To me, photography is an art of observation. It’s about finding something interesting in an ordinary place... I’ve found it has little to do with the things you see and everything to do with the way you see them. </blockquote>
-							<a href="#" class="bot">Elliott Erwitt <span>8 <br>comments</span></a>
-						</div>
-						<div class="p1_box right cl2">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img7.jpg" alt="">
-							<a href="#" class="bot">My new project<span><strong class=" fa-angle-right fa"></strong></span></a>
+							<img src="${BASE}/www/images/photosindex/page1_img3.jpg" alt="">
+							<a href="index-3.html" class="bot">Night Sky Video<span><strong class=" fa-angle-right fa"></strong></span></a>
 						</div>
 					</div>
 					<div class="clear"></div>
@@ -106,7 +113,23 @@
 				</div>
 			</div>
  <%@ include file="foot.jsp"%>
-
+ <%@ include file="../script.jsp"%>
+<script>
+		var creat = function(){
+			var diag = new zDialog();
+        	diag.Width = 760;
+        	diag.Height = 610;       	
+        	diag.URL = '${BASE}/photo/creat';
+        	/* diag.OKEvent = function(){
+        	    refreshFn();  
+        		diag.close(); 
+        	}; */
+        	diag.show();
+        	diag.okButton.value=" 保存 ";
+        	diag.cancelButton.value=" 取消 ";
+		};
+		$("#creat").click(creat);
+		</script>
 
 </body>
 </html>

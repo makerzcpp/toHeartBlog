@@ -14,12 +14,12 @@
 	</select> -->
 	
 	<select id="findUser" parameterType="java.lang.String" resultType="User">
-	select userName,userPass,email,creatTime from user where userName =#{userName}
+	select userName,userPass,email,creatTime,blogId from user where userName =#{userName}
 	</select>
 	
 	<insert id="addUser" parameterType="User">
-		INSERT INTO user(userName,userPass,email,creatTime)
-		values ( #{userName},#{userPass},#{email},#{creatTime})
+		INSERT INTO user(userName,userPass,email,creatTime,blogId)
+		values ( #{userName},#{userPass},#{email},#{creatTime},#{blogId})
 	</insert>
 	<!-- <delete id="deleteById" parameterType="java.lang.String">
 	delete from t_teacher where id=#{id}

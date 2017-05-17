@@ -10,6 +10,7 @@ private String userName;
 private String userPass;
 private String creatTime;
 private String blogName;//博客名字
+private String blogId;//博客Id
 private String friendId;//友情推荐的用户ID
 private String Email;
 private String Phone;
@@ -17,13 +18,14 @@ private String Authentication;//是否认证
 private String headImg;//头像
 
 
-public User(String userId, String userName, String userPass, String creatTime, String blogName, String friendId,
+public User(String userName, String userPass, String creatTime, String blogName, String blogId, String friendId,
 		String email, String phone, String authentication, String headImg) {
 	super();
 	this.userName = userName;
 	this.userPass = userPass;
 	this.creatTime = creatTime;
 	this.blogName = blogName;
+	this.blogId = blogId;
 	this.friendId = friendId;
 	Email = email;
 	Phone = phone;
@@ -35,7 +37,6 @@ public User(String userId, String userName, String userPass, String creatTime, S
 public User() {
 	super();
 }
-
 
 
 public String getUserName() {
@@ -92,16 +93,19 @@ public String getHeadImg() {
 public void setHeadImg(String headImg) {
 	this.headImg = headImg;
 }
-public static long getSerialversionuid() {
-	return serialVersionUID;
+
+public String getBlogId() {
+	return blogId;
 }
+public void setBlogId(String blogId) {
+	this.blogId = blogId;
+}
+
 @Override
 public String toString() {
-	return "User [ userName=" + userName + ", userPass=" + userPass + ", creatTime=" + creatTime
-			+ ", blogName=" + blogName + ", friendId=" + friendId + ", Email=" + Email + ", Phone=" + Phone
+	return "User [userName=" + userName + ", userPass=" + userPass + ", creatTime=" + creatTime + ", blogName="
+			+ blogName + ", blogId=" + blogId + ", friendId=" + friendId + ", Email=" + Email + ", Phone=" + Phone
 			+ ", Authentication=" + Authentication + ", headImg=" + headImg + "]";
 }
-
-
 
 }

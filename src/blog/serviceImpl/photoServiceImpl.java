@@ -1,5 +1,9 @@
 package blog.serviceImpl;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,5 +31,15 @@ public class photoServiceImpl implements photoService {
 		String imgHead = Constant.PhotoBoxHeadImg;
 		PhotosBox box = new PhotosBox(boxId,imgNum,boxName,boxText,creatTime,userName,boxType,imgHead);
 		photodao.creatBox(box);		
+	}
+
+	@Override
+	public List<PhotosBox> getBoxList(String userName,int pageNum,int pageSize) {
+		Map<String,Object> map = new HashMap<String,Object>();
+		map.put("userName", userName);
+		map.put("pageNum", pageNum);
+		map.put("pageSize", pageSize);
+		List<PhotosBox> list = photodao.getBoxList(map);
+		return list;
 	}  
 }

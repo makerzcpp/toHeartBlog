@@ -7,9 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import blog.Constant;
 import blog.bean.Category;
-import blog.bean.User;
+import blog.bean.PhotosBox;
 import blog.service.categoryService;
+import blog.service.photoService;
 import blog.utils.shiroUtils;
 
 
@@ -18,6 +20,7 @@ import blog.utils.shiroUtils;
 @RequestMapping("/index")
 public class BlogIndexAction {
 	@Autowired categoryService categoryservice;
+	@Autowired photoService photoservice;
 	
 	@RequestMapping(value="/home")
 	public ModelAndView toIndex() {	
@@ -30,8 +33,15 @@ public class BlogIndexAction {
 	}
 	
 	@RequestMapping(value="/photos")
-	public String toPhotosIndex() {
-		return "/main_index/photos_index";
+	public ModelAndView toPhotosIndex() {
+		ModelAndView modelAndView = new ModelAndView("/main_index/photos_index");
+		String userName = shiroUtils.getUserName();	
+		System.out.println(userName+"-----------");
+		int pageNum = 0;
+		int pageSize = Constant.photoBoxpageSzie;
+		List<PhotosBox> list = photoservice.getBoxList(userName,pageNum,pageSize);
+		modelAndView.addObject("list", list);
+		return modelAndView;
 	}
 	
 	@RequestMapping(value="/photoslist")

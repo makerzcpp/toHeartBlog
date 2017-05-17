@@ -13,13 +13,13 @@
 	from t_teacher where id=#{id}
 	</select> -->
 	
-	<!-- <select id="findUser" parameterType="java.lang.String" resultType="User">
-	select userName,userPass,email,creatTime from user where userName =#{userName}
-	</select> -->
+	<select id="getBoxList" parameterType="java.util.Map" resultType="PhotosBox">
+	select boxId,imgNum,boxName,boxText,creatTime,userName,boxType,imgHead from photos_box where userName =#{userName} limit ${pageNum},${pageSize}
+	</select> 
 	
 	<insert id="creatBox" parameterType="PhotosBox">
-		INSERT INTO photos_box(boxId,imgNum,boxName,boxText,creatTime,userName,boxType)
-		values ( #{boxId},#{imgNum},#{boxName},#{boxText},#{creatTime},#{userName},#{boxType})
+		INSERT INTO photos_box(boxId,imgNum,boxName,boxText,creatTime,userName,boxType,imgHead)
+		values ( #{boxId},#{imgNum},#{boxName},#{boxText},#{creatTime},#{userName},#{boxType},#{imgHead})
 	</insert>
 	<!-- <delete id="deleteById" parameterType="java.lang.String">
 	delete from t_teacher where id=#{id}

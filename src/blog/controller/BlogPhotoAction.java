@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import blog.service.photoService;
 import blog.utils.Result;
+import blog.utils.shiroUtils;
 
 @Controller
 @RequestMapping("/photo")
@@ -19,7 +20,14 @@ public class BlogPhotoAction {
 	
 	@RequestMapping(value="/creat", method={RequestMethod.GET})
 	public ModelAndView creatPhoto(){
-		ModelAndView modelAndView = new ModelAndView("/photos/photos_creat");
+		String userName = shiroUtils.getUserName();
+		ModelAndView modelAndView;
+		if(userName!=null){
+		modelAndView = new ModelAndView("/photos/photos_creat");
+		}else{
+		String url = "redirect:/index/login";
+		modelAndView = new ModelAndView(url);
+		}
 		return modelAndView;
 	}
 	

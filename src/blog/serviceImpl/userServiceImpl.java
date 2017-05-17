@@ -26,6 +26,7 @@ public class userServiceImpl implements userService {
 		user.setEmail((String) map.get("email"));
 		user.setUserName(username);
 		user.setUserPass((String) map.get("userpass"));
+		user.setBlogId(usuallyUtils.uuid());
 		userDao.addUser(user);
 		reslut = true;
 		}else{

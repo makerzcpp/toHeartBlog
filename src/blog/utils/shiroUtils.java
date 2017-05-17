@@ -7,17 +7,17 @@ import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
 
-
+import blog.Constant;
 import blog.bean.User;
 
 public class shiroUtils {
 
 	//进行shiro加密，返回加密后的结果
 	public static String md5(String pass){
-		String saltSource = "blog";	
+		String saltSource = Constant.shiroPassSource;	
 		String hashAlgorithmName = "MD5";
 		Object salt = new Md5Hash(saltSource);
-		int hashIterations = 1024;			
+		int hashIterations = Constant.shiroPassNum;			
 		Object result = new SimpleHash(hashAlgorithmName, pass, salt, hashIterations);
 		String password = result.toString();
 		return password;

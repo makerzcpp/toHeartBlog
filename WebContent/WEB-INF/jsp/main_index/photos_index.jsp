@@ -119,11 +119,26 @@
 			var diag = new zDialog();
         	diag.Width = 760;
         	diag.Height = 610;       	
-        	diag.URL = '${BASE}/photo/creat';
-        	/* diag.OKEvent = function(){
-        	    refreshFn();  
-        		diag.close(); 
-        	}; */
+        	diag.URL = BASE+'/photo/creat';
+        	diag.OKEvent = function(){
+        		// 1.提交保存    		
+			var data = diag.innerFrame.contentWindow.getParamsFn();
+				$.ajax({
+					url : BASE+"/photo/creat",
+					data : data,
+					type : 'POST',
+					dataType : 'json',
+					success : function(data) {
+						if(data.success){
+							showInfo("创建成功", function() { }, 3);
+						}else{
+							showInfo("服务器正忙，请稍后再试", function() { }, 3);
+						}
+					}
+					})
+					location.reload();
+				diag.close();
+        	}; 
         	diag.show();
         	diag.okButton.value=" 保存 ";
         	diag.cancelButton.value=" 取消 ";

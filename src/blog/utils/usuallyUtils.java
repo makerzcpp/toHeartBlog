@@ -1,5 +1,7 @@
 package blog.utils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.UUID;
 
@@ -40,5 +42,14 @@ public class usuallyUtils {
 		public static String uuid(){
 			UUID uuid = UUID.randomUUID();
 			return uuid.toString().replace("-", "");
+		}
+		
+	//获取当前时间
+		public static String getTime(){
+			Date date = new Date();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+			String Time = sdf.format(date);
+			return Time;
+			
 		}
 }

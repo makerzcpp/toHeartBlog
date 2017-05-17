@@ -1,7 +1,5 @@
 package blog.serviceImpl;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +8,7 @@ import org.springframework.stereotype.Service;
 import blog.bean.User;
 import blog.dao.userDao;
 import blog.service.userService;
-import blog.utils.shiroUtils;
+import blog.utils.usuallyUtils;
 
 @Service
 public class userServiceImpl implements userService {
@@ -18,10 +16,8 @@ public class userServiceImpl implements userService {
 	
 	@Override
 	public boolean addUser(Map<String,Object> map) {
-		boolean reslut;
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
-		String creatTime = sdf.format(date);
+		boolean reslut;		
+		String creatTime = usuallyUtils.getTime();
 		User user = new User();
 		String username = (String) map.get("username");
 		User finduser = userDao.findUser(username);	

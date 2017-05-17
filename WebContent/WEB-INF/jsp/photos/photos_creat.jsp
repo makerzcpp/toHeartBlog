@@ -10,22 +10,31 @@
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script src="${BASE}/www/js/jquery/jquery-1.11.1.min.js"></script>
+		<script>
+		 var BASE='${BASE}';
+		</script>
 </head>
 <body>
-<form action=""  accept-charset="utf-8" id="creat_photos" method="post">
+<form action=""  id="creat_photos" >
                 <label class="input-tips" >相册名字：</label>                
-                    <input type="text" id="name"  />
+                    <input type="text" id="name"  name="na"/>
                                
                <label class="input-tips" >描述：</label>                    
-                    <input type="text" id="text"  />   
+                    <input type="text" id="text"  name="te"/>   
                     
                <label class="input-tips" >分类：</label>    
-                   <select style="width:180px; margin-left:-20px; ">
+                   <select style="width:180px; margin-left:-20px;" name="fen" >
                    <option selected>=请选择款项类型=</option>
-                   <option value="">图片</option>
-                   <option value="">视频</option>
+                   <option value="0">图片</option>
+                   <option value="1">视频</option>
                   </select>                          
-                <div style="padding-left:50px;margin-top:20px;"><input type="submit" value="提交" style="width:150px;" class="button_blue"/></div>
+                
               </form>
-</body>
+             <%@ include file="../script.jsp"%>
+             <script>
+            	function getParamsFn(){
+            		return  $('#creat_photos').serialize();
+            	}
+             </script>
+      </body>     
 </html>

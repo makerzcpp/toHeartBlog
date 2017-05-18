@@ -4,7 +4,7 @@
 <mapper namespace="blog.dao.categoryDao">
 
 	<sql id="Base_Column_List" >
-    categoryId, userName,categoryName,articleNum
+    categoryId, blogId,categoryName,articleNum
   	</sql>
 	
 	<!-- <select id="getAllTeacher"  resultType="Teacher">
@@ -20,7 +20,7 @@
 	<select id="getCategoryList" parameterType="java.lang.String" resultType="Category">
 	select 
 	<include refid="Base_Column_List" />
-	from category where userName =#{userName}
+	from category where blogId =#{blogId}
 	</select>
 	
 	<!-- <insert id="addUser" parameterType="User">

@@ -6,7 +6,7 @@ public class Category implements Serializable{
 private static final long serialVersionUID = 7857121030962151028L;
 
 private String categoryId; //类别ID
-private String userId;  //用户ID	
+private String blogId;  //用户ID	
 private String categoryName; //类别名字
 private String articleNum; //文章数量
 public String getCategoryId() {
@@ -15,11 +15,12 @@ public String getCategoryId() {
 public void setCategoryId(String categoryId) {
 	this.categoryId = categoryId;
 }
-public String getUserId() {
-	return userId;
+
+public String getBlogId() {
+	return blogId;
 }
-public void setUserId(String userId) {
-	this.userId = userId;
+public void setBlogId(String blogId) {
+	this.blogId = blogId;
 }
 public String getCategoryName() {
 	return categoryName;

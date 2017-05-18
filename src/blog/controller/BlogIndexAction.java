@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import blog.Constant;
@@ -22,13 +24,14 @@ public class BlogIndexAction {
 	@Autowired categoryService categoryservice;
 	@Autowired photoService photoservice;
 	
-	@RequestMapping(value="/home")
-	public ModelAndView toIndex() {	
+	@RequestMapping(value="/home", method={RequestMethod.GET})
+	public ModelAndView toIndex(@RequestParam("blogId") String blogId) {			
         ModelAndView modelAndView = new ModelAndView("/main_index/index");
-		String userName = shiroUtils.getUserName();		
-		List<Category> cglist = categoryservice.findCategoryList(userName);
-		modelAndView.addObject("user", userName);
-		modelAndView.addObject("cglist", cglist);	
+		String logusername = shiroUtils.getUserName();		
+		List<Category> cglist = categoryservice.findCategoryList(blogId);
+		modelAndView.addObject("logusername", logusername);
+		modelAndView.addObject("cglist", cglist);
+		modelAndView.addObject("blogId", blogId);
 		return modelAndView;
 	}
 	
@@ -36,7 +39,6 @@ public class BlogIndexAction {
 	public ModelAndView toPhotosIndex() {
 		ModelAndView modelAndView = new ModelAndView("/main_index/photos_index");
 		String userName = shiroUtils.getUserName();	
-		System.out.println(userName+"-----------");
 		int pageNum = 0;
 		int pageSize = Constant.photoBoxpageSzie;
 		List<PhotosBox> list = photoservice.getBoxList(userName,pageNum,pageSize);

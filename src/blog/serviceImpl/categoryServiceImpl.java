@@ -14,8 +14,8 @@ public class categoryServiceImpl implements categoryService {
 	@Autowired categoryDao categorydao ;
 	
 	@Override
-	public List<Category> findCategoryList(String userName) {
-		List<Category> list = categorydao.getCategoryList(userName);
+	public List<Category> findCategoryList(String blogId) {
+		List<Category> list = categorydao.getCategoryList(blogId);
 		return list;
 	}
 

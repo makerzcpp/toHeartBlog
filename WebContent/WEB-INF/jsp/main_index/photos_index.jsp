@@ -37,12 +37,15 @@
 
 </head>
 <body>
+<input type="hidden" id="blogId" value="${blogId}"/>
 <%@ include file="head.jsp"%>
  <div class="b-breadcrumbs f-breadcrumbs">
         <div class="container">
             <ul>
                 <li><a href="#"><i class="fa fa-home"></i>相册</a></li>
+                <c:if test="${buttonshow==true}">
                 <li><a id="creat"><i class="fa fa-home"></i>新建相册</a></li>
+                </c:if>
                <!--  <li><i class="fa fa-angle-right"></i><a href="#">Blog</a></li>
                 <li><i class="fa fa-angle-right"></i><span>Listing Left Sidebar</span></li> -->
             </ul>
@@ -119,12 +122,12 @@
 			var diag = new zDialog();
         	diag.Width = 760;
         	diag.Height = 610;       	
-        	diag.URL = BASE+'/photo/creat';
+        	diag.URL = BASE+'/photo/creat/'+$("#blogId").val();
         	diag.OKEvent = function(){
         		// 1.提交保存    		
 			var data = diag.innerFrame.contentWindow.getParamsFn();
 				$.ajax({
-					url : BASE+"/photo/creat",
+					url : BASE+"/photo/creat/"+$("#blogId").val(),
 					data : data,
 					type : 'POST',
 					dataType : 'json',

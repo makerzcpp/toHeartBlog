@@ -15,6 +15,7 @@
 		</script>
 </head>
 <body>
+
 <form action=""  id="creat_photos" >
                 <label class="input-tips" >相册名字：</label>                
                     <input type="text" id="name"  name="na"/>
@@ -28,7 +29,7 @@
                    <option value="0">图片</option>
                    <option value="1">视频</option>
                   </select>                          
-                
+               <input type="hidden" name="blogId" value="${blogId}"/>
               </form>
              <%@ include file="../script.jsp"%>
              <script>

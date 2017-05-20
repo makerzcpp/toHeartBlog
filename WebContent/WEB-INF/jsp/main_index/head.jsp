@@ -14,7 +14,7 @@
     </li>
     
     <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-        <a href="${BASE}/index/photos"><i class="fa fa-picture-o b-menu-1level-ico"></i>图册 <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+        <a href="${BASE}/index/photos/${blogId}"><i class="fa fa-picture-o b-menu-1level-ico"></i>图册 <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
         
     </li>
     <li class="b-top-nav__1level f-top-nav__1level f-primary-b">

@@ -7,13 +7,13 @@ public class PhotosBox implements Serializable{
 	private static final long serialVersionUID = -8724262949528415949L;
 	
 	private String boxId;
-	private int imgNum;
-	private String boxName;
+	private int imgNum;//图片数量
+	private String boxName;//相册名字
 	private String boxText;
 	private String CreatTime;
-	private String userName;
-	private int boxType;
-	private String imgHead;
+	private String blogId;
+	private int boxType;//类型  1图片  2视频
+	private String imgHead;//封面图片
 	
 	public String getBoxId() {
 		return boxId;
@@ -45,11 +45,12 @@ public class PhotosBox implements Serializable{
 	public void setCreatTime(String creatTime) {
 		CreatTime = creatTime;
 	}
-	public String getUserName() {
-		return userName;
+	
+	public String getBlogId() {
+		return blogId;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setBlogId(String blogId) {
+		this.blogId = blogId;
 	}
 	public int getBoxType() {
 		return boxType;
@@ -64,7 +65,8 @@ public class PhotosBox implements Serializable{
 		this.imgHead = imgHead;
 	}
 	
-	public PhotosBox(String boxId, int imgNum, String boxName, String boxText, String creatTime, String userName,
+
+	public PhotosBox(String boxId, int imgNum, String boxName, String boxText, String creatTime, String blogId,
 			int boxType, String imgHead) {
 		super();
 		this.boxId = boxId;
@@ -72,7 +74,7 @@ public class PhotosBox implements Serializable{
 		this.boxName = boxName;
 		this.boxText = boxText;
 		CreatTime = creatTime;
-		this.userName = userName;
+		this.blogId = blogId;
 		this.boxType = boxType;
 		this.imgHead = imgHead;
 	}

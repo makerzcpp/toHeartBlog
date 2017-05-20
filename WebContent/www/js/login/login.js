@@ -120,7 +120,7 @@ $(function(){
 				success : function(data) {
 					if(data.success){						
 						showInfo("登录成功", function() { }, 3);
-						window.location.href=BASE+"/index/home"; 
+						window.location.href=BASE+"/index/home/"+$("#blogId").val(); 
 					}else{
 						showInfo("账号或密码错误，请重新输出", function() {}, 3);
 						$("#lopassword").val("");

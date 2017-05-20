@@ -54,7 +54,7 @@ color : red;
 </script>
 </head>
 <body>
-		
+	<input id="blogId" type="hidden" value="${blogId}"/>	
 	<div class="gtco-loader"></div>
 	
 	<div id="page">

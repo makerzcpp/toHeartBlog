@@ -1120,9 +1120,6 @@ body .b-btn-type-square [class*='btn-'], body .b-btn-type-square [class*='button
 .b-bg-street {
   background: url("../img/slider/section-bg-street.jpg") no-repeat center center; }
 
-.b-bg-header-inner-page {
-  background: url("../img/inner-head-bg.jpg") no-repeat center;
-  background-size: cover; }
 
 .b-bg-header-inner-page_2 {
   background: url("../img/inner-head-bg_2.jpg") no-repeat center;
@@ -12723,4 +12720,4 @@ textarea.b-product-card-textarea {
   display: block;
   visibility: visible; }
 
-/*# sourceMappingURL=main-default.css.map */
+

@@ -12,7 +12,7 @@ public class PhotosBox implements Serializable{
 	private String boxText;
 	private String CreatTime;
 	private String blogId;
-	private int boxType;//类型  1图片  2视频
+	private int boxType;//类型  0图片  1视频
 	private String imgHead;//封面图片
 	
 	public String getBoxId() {

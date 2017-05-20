@@ -78,8 +78,10 @@ public class BlogIndexAction {
 		return "/main_index/write_index";
 	}
 	
-	@RequestMapping(value="/login")
-	public String toLoginIndex() {
-		return "/main_index/login";
+	@RequestMapping(value="/login/{blogId}", method={RequestMethod.GET})
+	public ModelAndView toLoginIndex(@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/main_index/login");
+		modelandview.addObject("blogId", blogId);
+		return modelandview;
 	}
 }

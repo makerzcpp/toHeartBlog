@@ -27,10 +27,10 @@ public class BlogPhotoAction {
 		ModelAndView modelAndView = new ModelAndView();
 		if(userName!=null&&userName!="游客"){
 		String loginblogId = userservice.findUserByName(userName).getBlogId();
-		if(loginblogId==blogId){
+		if(loginblogId.equals(blogId)){
 		modelAndView.setViewName("/photos/photos_creat");		
 		}else{
-			modelAndView.setViewName("/error/error");		
+		modelAndView.setViewName("/error/error");		
 		}
 		}else{
 		String url = "redirect:/index/login";
@@ -41,8 +41,8 @@ public class BlogPhotoAction {
 	}
 	
 	@ResponseBody
-	@RequestMapping(value="/creat", method={RequestMethod.POST})
-	public Result creatPhotoparam(@RequestParam("na") String na,@RequestParam("te") String te,@RequestParam("fen") int fen,@RequestParam("blogId") String blogId){	
+	@RequestMapping(value="/creat/{blogId}", method={RequestMethod.POST})
+	public Result creatPhotoparam(@PathVariable(value="blogId") String blogId,@RequestParam("na") String na,@RequestParam("te") String te,@RequestParam("fen") int fen){	
 		boolean result =true;
 		try{
 		photoservice.creatPhotoBox(na,te,fen,blogId);

@@ -14,19 +14,7 @@
 		<link rel="shortcut icon" href="${BASE}/www/images/photosindex/favicon.ico" />
 		<link rel="stylesheet" href="${BASE}/www/css/photosindex/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Economica:700' rel='stylesheet' type='text/css'>		
-		<script src="${BASE}/www/js/photosindex/jquery-migrate-1.1.1.js"></script>
-		<script src="${BASE}/www/js/photosindex/script.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.ui.totop.js"></script>
-		<script src="${BASE}/www/js/photosindex/superfish.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.equalheights.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.mobilemenu.js"></script>
-		<script src="${BASE}/www/js/photosindex/jquery.easing.1.3.js"></script>
-		<script>
-		BASE = '${BASE}';
-		$(document).ready(function(){
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		})
-		</script>
+
 		
 		
 		<!-- 头部和底部的css -->
@@ -53,69 +41,67 @@
     </div>
 <%--  <%@ include file="head.jsp"%>  --%>
 <div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - December 30, 2013!</div>
-				<div class="container_12">
+
+				<div class="container_12">	
+				<c:forEach var="box" items="${list}" varStatus="ls">	
 					<div class="grid_6">
+					<c:if test="${ls.index%2==0}">				
+						<c:if test="${box.boxType==0}">
 						<div class="p1_box left cl1">
 							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img1.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Boudoir Beauty <span>7 <br>images</span></a>
+							<img src="${BASE}${box.imgHead}" alt="">
+							<a href="${BASE}/index/photoslist" class="bot">${box.boxName} <span>${box.imgNum} <br>images</span></a>
 						</div>
-						<div class="p1_box left cl1">
+						</c:if>
+						<c:if test="${box.boxType==1}">
+						<div class="p1_box left cl3">
 							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img1.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Boudoir Beauty <span>7 <br>images</span></a>
+							<img src="${BASE}${box.imgHead}" alt="">
+							<a href="index-3.html" class="bot">${box.boxName}<span><strong class=" fa-angle-left fa"></strong></span></a>
 						</div>
-						
-						<!-- <div class="p1_box left cl2">
-							<div class="type"></div>
-							<div class="gray_block">
-								Go ahead and read more about this <span class="col1"><a href="http://sc.chinaz.com/?free-website-templates/" rel="nofollow">free theme</a></span> created by TemplateMonster.com.<br>
-								Wide variety of premium <span class="col1"><a href="http://sc.chinaz.com/?category/art-photography-website-templates/" rel="nofollow">Art &amp; Photography templates</a></span> is to be found in the same name category at our site.
-							</div>
-							<a href="#" class="bot">Master Class<span>5 <br>comments</span></a>
-						</div> -->
-						<div class="p1_box left cl1 pos1">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img4.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Summer Lifestyle<span>10<br>images</span></a>
-						</div>
-				
-						
-						<%-- <div class="p1_box left cl3 pos1">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img6.jpg" alt="">
-							<a href="index-3.html" class="bot">Coexisting with Nature<span><strong class="fa-angle-right fa"></strong></span></a>
-						</div> --%>
+						</c:if>
+					</c:if>	
 					</div>
 					<div class="grid_6">
-						<%-- <div class="p1_box right cl1">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img2.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Pics of Nature <span>8 <br>images</span></a>
-						</div> --%>
+					<c:if test="${ls.index%2!=0}">	
+					<c:if test="${box.boxType==0}">
 						<div class="p1_box right cl1 pos1">
 							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img4.jpg" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">Summer Lifestyle<span>10<br>images</span></a>
+							<img src="${BASE}${box.imgHead}" alt="">
+							<a href="${BASE}/index/photoslist" class="bot">${box.boxName}<span>${box.imgNum}<br>images</span></a>
 						</div>
+						</c:if>
+						<c:if test="${box.boxType==1}">
 						<div class="p1_box right cl3">
 							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img3.jpg" alt="">
-							<a href="index-3.html" class="bot">Night Sky Video<span><strong class=" fa-angle-right fa"></strong></span></a>
+							<img src="${BASE}${box.imgHead}" alt="">
+							<a href="index-3.html" class="bot">${box.boxName}<span><strong class=" fa-angle-right fa"></strong></span></a>
 						</div>
-						<div class="p1_box right cl3">
-							<div class="type"></div>
-							<img src="${BASE}/www/images/photosindex/page1_img3.jpg" alt="">
-							<a href="index-3.html" class="bot">Night Sky Video<span><strong class=" fa-angle-right fa"></strong></span></a>
-						</div>
+						</c:if>
+						</c:if>
 					</div>
+					</c:forEach>
 					<div class="clear"></div>
 					<div class="grid_12">
 						<a href="#" class="round"> Older Posts</a>
 					</div>
-				</div>
+						
+				</div>				
 			</div>
  <%@ include file="foot.jsp"%>
+ 		<script src="${BASE}/www/js/photosindex/jquery-migrate-1.1.1.js"></script>
+		<script src="${BASE}/www/js/photosindex/script.js"></script>
+		<script src="${BASE}/www/js/photosindex/jquery.ui.totop.js"></script>
+		<script src="${BASE}/www/js/photosindex/superfish.js"></script>
+		<script src="${BASE}/www/js/photosindex/jquery.equalheights.js"></script>
+		<script src="${BASE}/www/js/photosindex/jquery.mobilemenu.js"></script>
+		<script src="${BASE}/www/js/photosindex/jquery.easing.1.3.js"></script>
+		<script>
+		BASE = '${BASE}';
+		$(document).ready(function(){
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		})
+		</script>
  <%@ include file="../script.jsp"%>
 <script>
 		var creat = function(){

@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="BASE" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
 <c:set var="BASE" value="${pageContext.request.contextPath}"/>
@@ -19,8 +20,8 @@
 	<div class="tipInfo">
 		<div class="in">
 			<div class="textThis">
-				<h2>验证码错误</h2>
-				<p><span>页面自动<a id="href" href="">跳转</a></span><span>等待<b id="wait">6</b>秒</span></p>
+				<h2>页面出错啦</h2>
+				<p><span>页面自动<a id="href" href="${BASE}/index/home/${blogId}">跳转</a></span><span>等待<b id="wait">6</b>秒</span></p>
 				<script type="text/javascript">                            (function() {
 						var wait = document.getElementById('wait'), href = document.getElementById('href').href;
 						var interval = setInterval(function() {

@@ -50,14 +50,14 @@
 						<div class="p1_box left cl1">
 							<div class="type"></div>
 							<img src="${BASE}${box.imgHead}" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">${box.boxName} <span>${box.imgNum} <br>images</span></a>
+							<a href="${BASE}/index/photoslist" class="bot">${box.boxName}${ls.index} <span>${box.imgNum} <br>images</span></a>
 						</div>
 						</c:if>
 						<c:if test="${box.boxType==1}">
-						<div class="p1_box left cl3">
+						<div class="p1_box left cl3 pos1">
 							<div class="type"></div>
 							<img src="${BASE}${box.imgHead}" alt="">
-							<a href="index-3.html" class="bot">${box.boxName}<span><strong class=" fa-angle-left fa"></strong></span></a>
+							<a href="index-3.html" class="bot">${box.boxName}${ls.index}<span><strong class=" fa-angle-left fa"></strong></span></a>
 						</div>
 						</c:if>
 					</c:if>	
@@ -68,14 +68,14 @@
 						<div class="p1_box right cl1 pos1">
 							<div class="type"></div>
 							<img src="${BASE}${box.imgHead}" alt="">
-							<a href="${BASE}/index/photoslist" class="bot">${box.boxName}<span>${box.imgNum}<br>images</span></a>
+							<a href="${BASE}/index/photoslist" class="bot">${box.boxName}${ls.index}<span>${box.imgNum}<br>images</span></a>
 						</div>
 						</c:if>
 						<c:if test="${box.boxType==1}">
 						<div class="p1_box right cl3">
 							<div class="type"></div>
 							<img src="${BASE}${box.imgHead}" alt="">
-							<a href="index-3.html" class="bot">${box.boxName}<span><strong class=" fa-angle-right fa"></strong></span></a>
+							<a href="index-3.html" class="bot">${box.boxName}${ls.index}<span><strong class=" fa-angle-right fa"></strong></span></a>
 						</div>
 						</c:if>
 						</c:if>

@@ -134,71 +134,21 @@
 
         <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row">
             <div class="b-blog-short-post b-blog-short-post--img-hover-bordered b-blog-short-post--w-img f-blog-short-post--w-img row">
+            <c:forEach var="box" items="${pboxlist}">
     <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
         <div class="b-blog-short-post__item_img">
-            <a href="#"><img data-retina src="${BASE}/www/images/img/gallery/sm/gallery_1.jpg" alt=""/></a>
+            <a href="#"><img data-retina src="${BASE}${box.imgHead}" alt=""/></a>
         </div>
         <div class="b-remaining">
             <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
-                <a href="#">Phasellus id mattis dolorunc et erat hendrerit, tincidunt</a>
+                <a href="#">${box.boxName}:${box.boxText}</a>
             </div>
             <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it">
-                10, January, 2014
+                ${box.creatTime}
             </div>
         </div>
     </div>
-    <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
-        <div class="b-blog-short-post__item_img">
-            <a href="#"><img data-retina src="${BASE}/www/images/img/gallery/sm/gallery_2.jpg" alt=""/></a>
-        </div>
-        <div class="b-remaining">
-            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
-                <a href="#">Vel eleifend id ullamcorper eu velit</a>
-            </div>
-            <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it">
-                14, January, 2014
-            </div>
-        </div>
-    </div>
-    <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
-        <div class="b-blog-short-post__item_img">
-            <a href="#"><img data-retina src="${BASE}/www/images/img/gallery/sm/gallery_2.jpg" alt=""/></a>
-        </div>
-        <div class="b-remaining">
-            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
-                <a href="#">Lorem ipsum dolor sit amet purus vitae magna rhoncus</a>
-            </div>
-            <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it">
-                10, January, 2014
-            </div>
-        </div>
-    </div>
-    <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
-        <div class="b-blog-short-post__item_img">
-            <a href="#"><img data-retina src="${BASE}/www/images/img/gallery/sm/gallery_3.jpg" alt=""/></a>
-        </div>
-        <div class="b-remaining">
-            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
-                <a href="#">Fusce vitae dui sit amet lacus rutrum convallis</a>
-            </div>
-            <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it">
-                10, January, 2014
-            </div>
-        </div>
-    </div>
-    <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b @@hidden">
-        <div class="b-blog-short-post__item_img">
-            <a href="#"><img data-retina src="${BASE}/www/images/img/gallery/sm/gallery_1.jpg" alt=""/></a>
-        </div>
-        <div class="b-remaining">
-            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
-                <a href="#">Fusce vitae dui sit amet lacus rutrum convallis</a>
-            </div>
-            <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it">
-                10, January, 2014
-            </div>
-        </div>
-    </div>
+    </c:forEach>
 </div>
         </div>
     </div>

@@ -11,4 +11,6 @@ public interface Constant {
 	String shiroPassSource = "blog";
 	//相册每页展示数量
 	int photoBoxpageSzie = 8;
+	//首页专辑展示数量
+	int IndexBoxpageSzie = 5;
 }

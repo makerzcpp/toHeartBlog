@@ -1,5 +1,6 @@
 package blog.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import blog.Constant;
@@ -32,6 +32,15 @@ public class BlogIndexAction {
         ModelAndView modelAndView = new ModelAndView("/main_index/index");
 		String logusername = shiroUtils.getUserName();		
 		List<Category> cglist = categoryservice.findCategoryList(blogId);
+		List<PhotosBox> plist = photoservice.getBoxList(blogId,0,Constant.IndexBoxpageSzie);
+		List<PhotosBox> pboxlist = new ArrayList<PhotosBox>();
+		//对url进行重构以便直接利用转码之后的图片
+		for(PhotosBox box:plist){
+			box.setImgHead(box.getImgHead().replace(".jpg", "_smart.jpg").replace(".JPG", "_smart.JPG")
+					.replace(".png", "_smart.png").replace(".PNG", "_smart.PNG").replace(".gif", "_smart.gif").replace(".GIF", "_smart.GIF"));
+			pboxlist.add(box);
+		}
+		modelAndView.addObject("pboxlist", pboxlist);
 		modelAndView.addObject("logusername", logusername);
 		modelAndView.addObject("cglist", cglist);
 		modelAndView.addObject("blogId", blogId);

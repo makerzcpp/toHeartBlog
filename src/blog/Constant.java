@@ -13,4 +13,6 @@ public interface Constant {
 	int photoBoxpageSzie = 8;
 	//首页专辑展示数量
 	int IndexBoxpageSzie = 5;
+	//未登录状态的用户名
+	String nologgingName = "游客";
 }

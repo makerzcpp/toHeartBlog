@@ -30,7 +30,7 @@ public class shiroUtils {
 	Subject currentUser = SecurityUtils.getSubject();
 	shiroUser = (String) currentUser.getPrincipal();
 	if (shiroUser == null) {
-		 shiroUser = "游客";
+		 shiroUser = Constant.nologgingName;
 	}	
 	return shiroUser;
 	}

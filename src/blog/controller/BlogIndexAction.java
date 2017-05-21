@@ -52,7 +52,7 @@ public class BlogIndexAction {
 		ModelAndView modelAndView = new ModelAndView("/main_index/photos_index");
 		//页面博客主按钮显示
 		String userblogId;
-		if(shiroUtils.getUserName()!=null&&shiroUtils.getUserName()!="游客"){
+		if(shiroUtils.getUserName()!=null&&!shiroUtils.getUserName().equals(Constant.nologgingName)){
 		 userblogId = userservice.findUserByName(shiroUtils.getUserName()).getBlogId();
 		 if(blogId.equals(userblogId)){
 				modelAndView.addObject("buttonshow", true);

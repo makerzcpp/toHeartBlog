@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import blog.Constant;
 import blog.service.photoService;
 import blog.service.userService;
 import blog.utils.Result;
@@ -25,7 +26,7 @@ public class BlogPhotoAction {
 	public ModelAndView creatPhoto(@PathVariable(value="blogId") String blogId){		
 		String userName = shiroUtils.getUserName();
 		ModelAndView modelAndView = new ModelAndView();
-		if(userName!=null&&userName!="游客"){
+		if(userName!=null&&!userName.equals(Constant.nologgingName)){
 		String loginblogId = userservice.findUserByName(userName).getBlogId();
 		if(loginblogId.equals(blogId)){
 		modelAndView.setViewName("/photos/photos_creat");		
@@ -50,5 +51,10 @@ public class BlogPhotoAction {
 			result = false;
 		}
 		return new Result(result);	
+	}
+	
+	@RequestMapping(value="/photoslist")
+	public String toPhotosList() {
+		return "/photos/photos_list";
 	}
 }

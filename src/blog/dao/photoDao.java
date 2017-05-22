@@ -13,4 +13,6 @@ public interface photoDao {
  public List<PhotosBox> getBoxList(Map<String,Object> map);
  
  public List<Photos>  getPhoto(String boxId);
+ 
+ public void addphoto(Photos photos);
 }

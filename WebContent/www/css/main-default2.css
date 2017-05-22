@@ -11948,7 +11948,7 @@ h3.f-tabs-vertical__title {
       box-shadow: 1px 2px 5px rgba(108, 108, 108, 0.7); }
       @media screen and (max-width: 979px) {
         .b-list-project--items li .b-list-progect--example {
-          width: 300px; }
+          width: 300px;}
           .b-list-project--items li .b-list-progect--example img {
             width: 100%; } }
     @media screen and (max-width: 479px) {

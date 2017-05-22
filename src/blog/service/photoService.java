@@ -12,4 +12,6 @@ public interface photoService {
 	public List<PhotosBox> getBoxList(String blogId,int pageNum,int pageSize);
 	
 	public List<Photos> getPhotos(String boxId);
+	
+	public void addphoto(String photoUrl,String boxId);
 }

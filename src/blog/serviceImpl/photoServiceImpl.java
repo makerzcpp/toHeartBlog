@@ -47,5 +47,15 @@ public class photoServiceImpl implements photoService {
 	public List<Photos> getPhotos(String boxId) {
 		List<Photos> list = photodao.getPhoto(boxId);
 		return list;
+	}
+
+	@Override
+	public void addphoto(String photoUrl, String boxId) {
+		String photoId = usuallyUtils.uuid();
+		String photoText = "";
+		int okNum = 0;
+		Photos photo = new Photos(photoId,boxId,photoText,photoUrl,okNum);
+		photodao.addphoto(photo);
+		
 	}  
 }

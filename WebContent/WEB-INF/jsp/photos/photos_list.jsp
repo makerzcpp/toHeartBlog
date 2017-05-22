@@ -23,7 +23,7 @@ pre{font-family:'微软雅黑'}
 .layer_text{background-color:#fff; padding:20px;}
 .layer_text p{margin-bottom: 10px; text-indent: 2em; line-height: 23px;}
 .button{display:inline-block; *display:inline; *zoom:1; line-height:30px; padding:0 20px; background-color:#56B4DC; color:#fff; font-size:14px; border-radius:3px; cursor:pointer; font-weight:normal;}
-.imgs img{width:300px;padding:0 20px 20px;}
+.imgs img{width:300px;height: 200px;padding:0 20px 20px;}
 </style>
 
 		<!-- 头部和底部的css -->
@@ -49,16 +49,9 @@ pre{font-family:'微软雅黑'}
 <div class="box">
     <h2 style="padding-bottom:20px;">相册列表</h2>
     <div id="imgs" class="imgs">
-        <img src="${BASE}/www/images/photos/1.jpg" layer-pname="HTML5资源教程 - 1">
-        <img src="${BASE}/www/images/photos/2.jpg" layer-pname="HTML5资源教程 - 2">
-        <img src="${BASE}/www/images/photos/3.jpg" layer-pname="HTML5资源教程 - 3">
-        <img src="${BASE}/www/images/photos/4.jpg" layer-pname="HTML5资源教程 - 4">
-        <img src="${BASE}/www/images/photos/2.jpg" layer-pname="HTML5资源教程 - 2">
-        <img src="${BASE}/www/images/photos/3.jpg" layer-pname="HTML5资源教程 - 3">
-        <img src="${BASE}/www/images/photos/4.jpg" layer-pname="HTML5资源教程 - 4">
-        <img src="${BASE}/www/images/photos/2.jpg" layer-pname="HTML5资源教程 - 2">
-        <img src="${BASE}/www/images/photos/3.jpg" layer-pname="HTML5资源教程 - 3">
-        <img src="${BASE}/www/images/photos/4.jpg" layer-pname="HTML5资源教程 - 4">
+    <c:forEach var="ph" items="${photoList}">
+        <img src="${BASE}/${ph.photoUrl}" >
+        </c:forEach>
     </div>
 	<div style="text-align:center;clear:both;">
 </div>
@@ -87,11 +80,12 @@ pre{font-family:'微软雅黑'}
         	diag.Height = 610;       	
         	diag.URL = BASE+'/photo/add/'+$("#boxId").val();
         	diag.OKEvent = function(){ 
-        		diag.close();
+    			var upload = diag.innerFrame.contentWindow.upPhoto();
+        		upload;
         	}; 
         	diag.show();
-        	diag.okButton.value=" 完成 ";
-        	
+        	diag.okButton.value=" 上传   ";
+        	diag.cancelButton.value=" 完成 ";       	
 		};
 		$("#add").click(add);
 </script>

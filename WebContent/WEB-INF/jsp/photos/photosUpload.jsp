@@ -66,6 +66,17 @@ var BASE = "${BASE}";
 			});
 		
 		</script> 
+		  <script>
+            	function upPhoto(){
+    					// 判断当前是否有文件需要上传
+    					if(ZYFILE.funReturnNeedFiles().length > 0){
+    						$("#fileSubmit").click();
+    					}else{
+    						alert("请先选中文件再点击上传");
+    					}
+            	}
+             </script>
+	
 	</body>
       </body>     
 </html>

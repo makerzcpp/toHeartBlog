@@ -97,7 +97,7 @@ public class BlogPhotoAction{
 	        PrintWriter out = response.getWriter();  
 	          
 	        //文件保存目录路径  
-	        String savePath = "E:/";  
+	        String savePath = servletContext.getRealPath("")+Constant.configPath;  
 	        //String savePath = this.getServletContext().getRealPath("/") + configPath;  
 	          
 	        // 临时文件目录   
@@ -112,7 +112,7 @@ public class BlogPhotoAction{
 	            dirFile.mkdirs();  
 	        }  
 	          
-	        tempPath += "/" + ymd + "/";  
+	        tempPath += "/" + ymd + "/"; 
 	        //创建临时文件夹  
 	        File dirTempFile = new File(tempPath);  
 	        if (!dirTempFile.exists()) {  
@@ -160,7 +160,8 @@ public class BlogPhotoAction{
 	                }else {  
 	                    String filedName = item.getFieldName();  
 	                    System.out.println("===============");   
-	                    System.out.println(new String(item.getString().getBytes("iso-8859-1"),"utf-8"));  
+	                    System.out.println(new String(item.getString().getBytes("iso-8859-1"),
+	                    		"utf-8"));  
 	                    System.out.println("FieldName："+filedName);  
 	                    // 获得裁剪部分的坐标和宽高
 	                    System.out.println("String："+item.getString());  
@@ -172,6 +173,9 @@ public class BlogPhotoAction{
 	            e.printStackTrace();  
 	        }  
 	        out.flush();  
-	        out.close(); 		
+	        out.close(); 
+	        //插入数据库
+	        String photoUrl = Constant.configPath+"/" + ymd + "/"+newFileName;
+	        photoservice.addphoto(photoUrl,boxId);
 	}
 }

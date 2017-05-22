@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import blog.Constant;
+import blog.bean.Photos;
 import blog.bean.PhotosBox;
 import blog.dao.photoDao;
 import blog.service.photoService;
@@ -39,6 +40,12 @@ public class photoServiceImpl implements photoService {
 		map.put("pageNum", pageNum);
 		map.put("pageSize", pageSize);
 		List<PhotosBox> list = photodao.getBoxList(map);
+		return list;
+	}
+
+	@Override
+	public List<Photos> getPhotos(String boxId) {
+		List<Photos> list = photodao.getPhoto(boxId);
 		return list;
 	}  
 }

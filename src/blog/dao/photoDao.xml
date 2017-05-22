@@ -17,6 +17,10 @@
 	select boxId,imgNum,boxName,boxText,creatTime,blogId,boxType,imgHead from photos_box where blogId =#{blogId} limit ${pageNum},${pageSize}
 	</select> 
 	
+	<select id="getPhoto" parameterType="java.lang.String" resultType="Photos">
+	select photoId,boxId,photoText,photoUrl,photoComment,okNum from photos where boxId =#{boxId} 
+	</select> 
+	
 	<insert id="creatBox" parameterType="PhotosBox">
 		INSERT INTO photos_box(boxId,imgNum,boxName,boxText,creatTime,blogId,boxType,imgHead)
 		values ( #{boxId},#{imgNum},#{boxName},#{boxText},#{creatTime},#{blogId},#{boxType},#{imgHead})

@@ -7,6 +7,7 @@
     pageEncoding="UTF-8"%> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>相册列表</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <script type="text/javascript">
     var BASE="${BASE}";
 </script>
@@ -16,7 +17,7 @@
 html{background-color:#E3E3E3; font-size:14px; color:#000; font-family:'微软雅黑'}
 a,a:hover{ text-decoration:none;}
 pre{font-family:'微软雅黑'}
-.box{padding:20px; background-color:#fff; margin:20px 100px; border-radius:5px;}
+.box{padding:20px; background-color:#fff; margin:20px 230px; border-radius:5px;}
 .box a{padding-right:15px;}
 #about_hide{display:none}
 .layer_text{background-color:#fff; padding:20px;}
@@ -24,11 +25,29 @@ pre{font-family:'微软雅黑'}
 .button{display:inline-block; *display:inline; *zoom:1; line-height:30px; padding:0 20px; background-color:#56B4DC; color:#fff; font-size:14px; border-radius:3px; cursor:pointer; font-weight:normal;}
 .imgs img{width:300px;padding:0 20px 20px;}
 </style>
+
+		<!-- 头部和底部的css -->
+<link type="text/css" rel='stylesheet' href="${BASE}/www/css/bootstrap.min.css">
+<link type="text/css" data-themecolor="default" rel='stylesheet' href="${BASE}/www/css/main-default.css"> 
+<link type="text/css" rel='stylesheet' href="${BASE}/www/css/pignose.parallaxslider.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 </head>
 <body>
-
+<input type="hidden" id="boxId" value="${boxId}"/>
+<%@ include file="../main_index/head.jsp"%>
+<div class="b-breadcrumbs f-breadcrumbs">
+        <div class="container">
+            <ul>
+                <li><a href="#"><i class="fa fa-home"></i>相册列表</a></li>
+                <li><a id="add"><i class="fa fa-home"></i>新增照片</a></li>
+               <!--  <li><i class="fa fa-angle-right"></i><a href="#">Blog</a></li>
+                <li><i class="fa fa-angle-right"></i><span>Listing Left Sidebar</span></li> -->
+            </ul>
+        </div>
+    </div>
 <div class="box">
-    <h2 style="padding-bottom:20px;">layer1.8相册模块，点击下述图片试试</h2>
+    <h2 style="padding-bottom:20px;">相册列表</h2>
     <div id="imgs" class="imgs">
         <img src="${BASE}/www/images/photos/1.jpg" layer-pname="HTML5资源教程 - 1">
         <img src="${BASE}/www/images/photos/2.jpg" layer-pname="HTML5资源教程 - 2">
@@ -44,6 +63,8 @@ pre{font-family:'微软雅黑'}
 	<div style="text-align:center;clear:both;">
 </div>
 </div>
+ <%@ include file="../main_index/foot.jsp"%>
+  <%@ include file="../script.jsp"%>
 <script>
 	;!function(){
 		layer.use('layer.ext.js', function(){
@@ -58,6 +79,21 @@ pre{font-family:'微软雅黑'}
 		    };
 		});
 		}();
+		
+		//添加照片
+		var add = function(){
+			var diag = new zDialog();
+        	diag.Width = 760;
+        	diag.Height = 610;       	
+        	diag.URL = BASE+'/photo/add/'+$("#boxId").val();
+        	diag.OKEvent = function(){ 
+        		diag.close();
+        	}; 
+        	diag.show();
+        	diag.okButton.value=" 完成 ";
+        	
+		};
+		$("#add").click(add);
 </script>
 
       </body>     

@@ -12,6 +12,12 @@
 	select id,t_name as name,t_password as password,sex,description,pic_url as picUrl,school_name as schoolName,regist_date as registDate,remark 
 	from t_teacher where id=#{id}
 	</select> -->
+	<select id="delPhotos" >
+	delete from photos where photoId in
+	<foreach collection="array" item="item" index="index" open="(" separator="," close=")">
+	#{item}
+	</foreach>
+	</select>
 	
 	<select id="getBoxList" parameterType="java.util.Map" resultType="PhotosBox">
 	select boxId,imgNum,boxName,boxText,creatTime,blogId,boxType,imgHead from photos_box where blogId =#{blogId} limit ${pageNum},${pageSize}

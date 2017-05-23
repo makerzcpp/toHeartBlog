@@ -15,4 +15,6 @@ public interface photoDao {
  public List<Photos>  getPhoto(String boxId);
  
  public void addphoto(Photos photos);
+ 
+ public void delPhotos(String[] array);
 }

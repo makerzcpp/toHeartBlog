@@ -32,6 +32,7 @@ pre{font-family:'微软雅黑'}
 <link type="text/css" rel='stylesheet' href="${BASE}/www/css/pignose.parallaxslider.min.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/showDialog/showDialog.css" />
 </head>
 <body>
 <input type="hidden" id="boxId" value="${boxId}"/>
@@ -51,6 +52,7 @@ pre{font-family:'微软雅黑'}
     <div id="imgs" class="imgs">
     <c:forEach var="ph" items="${photoList}">
         <img src="${BASE}/${ph.photoUrl}" >
+        <a id="dele" data-id="${ph.photoId}">删除</a>
         </c:forEach>
     </div>
 	<div style="text-align:center;clear:both;">
@@ -88,6 +90,27 @@ pre{font-family:'微软雅黑'}
         	diag.cancelButton.value=" 完成 ";       	
 		};
 		$("#add").click(add);
+		
+</script>
+<script type="text/javascript">
+//删除照片
+var del = function(){
+	var photoIds = $(this).attr("data-id");
+	$.ajax({
+		url : BASE+"/photo/delete",
+		data : {'photoIds':photoIds},
+		type : 'POST',
+		dataType : 'json',
+		success : function(data) {
+			if(data.success){
+				showInfo("删除成功", function() { }, 3);
+			}else{
+				showInfo("服务器正忙，请稍后再试", function() { }, 3);
+			}
+		}
+		})
+}
+$("#dele").click(del);
 </script>
 
       </body>     

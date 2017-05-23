@@ -12,6 +12,7 @@ import blog.bean.Photos;
 import blog.bean.PhotosBox;
 import blog.dao.photoDao;
 import blog.service.photoService;
+import blog.utils.StringUtils;
 import blog.utils.shiroUtils;
 import blog.utils.usuallyUtils;
 
@@ -57,5 +58,18 @@ public class photoServiceImpl implements photoService {
 		Photos photo = new Photos(photoId,boxId,photoText,photoUrl,okNum);
 		photodao.addphoto(photo);
 		
+	}
+
+	@Override
+	public boolean delphotos(String photoIds) {
+		boolean result;
+		if(StringUtils.isNotEmpty(photoIds)){
+			String[] strArray = StringUtils.castStringArray(photoIds, StringUtils.MINSTOP);
+			photodao.delPhotos(strArray);
+			result = true;
+		}else{
+		result = false;
+		}
+		return result;		
 	}  
 }

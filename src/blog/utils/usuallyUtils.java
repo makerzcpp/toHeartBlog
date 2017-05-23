@@ -14,6 +14,8 @@ import javax.mail.internet.MimeMessage.RecipientType;
 
 public class usuallyUtils {
 
+	 
+	 
 	public static void sendEmail() throws Exception{
 		Properties prop = new Properties();
 		prop.setProperty("mail.transport.protocol", "smtp"); //协议
@@ -49,7 +51,10 @@ public class usuallyUtils {
 			Date date = new Date();
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
 			String Time = sdf.format(date);
-			return Time;
-			
+			return Time;			
 		}
+		
+
+		 
+
 }

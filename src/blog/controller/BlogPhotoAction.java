@@ -74,12 +74,13 @@ public class BlogPhotoAction{
 		return new Result(result);	
 	}
 	
-	@RequestMapping(value="/photoslist/{boxId}", method={RequestMethod.GET})
-	public ModelAndView toPhotosList(@PathVariable(value="boxId") String boxId) {
+	@RequestMapping(value="/photoslist/{blogId}/{boxId}", method={RequestMethod.GET})
+	public ModelAndView toPhotosList(@PathVariable(value="blogId") String blogId,@PathVariable(value="boxId") String boxId) {
 		ModelAndView modelAndView = new ModelAndView("/photos/photos_list");
 		List<Photos> list = photoservice.getPhotos(boxId);
 		modelAndView.addObject("photoList", list);
 		modelAndView.addObject("boxId", boxId);
+		modelAndView.addObject("blogId", blogId);
 		return modelAndView;
 	}
 	
@@ -177,5 +178,12 @@ public class BlogPhotoAction{
 	        //插入数据库
 	        String photoUrl = Constant.configPath+"/" + ymd + "/"+newFileName;
 	        photoservice.addphoto(photoUrl,boxId);
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/delete", method={RequestMethod.POST})
+	public Result delPhotos(@RequestParam(value="photoIds") String photoIds) {
+		boolean success = photoservice.delphotos(photoIds);
+		return new Result(success);
 	}
 }

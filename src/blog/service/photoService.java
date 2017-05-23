@@ -14,4 +14,7 @@ public interface photoService {
 	public List<Photos> getPhotos(String boxId);
 	
 	public void addphoto(String photoUrl,String boxId);
+
+	public boolean delphotos(String photoIds);
+	
 }

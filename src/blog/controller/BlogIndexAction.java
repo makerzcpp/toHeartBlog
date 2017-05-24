@@ -67,24 +67,29 @@ public class BlogIndexAction {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value="/photoslist")
-	public String toPhotosList() {
-		return "/main_index/photos_lists";
+	
+	@RequestMapping(value="/resource/{blogId}", method={RequestMethod.GET})
+	public ModelAndView toresourceIndex(@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/main_index/resource_index");
+		modelandview.addObject("blogId", blogId);
+		return modelandview;
 	}
 	
-	@RequestMapping(value="/resource")
-	public String toresourceIndex() {
-		return "/main_index/resource_index";
+	@RequestMapping(value="/text/{blogId}", method={RequestMethod.GET})
+	public ModelAndView totestIndex(@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/main_index/text_index");
+		modelandview.addObject("blogId", blogId);
+		return modelandview;
 	}
 	
-	@RequestMapping(value="/test")
-	public String totestIndex() {
-		return "/main_index/test_index";
-	}
-	
-	@RequestMapping(value="/write")
-	public String toWriteIndex() {
-		return "/main_index/write_index";
+	@RequestMapping(value="/write/{blogId}/{articleId}", method={RequestMethod.GET})
+	public ModelAndView toWriteIndex(@PathVariable(value="articleId") String articleId,@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/main_index/write_index");
+		modelandview.addObject("articleId", articleId);
+		if(!articleId.equals(0)){
+			
+		}		
+		return modelandview;
 	}
 	
 	@RequestMapping(value="/login/{blogId}", method={RequestMethod.GET})

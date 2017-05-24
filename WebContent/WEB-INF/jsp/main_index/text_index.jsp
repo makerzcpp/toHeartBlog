@@ -44,11 +44,13 @@
 
 </head>
 <body>
+<input type="hidden" id="blogId" value="${blogId}"/>
 <%@ include file="head.jsp"%>
  <div class="b-breadcrumbs f-breadcrumbs">
         <div class="container">
             <ul>
                 <li><a href="#"><i class="fa fa-home"></i>文章</a></li>
+                <li><a href="${BASE}/index/write/${blogId}/0"><i class="fa fa-home"></i>新建文章</a></li>
                <!--  <li><i class="fa fa-angle-right"></i><a href="#">Blog</a></li>
                 <li><i class="fa fa-angle-right"></i><span>Listing Left Sidebar</span></li> -->
             </ul>

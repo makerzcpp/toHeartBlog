@@ -1,5 +1,7 @@
 package blog.utils;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -13,6 +15,18 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMessage.RecipientType;
 
 public class usuallyUtils {
+	
+	 private volatile static Properties mProperties; 
+     
+	    static{
+	        mProperties = new Properties();
+	        InputStream in = usuallyUtils.class.getResourceAsStream("/UEload.properties");
+	        try{
+	            mProperties.load(in);
+	        } catch (IOException e){
+	            e.printStackTrace();
+	        }
+	    }
 
 	 
 	 
@@ -54,7 +68,12 @@ public class usuallyUtils {
 			return Time;			
 		}
 		
-
+	//读取UE配置文件     		  		     
+		public static String getValue(String key){
+		    if(mProperties == null) return "";
+		    return mProperties.getProperty(key, "");
+		}
+		
 		 
 
 }

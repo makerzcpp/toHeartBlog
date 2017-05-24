@@ -9,8 +9,12 @@
 <title>Write</title>
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script type="text/javascript">
+		var BASE = "${BASE}";
+		</script>
 		<script src="${BASE}/www/js/jquery/jquery-1.11.1.min.js"></script>		
 		 <script src="${BASE}/utf8jsp/ueditor.config.js"></script>
+		 <script src="${BASE}/www/js/write_index/index.js"></script>
     <script   src="${BASE}/utf8jsp/ueditor.all.min.js"> </script>
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
@@ -46,6 +50,7 @@
     <a>标题:</a><input id="headline" style="width:550px"></div>
     <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
 </div>
+<img src="D:/UE/static/1495630910168_028166.jpg" >
 <div id="btns">
     <div>
         <!-- <button onclick="getAllHtml()">获得整个html的内容</button> -->

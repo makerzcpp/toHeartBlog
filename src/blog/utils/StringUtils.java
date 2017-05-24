@@ -1,6 +1,7 @@
 package blog.utils;
 
 import java.text.DecimalFormat;
+import java.util.Random;
 
 public class StringUtils {
 	
@@ -51,4 +52,25 @@ public class StringUtils {
 	     }
 		  return defaultValue;
 	     }
+	  
+	  
+	  //获取文件名后缀
+	    public static String getExt(String name){
+	        if(name == null || "".equals(name) || !name.contains("."))
+	            return "";
+	        return name.substring(name.lastIndexOf(".")+1);
+	    }
+	    
+	    
+	    /**
+	     * 获取指定位数的随机数
+	     */
+	    public static String getRandom(int num){
+	        Random random = new Random();
+	        StringBuilder sb = new StringBuilder();
+	        for(int i = 0;i < num; i++){
+	            sb.append(String.valueOf(random.nextInt(10)));
+	        }
+	        return sb.toString();
+	    }
 }

@@ -3,9 +3,12 @@ package blog.controller;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import blog.Constant;
 import blog.utils.StringUtils;
 import blog.utils.usuallyUtils;
 
@@ -27,21 +31,25 @@ public class BlogArticleAction {
 	    @RequestMapping(value="/images")
 	    public Map<String,Object> images (MultipartFile upfile, HttpServletRequest request, HttpServletResponse response){
 	        Map<String,Object> params = new HashMap<String,Object>();
+	        String visitUrl ="";
 	        try{
-	             String basePath =usuallyUtils.getValue("UE.uploading.url");
-	             String visitUrl =usuallyUtils.getValue("UE.visit.url");
-	             if(basePath == null || "".equals(basePath)){
-	                 basePath = "d:/UE/static";  //与properties文件中UE.uploading.url相同，未读取到文件数据时为basePath赋默认值
-	             }
-	             if(visitUrl == null || "".equals(visitUrl)){
-	                 visitUrl = "/upload/"; //与properties文件中UE.visit.url相同，未读取到文件数据时为visitUrl赋默认值
-	             }
+	        	//文件保存目录路径  
+	    		ServletContext servletContext=request.getSession().getServletContext(); 
+	            String basePath = servletContext.getRealPath("")+Constant.UEimgPath;
+	            //创建文件夹  
+	            File dirFile = new File(basePath);  
+	            if (!dirFile.exists()) {  
+	                dirFile.mkdirs();  
+	            }  
+	            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMM");  
+	            String ymd = sdf.format(new Date());  
+	            basePath += "/" + ymd + "/";  
 	             String ext = StringUtils.getExt(upfile.getOriginalFilename());
 	             String fileName = String.valueOf(System.currentTimeMillis()).concat("_").concat(StringUtils.getRandom(6)).concat(".").concat(ext);
 	             StringBuilder sb = new StringBuilder();
 	             //拼接保存路径
-	             sb.append(basePath).append("/").append(fileName);
-	             visitUrl = visitUrl.concat(fileName);
+	             sb.append(basePath).append(fileName);
+	             visitUrl = "/toHeartBlog/"+Constant.UEimgPath+"/" + ymd + "/"+fileName;
 	             File f = new File(sb.toString());
 	             if(!f.exists()){
 	                 f.getParentFile().mkdirs();

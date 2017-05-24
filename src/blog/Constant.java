@@ -16,8 +16,10 @@ public interface Constant {
 	//未登录状态的用户名
 	String nologgingName = "游客";	
 	//上传文件的保存路径  
-    String configPath = "upload/photo";  
-  
+    String configPath = "upload/photo";    
+    //上传文件的保存路径  
+    String UEimgPath = "UE/images";  
+    
     String dirTemp = "upload/widget/temp";  
       
     String dirName = "file";  

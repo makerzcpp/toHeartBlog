@@ -85,7 +85,10 @@ public class BlogIndexAction {
 	@RequestMapping(value="/write/{blogId}/{articleId}", method={RequestMethod.GET})
 	public ModelAndView toWriteIndex(@PathVariable(value="articleId") String articleId,@PathVariable(value="blogId") String blogId) {
 		ModelAndView modelandview = new ModelAndView("/main_index/write_index");
+		List<Category> cglist = categoryservice.findCategoryList(blogId);
 		modelandview.addObject("articleId", articleId);
+		modelandview.addObject("blogId", blogId);
+		modelandview.addObject("cglist", cglist);
 		if(!articleId.equals(0)){
 			
 		}		

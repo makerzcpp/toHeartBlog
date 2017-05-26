@@ -12,30 +12,37 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import blog.Constant;
+import blog.service.ArticleService;
+import blog.utils.Result;
 import blog.utils.StringUtils;
-import blog.utils.usuallyUtils;
 
 @Controller
 @RequestMapping("/text")
 public class BlogArticleAction {
-
+@Autowired ArticleService articleservice;
 	
 	  	@ResponseBody
 	    @RequestMapping(value="/images")
 	    public Map<String,Object> images (MultipartFile upfile, HttpServletRequest request, HttpServletResponse response){
 	        Map<String,Object> params = new HashMap<String,Object>();
 	        String visitUrl ="";
+	        String basePath="";
 	        try{
 	        	//文件保存目录路径  
 	    		ServletContext servletContext=request.getSession().getServletContext(); 
-	            String basePath = servletContext.getRealPath("")+Constant.UEimgPath;
+	            basePath = servletContext.getRealPath("")+Constant.UEimgPath;
 	            //创建文件夹  
 	            File dirFile = new File(basePath);  
 	            if (!dirFile.exists()) {  
@@ -60,10 +67,20 @@ public class BlogArticleAction {
 	             params.put("url", visitUrl);
 	             params.put("size", upfile.getSize());
 	             params.put("original", fileName);
-	             params.put("type", upfile.getContentType());
+	             params.put("type", upfile.getContentType());	   	      
+	 	        System.out.println(basePath+fileName);
 	        } catch (Exception e){
 	             params.put("state", "ERROR");
 	        }
 	         return params;
 	    }
+	  	
+	  	@ResponseBody
+	  	@RequestMapping(value="/submit/{blogId}", method={RequestMethod.POST})
+		public Result addArticle(@PathVariable(value="blogId") String blogId,@RequestParam("headName") String headName,
+				@RequestParam("headLine") String headLine,@RequestParam("text") String text,@RequestParam("cateId") String cateId) {
+	  		articleservice.addArticle(blogId, headName, headLine, text, cateId);
+	  		return new Result(true);
+	  	}
+	  	
 }

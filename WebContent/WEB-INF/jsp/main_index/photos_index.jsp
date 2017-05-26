@@ -14,7 +14,7 @@
 		<link rel="shortcut icon" href="${BASE}/www/images/photosindex/favicon.ico" />
 		<link rel="stylesheet" href="${BASE}/www/css/photosindex/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Economica:700' rel='stylesheet' type='text/css'>		
-
+		<link type="text/css" rel='stylesheet' href="${BASE}/www/css/showDialog/showDialog.css">
 		
 		
 		<!-- 头部和底部的css -->

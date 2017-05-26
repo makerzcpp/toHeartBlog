@@ -11,12 +11,14 @@ import blog.service.categoryService;
 
 @Service
 public class categoryServiceImpl implements categoryService {
-	@Autowired categoryDao categorydao ;
+	@Autowired categoryDao categorydao ; 
 	
 	@Override
 	public List<Category> findCategoryList(String blogId) {
 		List<Category> list = categorydao.getCategoryList(blogId);
+		System.out.println("------------------------------------------------------------------");
 		return list;
 	}
+	
 
 }

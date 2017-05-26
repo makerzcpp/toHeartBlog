@@ -30,6 +30,11 @@
 		<script src="${BASE}/www/js/photosindex/jquery.equalheights.js"></script>
 		<script src="${BASE}/www/js/photosindex/jquery.mobilemenu.js"></script>
 		<script src="${BASE}/www/js/photosindex/jquery.easing.1.3.js"></script>
+		
+		<!-- 分页JS -->
+		<script type="text/javascript" src="${BASE}/www/js/page/page.js"></script>
+		<link href="${BASE}/www/css/page/page.css" type="text/css" rel="stylesheet"/>
+		
 		<script>
 		$(document).ready(function(){
 			$().UItoTop({ easingType: 'easeOutQuart' });
@@ -45,6 +50,8 @@
 </head>
 <body>
 <input type="hidden" id="blogId" value="${blogId}"/>
+<input type="hidden" id="artNum" value="${artNum}"/>
+
 <%@ include file="head.jsp"%>
  <div class="b-breadcrumbs f-breadcrumbs">
         <div class="container">
@@ -62,150 +69,46 @@
         	<div class="inner">
             	<div class="general_content">
                 	<div class="main_content">                   	
-                        <div class="separator" style="height:30px;"></div>
-                        
-                        <h2>Our Blog Style 1</h2>
-                        
-                        <p class="general_subtitle">Eestablished fact that a reader will be distracted by the readable content of a page when looking at its layout are many variations of passages have suffered alteration.</p>
-                        
-                        <div class="line_4" style="margin:0px 0px 0px;"></div>
-                        
                         <div class="block_blog_1">
+                        <c:forEach var="ar" items="${arlist}">
                         	<article class="blog_post">
-                            	<div class="tail"></div>
-                            	<!-- <div class="f_pic"><a href="blog_post.html"><img src="images/pic_blog_1_1.jpg" alt="" /></a></div> -->
+                            	<div class="tail"></div>                            	
                             	
-                                <h4 class="title"><a href="blog_post.html">Publishing packages and web page editors now use.</a></h4>
+                                <h4 class="title"><a href="blog_post.html">${ar.articleName}</a></h4>
                                 
                                 <div class="info">
-                                	<div class="date"><p>15 July, 2012</p></div>
-                                    <div class="author"><p>By: <a href="#">John Doe</a></p></div>
+                                	<div class="date"><p>${ar.creatTime}</p></div>
                                     
                                     <div class="r_part">
                                     	<div class="category">
-                                        	<p class="text">Category:</p>
+                                        	<p class="text">类别:</p>
                                             <ul>
-                                            	<li><a href="#">BUSINESS</a></li>
+                                              <c:forEach var="cg" items="${cglist}">
+                                              <c:if test="${ar.categoryId == cg.categoryId}">
+                                            	<li><a href="#"> ${cg.categoryName}</a></li>
+                                            	</c:if>
+                                            	  </c:forEach>
                                             </ul>
                                         </div>
                                         
-                                        <a href="#" class="views">650</a>
-                                        <a href="#" class="comments">25</a>
+                                        <a href="#" class="views">${ar.readNum}</a>
+                                        <a href="#" class="comments">${ar.commentNum}</a>
                                     </div>
                                 </div>
                                 
                                 <div class="content">
-                                	<p>Pellentesque felis at turpis bibendum, duis eu consectetur sed tellus, blandit pulvinar dictum ac wisi libero a, nec sed ac elit. Fringilla penatibus orci est non mollit, suspendisse pulvinar egestas a donec, iaculis aenean, parturient velit elit ac viverra vestibulum, quis et nascetur rutrum nibh molestie fusce.</p>
+                                	<p>${ar.articleHead}</p>
                                 </div>
                                 
                             </article>
-                            
-                            <article class="blog_post">
-                            	<div class="tail"></div>
-                            	<!-- <div class="f_pic"><a href="blog_post.html" class="general_pic_hover zoom"><img src="images/pic_blog_1_2.jpg" alt="" /></a></div> -->
-                            	
-                                <h4 class="title"><a href="blog_post.html">Publishing packages and web page editors now use.</a></h4>
-                                
-                                <div class="info">
-                                	<div class="date"><p><a href="#">15 July, 2012</a></p></div>
-                                    <div class="author"><p>By: <a href="#">John Doe</a></p></div>
-                                    
-                                    <div class="r_part">
-                                    	<div class="category">
-                                        	<p class="text">Category:</p>
-                                            <ul>
-                                            	<li><a href="#">People</a></li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <a href="#" class="views">650</a>
-                                        <a href="#" class="comments">25</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="content">
-                                	<p>Pellentesque felis at turpis bibendum, duis eu consectetur sed tellus, blandit pulvinar dictum ac wisi libero a, nec sed ac elit. Fringilla penatibus orci est non mollit, suspendisse pulvinar egestas a donec, iaculis aenean, parturient velit elit ac viverra vestibulum, quis et nascetur rutrum nibh molestie fusce.</p>
-                                </div>
-                                
-                            </article>
-                            
-                            <article class="blog_post">
-                            	<div class="tail"></div>
-                            	<!-- <div class="f_pic"><a href="blog_post.html"><img src="images/pic_blog_1_3.jpg" alt="" /></a></div> -->
-                            	
-                                <h4 class="title"><a href="blog_post.html">Publishing packages and web page editors now use.</a></h4>
-                                
-                                <div class="info">
-                                	<div class="date"><p>15 July, 2012</p></div>
-                                    <div class="author"><p>By: <a href="#">John Doe</a></p></div>
-                                    
-                                    <div class="r_part">
-                                    	<div class="category">
-                                        	<p class="text">Category:</p>
-                                            <ul>
-                                            	<li><a href="#">BUSINESS</a></li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <a href="#" class="views">650</a>
-                                        <a href="#" class="comments">25</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="content">
-                                	<p>Pellentesque felis at turpis bibendum, duis eu consectetur sed tellus, blandit pulvinar dictum ac wisi libero a, nec sed ac elit. Fringilla penatibus orci est non mollit, suspendisse pulvinar egestas a donec, iaculis aenean, parturient velit elit ac viverra vestibulum, quis et nascetur rutrum nibh molestie fusce.</p>
-                                </div>
-                                
-                            </article>
-                            
-                            <article class="blog_post">
-                            	<div class="tail"></div>
-                            	<!-- <div class="f_pic"><a href="blog_post.html"><img src="images/pic_blog_1_4.jpg" alt="" /></a></div> -->
-                            	
-                                <h4 class="title"><a href="blog_post.html">Publishing packages and web page editors now use.</a></h4>
-                                
-                                <div class="info">
-                                	<div class="date"><p>15 July, 2012</p></div>
-                                    <div class="author"><p>By: <a href="#">John Doe</a></p></div>
-                                    
-                                    <div class="r_part">
-                                    	<div class="category">
-                                        	<p class="text">Category:</p>
-                                            <ul>
-                                            	<li><a href="#">BUSINESS</a></li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <a href="#" class="views">650</a>
-                                        <a href="#" class="comments">25</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="content">
-                                	<p>Pellentesque felis at turpis bibendum, duis eu consectetur sed tellus, blandit pulvinar dictum ac wisi libero a, nec sed ac elit. Fringilla penatibus orci est non mollit, suspendisse pulvinar egestas a donec, iaculis aenean, parturient velit elit ac viverra vestibulum, quis et nascetur rutrum nibh molestie fusce.</p>
-                                </div>
-                                
-                            </article>
+                            </c:forEach>
+                          
                         </div>
                         
                         <div class="line_2" style="margin:24px 0px 25px;"></div>
-                        
+                        <!-- 分页插件 -->
                         <div class="block_pager">
-                        	<a href="#" class="prev">Previous</a>
-                            <a href="#" class="next">Next</a>
-                            
-                            <div class="pages">
-                            	<ul>
-                                	<li><a href="#">1</a></li>
-                                    <li class="current"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="clearboth"></div>
+                        <ul class="page" maxshowpageitem="5" pagelistcount="2"  id="page"></ul>
                         </div>
                         
                     </div>
@@ -282,7 +185,12 @@
 									}
 								});
 							</script>
-                            
+  <script type="text/javascript">
+    function tt(dd){
+        alert(dd);
+    }
+    $("#page").initPage($('#artNum').val(),1,tt);
+</script>
                             <div class="line_2"></div>
                         </div>
                         

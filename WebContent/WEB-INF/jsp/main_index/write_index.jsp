@@ -53,10 +53,10 @@
     <div style="margin:30px 30px 30px 80px">
     <a>摘要:</a><input id="headLine" style="width:550px"></div>
     <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+</div>
     <c:forEach var="cg" items="${cglist}">
     <input type="radio" name="Category" value="${cg.categoryId}" >${cg.categoryName}
     </c:forEach> 
-</div>
 <div id="btns">
     <div>
         <!-- <button onclick="getAllHtml()">获得整个html的内容</button> -->

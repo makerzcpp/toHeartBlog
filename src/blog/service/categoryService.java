@@ -7,6 +7,6 @@ import blog.bean.Category;
 public interface categoryService {
 
 	public List<Category> findCategoryList(String userName);
-	
+
 	
 }

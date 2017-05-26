@@ -1,8 +1,15 @@
 package blog.dao;
 
+import java.util.List;
+import java.util.Map;
+
 import blog.bean.Article;
 
 public interface articleDao {
 
 	public void addArticle(Article article);
+	
+	public List<Article> getArticleList(Map<String,Object> map);
+	
+	public int getAllArticleNum(String blogId);
 }

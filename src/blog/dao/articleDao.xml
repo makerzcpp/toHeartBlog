@@ -3,27 +3,19 @@
  
 <mapper namespace="blog.dao.articleDao">
 	
-	<!-- <select id="getAllTeacher"  resultType="Teacher">
-	select id,t_name as name,t_password as password,sex,description,pic_url as picUrl,school_name as schoolName,regist_date as registDate,remark 
-	from t_teacher limit 100
+	<select id="getArticleList" parameterType="java.util.Map" resultType="Article">
+	select 
+	articleId,articleName,creatTime,readNum,commentNum,categoryId,blogId,articleText,articleHead
+	from article where blogId =#{blogId} limit ${pageNum},${pageSize}
 	</select>
-		
-	<select id="getById" parameterType="java.lang.String" resultType="Teacher">
-	select id,t_name as name,t_password as password,sex,description,pic_url as picUrl,school_name as schoolName,regist_date as registDate,remark 
-	from t_teacher where id=#{id}
-	</select> -->
-
 	
 	<insert id="addArticle" parameterType="Article">
 		INSERT INTO article(articleId,articleName,creatTime,readNum,commentNum,categoryId,blogId,articleText,articleHead)
 		values ( #{articleId},#{articleName},#{creatTime},#{readNum},#{commentNum},#{categoryId},#{blogId},#{articleText},#{articleHead})
 	</insert>
-	<!-- <delete id="deleteById" parameterType="java.lang.String">
-	delete from t_teacher where id=#{id}
-	</delete>
-	
-	<update id="update" parameterType="Teacher">
-	update t_teacher set t_name=#{name},t_password=#{password},sex=#{sex},description=#{description},pic_url=#{picUrl},school_name=#{schoolName},regist_date=#{registDate},remark=#{remark}
-	where id=#{id}
-	</update> -->
+
+	<select id="getAllArticleNum" parameterType="java.lang.String" resultType="java.lang.Integer">  
+	select count(*) from article where blogId = #{blogId}
+	</select>
+
 </mapper>

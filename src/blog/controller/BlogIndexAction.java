@@ -80,31 +80,21 @@ public class BlogIndexAction {
 	}
 	
 	@RequestMapping(value="/text/{blogId}")
-	public ModelAndView totestIndex(@PathVariable(value="blogId") String blogId,@RequestParam("pageNum") String pageNum,
-			@RequestParam("pageSize") String pageSize) {
-		ModelAndView modelandview = new ModelAndView("/main_index/text_index");
-		List<Article> arlist = new ArrayList<>();
-		int artNum = articleservice.getAllArticleNum(blogId);
-		if(pageNum==null||pageSize==null){
-			arlist = articleservice.getArticleList(blogId, 0, Constant.IndexBoxpageSzie);
-		}else{
-			arlist = articleservice.getArticleList(blogId, Integer.parseInt(pageNum)-1, Integer.parseInt(pageSize));
-		}
-		List<Category> cglist = categoryservice.findCategoryList(blogId);
+	public ModelAndView totestIndex(@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/article/article_index");		
+		int artNum = articleservice.getAllArticleNum(blogId);		
+		List<Article> hotarlist = articleservice.getHotArticleList(blogId, 0, 3);
 		modelandview.addObject("blogId", blogId);
-		modelandview.addObject("arlist", arlist);
-		modelandview.addObject("cglist", cglist);
+		modelandview.addObject("hotarlist", hotarlist);
 		modelandview.addObject("artNum", artNum);
 		return modelandview;
 	}
 	
 	@RequestMapping(value="/write/{blogId}/{articleId}", method={RequestMethod.GET})
 	public ModelAndView toWriteIndex(@PathVariable(value="articleId") String articleId,@PathVariable(value="blogId") String blogId) {
-		ModelAndView modelandview = new ModelAndView("/main_index/write_index");
-		List<Category> cglist = categoryservice.findCategoryList(blogId);
+		ModelAndView modelandview = new ModelAndView("/main_index/write_index");		
 		modelandview.addObject("articleId", articleId);
 		modelandview.addObject("blogId", blogId);
-		modelandview.addObject("cglist", cglist);
 		if(!articleId.equals(0)){
 			
 		}		

@@ -15,7 +15,7 @@
 		<link type="text/css" rel='stylesheet' href="${BASE}/www/css/showDialog/showDialog.css">
 		<script src="${BASE}/www/js/jquery/jquery-1.11.1.min.js"></script>		
 		 <script src="${BASE}/utf8jsp/ueditor.config.js"></script>
-		 <script src="${BASE}/www/js/write_index/index.js"></script>
+		 <script src="${BASE}/www/js/article_index/write_index.js"></script>
     <script   src="${BASE}/utf8jsp/ueditor.all.min.js"> </script>
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->

@@ -33,8 +33,17 @@ public class ArticleServiceImpl implements ArticleService {
 		map.put("pageNum", pageNum);
 		map.put("pageSize", pageSize);
 		List<Article> list = articledao.getArticleList(map);
-		return list;
-		
+		return list;		
+	}
+	
+	@Override
+	public List<Article> getHotArticleList(String blogId, int pageNum, int pageSize) {
+		Map<String,Object> map = new HashMap<String,Object>();
+		map.put("blogId", blogId);
+		map.put("pageNum", pageNum);
+		map.put("pageSize", pageSize);
+		List<Article> list = articledao.getHotArticleList(map);
+		return list;		
 	}
 
 	@Override

@@ -10,5 +10,7 @@ public interface ArticleService {
 	
 	public List<Article> getArticleList(String blogId,int pageNum,int pageSize );
 	
+	public List<Article> getHotArticleList(String blogId,int pageNum,int pageSize );
+	
 	public int getAllArticleNum(String blogId);
 }

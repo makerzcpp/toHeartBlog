@@ -4,8 +4,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
@@ -22,9 +24,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import blog.Constant;
+import blog.bean.Article;
+import blog.bean.Category;
 import blog.service.ArticleService;
+import blog.service.categoryService;
 import blog.utils.Result;
 import blog.utils.StringUtils;
 
@@ -32,6 +38,7 @@ import blog.utils.StringUtils;
 @RequestMapping("/text")
 public class BlogArticleAction {
 @Autowired ArticleService articleservice;
+@Autowired categoryService categoryservice;
 	
 	  	@ResponseBody
 	    @RequestMapping(value="/images")
@@ -82,5 +89,22 @@ public class BlogArticleAction {
 	  		articleservice.addArticle(blogId, headName, headLine, text, cateId);
 	  		return new Result(true);
 	  	}
+	  	
+	  	@RequestMapping(value="/list/{blogId}", method={RequestMethod.POST})
+		public ModelAndView totestIndex(@PathVariable(value="blogId") String blogId,@RequestParam("pageNum") String pageNum,
+				@RequestParam("pageSize") String pageSize) {
+			ModelAndView modelandview = new ModelAndView("/article/article_list");
+			List<Article> arlist = new ArrayList<>();
+			if(pageNum==null||pageSize==null){
+				arlist = articleservice.getArticleList(blogId, 0, Constant.IndexBoxpageSzie);
+			}else{
+				arlist = articleservice.getArticleList(blogId, Integer.parseInt(pageNum)-1, Integer.parseInt(pageSize));
+			}
+			List<Category> cglist = categoryservice.findCategoryList(blogId);
+			modelandview.addObject("arlist", arlist);
+			modelandview.addObject("cglist", cglist);
+			modelandview.addObject("blogId", blogId);
+			return modelandview;
+		}
 	  	
 }

@@ -50,7 +50,7 @@
                             <a href="#" class="b-infoblock-with-icon__icon f-infoblock-with-icon__icon fade-in-animate hidden-xs">
                                 <i class="fa fa-pencil"></i>
                             </a>
-                            <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
+                             <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
                                 <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
                                     Mauris ac risus neque, ut pulvinar risus
                                 </a>
@@ -64,7 +64,7 @@
                                 <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
                                     <a href="#" class="f-more f-primary-b">Read more</a>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <div class="b-blog-listing__block">
@@ -90,6 +90,7 @@
                                     <a href="#" class="f-more f-primary-b">Read more</a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
               

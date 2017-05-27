@@ -11,5 +11,7 @@ public interface articleDao {
 	
 	public List<Article> getArticleList(Map<String,Object> map);
 	
+	public List<Article> getHotArticleList(Map<String,Object> map);
+	
 	public int getAllArticleNum(String blogId);
 }

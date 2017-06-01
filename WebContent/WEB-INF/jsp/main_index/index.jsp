@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
 <c:set var="BASE" value="${pageContext.request.contextPath}"/>
@@ -45,66 +46,38 @@
  <%@ include file="manyPhotos.jsp"%> 
   
 </div>
-                        </div>
-                        <div class="b-infoblock-with-icon b-blog-listing__infoblock">
-                            <a href="#" class="b-infoblock-with-icon__icon f-infoblock-with-icon__icon fade-in-animate hidden-xs">
-                                <i class="fa fa-pencil"></i>
-                            </a>
-                             <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
-                                <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
-                                    Mauris ac risus neque, ut pulvinar risus
-                                </a>
-                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text f-primary-b b-blog-listing__pretitle">
-                                    By <a href="#" class="f-more">Stephen Brock</a> In <a href="#" class="f-more">Lifestyle</a>, <a href="#" class="f-more">Photography</a> Posted May 24th, 2017
-                                    <a href="#" class="f-more b-blog-listing__additional-text f-primary"><i class="fa fa-comment"></i>12 Comments</a>
-                                </div>
-                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text c-primary b-blog-listing__text">
-                                    Pendisse blandit ligula turpis, ac convallis risus fermentum non. Duis vestibulum quis quam vel accumsan. Nunc a vulputate lectus. Vestibulum eleifend nisl sed massa sagittis vestibulum. Vestibulum pretium blandit tellus, sodales volutpat sapien varius vel. Phasellus tristique cursus erat, a placerat tellus laoreet eget. Blandit ligula turpis, ac convallis risus fermentum non. Duis vestibulum quis.
-                                </div>
-                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
-                                    <a href="#" class="f-more f-primary-b">Read more</a>
-                                </div>
-                            </div> 
-                        </div>
+                        </div>                        
                     </div>
                     <div class="b-blog-listing__block">
-                        <!-- <div class="b-video-player b-blog-listing__block-top">
-                            <iframe src="" width="870" height="460" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        </div> -->
+                      <!--  首页热门文章展示 -->                     
                         <div class="b-infoblock-with-icon b-blog-listing__infoblock">
+                         <c:forEach var="hotar" items="${hotarlist}">
                             <a href="#" class="b-infoblock-with-icon__icon f-infoblock-with-icon__icon fade-in-animate hidden-xs">
                                 <i class="fa fa-video-camera"></i>
                             </a>
                             <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
                                 <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
-                                    This Is Vimeo video post
+                                    ${hotar.articleName}
                                 </a>
                                 <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text f-primary-b b-blog-listing__pretitle">
-                                    By <a href="#" class="f-more">Stephen Brock</a> In <a href="#" class="f-more">Lifestyle</a>, <a href="#" class="f-more">Photography</a> Posted May 24th, 2017
-                                    <a href="#" class="f-more b-blog-listing__additional-text f-primary"><i class="fa fa-comment"></i>12 Comments</a>
+                                    By ${hotar.creatTime}
+                                    <a href="#" class="f-more b-blog-listing__additional-text f-primary"><i class="fa fa-comment"></i>${hotar.commentNum}Comments</a>
                                 </div>
                                 <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text c-primary b-blog-listing__text">
-                                    Pendisse blandit ligula turpis, ac convallis risus fermentum non. Duis vestibulum quis quam vel accumsan. Nunc a vulputate lectus. Vestibulum eleifend nisl sed massa sagittis vestibulum. Vestibulum pretium blandit tellus, sodales volutpat sapien varius vel. Phasellus tristique cursus erat, a placerat tellus laoreet eget. Blandit ligula turpis, ac convallis risus fermentum non. Duis vestibulum quis.
+                                    ${fn:substring(hotar.articleText,0,55)}
                                 </div>
-                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
+                            </div>                           
+                            <br><br>
+                           </c:forEach>
+                                                        
+                            
+                             <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
                                     <a href="#" class="f-more f-primary-b">Read more</a>
                                 </div>
-                            </div>
-                            
                         </div>
                     </div>
               
-                    <div class="b-pagination f-pagination">
-    <ul>
-        <li><a href="#">First</a></li>
-        <li><a class="prev" href="#"><i class="fa fa-angle-left"></i></a></li>
-        <li class="is-active-pagination"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a class="next" href="#"><i class="fa fa-angle-right"></i></a></li>
-        <li><a href="#">Last</a></li>
-    </ul>
-</div>
+ 
                 </div>
                 <div class="visible-xs-block visible-sm-block b-hr"></div>
                 <div class="col-md-3 col-md-pull-9">

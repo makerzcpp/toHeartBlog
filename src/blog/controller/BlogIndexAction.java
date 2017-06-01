@@ -38,6 +38,7 @@ public class BlogIndexAction {
 		List<Category> cglist = categoryservice.findCategoryList(blogId);
 		List<PhotosBox> plist = photoservice.getBoxList(blogId,0,Constant.IndexBoxpageSzie);
 		List<PhotosBox> pboxlist = new ArrayList<PhotosBox>();
+		List<Article> hotarlist = articleservice.getHotArticleList(blogId, 0, 2);
 		//对url进行重构以便直接利用转码之后的图片
 		for(PhotosBox box:plist){
 			box.setImgHead(box.getImgHead().replace(".jpg", "_smart.jpg").replace(".JPG", "_smart.JPG")
@@ -45,6 +46,7 @@ public class BlogIndexAction {
 			pboxlist.add(box);
 		}
 		modelAndView.addObject("pboxlist", pboxlist);
+		modelAndView.addObject("hotarlist", hotarlist);
 		modelAndView.addObject("logusername", logusername);
 		modelAndView.addObject("cglist", cglist);
 		modelAndView.addObject("blogId", blogId);

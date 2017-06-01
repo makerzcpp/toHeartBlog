@@ -127,7 +127,7 @@ img { outline-width: 0px; vertical-align: top; border: 0; }
 .head_nav li:hover a { color: #fff; }
 .head_nav li a { display: block; padding: 0 18px; color: #333; font-size: 14px; }
 .content { clear: both; min-height: 533px; margin: 160px 0 80px 0; }
-.content2 { clear: both; margin: 131px 0 80px 0; }
+.content2 { clear: both; margin: 30px 0 80px 0; }
 
 /*三级面包屑导航*/
 .level3_nav { width: 1200px; margin: 20px auto; font-size: 12px; }

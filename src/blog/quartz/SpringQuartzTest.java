@@ -8,12 +8,14 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
+import blog.esSearch.esTest;
+
 public class SpringQuartzTest extends QuartzJobBean{
 
 	@Override
 	protected void executeInternal(JobExecutionContext arg0) throws JobExecutionException {
 		// TODO Auto-generated method stub
-		this.work();
+		
 		this.work2();
 	}
 	

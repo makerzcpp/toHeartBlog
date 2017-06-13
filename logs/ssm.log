@@ -1,0 +1,2048 @@
+[INFO] [2017-06-12 19:43:23][org.elasticsearch.plugins][Collector] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 19:43:23][org.elasticsearch.threadpool][Collector] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[INFO] [2017-06-12 19:47:51][org.elasticsearch.plugins][Ringleader] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 19:47:51][org.elasticsearch.threadpool][Ringleader] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[INFO] [2017-06-12 19:56:19][org.elasticsearch.plugins][War Machine] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.threadpool][War Machine] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.client.transport][War Machine] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 19:56:19][org.elasticsearch.client.transport][War Machine] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 19:56:40][org.elasticsearch.client.transport][War Machine] failed to connect to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], removed from nodes list
+ConnectTransportException[[][192.168.0.84:9300] connect_timeout[30s]]; nested: ConnectException[Connection timed out: no further information: /192.168.0.84:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:967)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:933)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:906)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at blog.esSearch.esTest.main(esTest.java:39)
+Caused by: java.net.ConnectException: Connection timed out: no further information: /192.168.0.84:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] [2017-06-12 19:57:07][org.elasticsearch.plugins][Scanner] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 19:57:07][org.elasticsearch.threadpool][Scanner] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 19:57:08][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 19:57:08][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 19:57:08][org.elasticsearch.client.transport][Scanner] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 19:57:08][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 19:57:08][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 19:57:08][org.elasticsearch.client.transport][Scanner] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9200}]
+[DEBUG] [2017-06-12 19:57:08][org.elasticsearch.transport.netty][Scanner] connected to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9200}]
+[INFO] [2017-06-12 19:57:13][org.elasticsearch.client.transport][Scanner] failed to get node info for {#transport#-1}{192.168.0.84}{192.168.0.84:9200}, disconnecting...
+ReceiveTimeoutTransportException[[][192.168.0.84:9200][cluster:monitor/nodes/liveness] request_id [0] timed out after [5002ms]]
+	at org.elasticsearch.transport.TransportService$TimeoutHandler.run(TransportService.java:696)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[DEBUG] [2017-06-12 19:57:13][org.elasticsearch.transport.netty][Scanner] disconnecting from [{#transport#-1}{192.168.0.84}{192.168.0.84:9200}] due to explicit disconnect call
+[DEBUG] [2017-06-12 19:57:13][org.elasticsearch.transport.netty][Scanner] connected to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9200}]
+[INFO] [2017-06-12 20:00:22][org.elasticsearch.plugins][Human Robot] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 20:00:22][org.elasticsearch.threadpool][Human Robot] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:00:23][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 20:00:23][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 20:00:23][org.elasticsearch.client.transport][Human Robot] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 20:00:23][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 20:00:23][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 20:00:23][org.elasticsearch.client.transport][Human Robot] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:00:44][org.elasticsearch.client.transport][Human Robot] failed to connect to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], removed from nodes list
+ConnectTransportException[[][192.168.0.84:9300] connect_timeout[30s]]; nested: ConnectException[Connection timed out: no further information: /192.168.0.84:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:967)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:933)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:906)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at blog.esSearch.esTest.main(esTest.java:39)
+Caused by: java.net.ConnectException: Connection timed out: no further information: /192.168.0.84:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] [2017-06-12 20:10:50][org.elasticsearch.plugins][Persuasion] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 20:10:50][org.elasticsearch.threadpool][Persuasion] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:10:51][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 20:10:51][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 20:10:51][org.elasticsearch.client.transport][Persuasion] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 20:10:51][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 20:10:51][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[INFO] [2017-06-12 20:11:24][org.elasticsearch.plugins][Feral] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.threadpool][Feral] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.client.transport][Feral] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 20:11:24][org.elasticsearch.client.transport][Feral] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:11:45][org.elasticsearch.client.transport][Feral] failed to connect to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], removed from nodes list
+ConnectTransportException[[][192.168.0.84:9300] connect_timeout[30s]]; nested: ConnectException[Connection timed out: no further information: /192.168.0.84:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:967)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:933)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:906)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at blog.esSearch.esTest.main(esTest.java:39)
+Caused by: java.net.ConnectException: Connection timed out: no further information: /192.168.0.84:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] [2017-06-12 20:15:39][org.elasticsearch.plugins][Tyrannosaur] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.threadpool][Tyrannosaur] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.client.transport][Tyrannosaur] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 20:15:39][org.elasticsearch.client.transport][Tyrannosaur] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:15:41][org.elasticsearch.client.transport][Tyrannosaur] failed to connect to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], removed from nodes list
+ConnectTransportException[[][192.168.0.84:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /192.168.0.84:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:967)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:933)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:906)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at blog.esSearch.esTest.main(esTest.java:39)
+Caused by: java.net.ConnectException: Connection refused: no further information: /192.168.0.84:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] [2017-06-12 20:16:04][org.elasticsearch.plugins][Angel] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 20:16:04][org.elasticsearch.threadpool][Angel] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:16:05][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 20:16:05][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 20:16:05][org.elasticsearch.client.transport][Angel] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 20:16:05][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 20:16:05][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 20:16:05][org.elasticsearch.client.transport][Angel] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:16:06][org.elasticsearch.client.transport][Angel] failed to connect to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], removed from nodes list
+ConnectTransportException[[][192.168.0.84:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /192.168.0.84:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:967)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:933)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:906)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at blog.esSearch.esTest.main(esTest.java:39)
+Caused by: java.net.ConnectException: Connection refused: no further information: /192.168.0.84:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] [2017-06-12 20:31:49][org.elasticsearch.plugins][Moon-Boy] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 20:31:49][org.elasticsearch.threadpool][Moon-Boy] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.client.transport][Moon-Boy] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.client.transport][Moon-Boy] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.transport.netty][Moon-Boy] connected to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:31:50][org.elasticsearch.transport.netty][Moon-Boy] disconnecting from [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], channel closed event
+[INFO] [2017-06-12 20:31:50][org.elasticsearch.client.transport][Moon-Boy] failed to get node info for {#transport#-1}{192.168.0.84}{192.168.0.84:9300}, disconnecting...
+NodeDisconnectedException[[][192.168.0.84:9300][cluster:monitor/nodes/liveness] disconnected]
+[INFO] [2017-06-12 20:38:30][org.elasticsearch.plugins][George Washington Bridge] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.threadpool][George Washington Bridge] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.client.transport][George Washington Bridge] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 20:38:30][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 20:38:31][org.elasticsearch.client.transport][George Washington Bridge] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:38:31][org.elasticsearch.transport.netty][George Washington Bridge] connected to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 20:38:31][org.elasticsearch.transport.netty][George Washington Bridge] disconnecting from [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], channel closed event
+[INFO] [2017-06-12 20:38:31][org.elasticsearch.client.transport][George Washington Bridge] failed to get node info for {#transport#-1}{192.168.0.84}{192.168.0.84:9300}, disconnecting...
+NodeDisconnectedException[[][192.168.0.84:9300][cluster:monitor/nodes/liveness] disconnected]
+[INFO] [2017-06-12 21:06:38][org.elasticsearch.plugins][Fantasia] modules [], plugins [], sites []
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-12 21:06:38][org.elasticsearch.threadpool][Fantasia] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-12 21:06:39][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-12 21:06:39][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-12 21:06:39][org.elasticsearch.client.transport][Fantasia] node_sampler_interval[5s]
+[DEBUG] [2017-06-12 21:06:39][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-12 21:06:39][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-12 21:06:39][org.elasticsearch.client.transport][Fantasia] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-12 21:06:40][org.elasticsearch.client.transport][Fantasia] failed to connect to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], removed from nodes list
+ConnectTransportException[[][192.168.0.84:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /192.168.0.84:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:967)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:933)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:906)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at blog.esSearch.esTest.main(esTest.java:39)
+Caused by: java.net.ConnectException: Connection refused: no further information: /192.168.0.84:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] [2017-06-13 09:20:52][org.elasticsearch.plugins][James "Jimmy" Marks] modules [], plugins [], sites []
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-13 09:20:52][org.elasticsearch.threadpool][James "Jimmy" Marks] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 09:20:53][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-13 09:20:53][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-13 09:20:53][org.elasticsearch.client.transport][James "Jimmy" Marks] node_sampler_interval[5s]
+[DEBUG] [2017-06-13 09:20:53][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-13 09:20:53][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-13 09:20:53][org.elasticsearch.client.transport][James "Jimmy" Marks] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 09:20:54][org.elasticsearch.client.transport][James "Jimmy" Marks] failed to connect to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}], removed from nodes list
+ConnectTransportException[[][192.168.0.84:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /192.168.0.84:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:967)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:933)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:906)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at blog.esSearch.esTest.main(esTest.java:39)
+Caused by: java.net.ConnectException: Connection refused: no further information: /192.168.0.84:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] [2017-06-13 12:45:36][org.elasticsearch.plugins][Scalphunter] modules [], plugins [], sites []
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.threadpool][Scalphunter] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.client.transport][Scalphunter] node_sampler_interval[5s]
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-13 12:45:36][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-13 12:45:37][org.elasticsearch.client.transport][Scalphunter] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:45:37][org.elasticsearch.transport.netty][Scalphunter] connected to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:45:37][org.elasticsearch.transport.netty][Scalphunter] connected to node [{Mad Thinker’s Awesome Android}{9NbvwJOCSYuv-O5lkYRukQ}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:45:37][org.elasticsearch.transport.netty][Scalphunter] disconnecting from [{Mad Thinker’s Awesome Android}{9NbvwJOCSYuv-O5lkYRukQ}{192.168.0.84}{192.168.0.84:9300}] due to explicit disconnect call
+[DEBUG] [2017-06-13 12:45:37][org.elasticsearch.transport.netty][Scalphunter] disconnecting from [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}] due to explicit disconnect call
+[INFO] [2017-06-13 12:48:25][org.elasticsearch.plugins][Jacqueline Falsworth] modules [], plugins [], sites []
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-13 12:48:25][org.elasticsearch.threadpool][Jacqueline Falsworth] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.client.transport][Jacqueline Falsworth] node_sampler_interval[5s]
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.client.transport][Jacqueline Falsworth] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.transport.netty][Jacqueline Falsworth] connected to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.transport.netty][Jacqueline Falsworth] connected to node [{Mad Thinker’s Awesome Android}{9NbvwJOCSYuv-O5lkYRukQ}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.transport.netty][Jacqueline Falsworth] disconnecting from [{Mad Thinker’s Awesome Android}{9NbvwJOCSYuv-O5lkYRukQ}{192.168.0.84}{192.168.0.84:9300}] due to explicit disconnect call
+[DEBUG] [2017-06-13 12:48:26][org.elasticsearch.transport.netty][Jacqueline Falsworth] disconnecting from [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}] due to explicit disconnect call
+[INFO] [2017-06-13 12:49:08][org.elasticsearch.plugins][American Eagle] modules [], plugins [], sites []
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [generic], type [cached], keep_alive [30s]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.threadpool][American Eagle] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.common.network]configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:4
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:5
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:6
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:7
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:8
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:9
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:10
+
+eth3
+        Realtek PCIe GBE Family Controller
+        inet 192.168.0.112 netmask:255.255.255.0 broadcast:192.168.0.255 scope:site
+        inet6 fe80::5504:6862:6901:5fd prefixlen:64 scope:link
+        hardware 48:4D:7E:9D:4F:B8
+        UP MULTICAST mtu:1500 index:11
+
+net4
+        Teredo Tunneling Pseudo-Interface
+        inet6 2001:0:9d38:953c:20a5:ccdf:8e09:a96c prefixlen:0
+        inet6 fe80::20a5:ccdf:8e09:a96c prefixlen:32 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        UP POINTOPOINT mtu:1280 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.78.1 netmask:255.255.255.0 broadcast:192.168.78.255 scope:site
+        inet6 fe80::4864:1a12:4770:3b9b prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+net5
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:6f01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:14
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.111.1 netmask:255.255.255.0 broadcast:192.168.111.255 scope:site
+        inet6 fe80::a408:666f:903:8d93 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:15
+
+net6
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:4e01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:16
+
+net7
+        Microsoft ISATAP Adapter
+        inet6 fe80::5efe:c0a8:70 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:17
+
+eth6
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:18
+
+eth7
+        Realtek PCIe GBE Family Controller-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:19
+
+eth8
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:20
+
+eth9
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:21
+
+eth10
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:22
+
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.common.netty]using gathering [true]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.client.transport][American Eagle] node_sampler_interval[5s]
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Using select timeout of 500
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.netty.channel.socket.nio.SelectorUtil]Epoll-bug workaround enabled = false
+[DEBUG] [2017-06-13 12:49:08][org.elasticsearch.client.transport][American Eagle] adding address [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:49:09][org.elasticsearch.transport.netty][American Eagle] connected to node [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:49:09][org.elasticsearch.transport.netty][American Eagle] connected to node [{Mad Thinker’s Awesome Android}{9NbvwJOCSYuv-O5lkYRukQ}{192.168.0.84}{192.168.0.84:9300}]
+[DEBUG] [2017-06-13 12:49:09][org.elasticsearch.transport.netty][American Eagle] disconnecting from [{Mad Thinker’s Awesome Android}{9NbvwJOCSYuv-O5lkYRukQ}{192.168.0.84}{192.168.0.84:9300}] due to explicit disconnect call
+[DEBUG] [2017-06-13 12:49:09][org.elasticsearch.transport.netty][American Eagle] disconnecting from [{#transport#-1}{192.168.0.84}{192.168.0.84:9300}] due to explicit disconnect call

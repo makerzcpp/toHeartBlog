@@ -97,7 +97,7 @@
 <div class="row b-col-default-indent">
     <div class="col-md-12">
         <div class="b-categories-filter">
-            <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">博客类别</h4>
+            <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">博文类别</h4>
             <ul>
               <c:forEach var="cg" items="${cglist}" varStatus="name"  begin="0" end="8" >
                   <li>

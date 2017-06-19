@@ -219,7 +219,7 @@ UNUSEDUNUSED.carousel-control.left, UNUSEDUNUSED.carousel-control.right {
 	transform:rotate(180deg);
 }
 .site-nav li.current-menu-item > a, UNUSEDUNUSED.site-nav li.current-menu-parent > a {
-	border-bottom: 3px solid #FFFFFF;
+	border-bottom: 3px solid #E94C3D;
 	line-height:30px;
 }
 .search-input:focus {

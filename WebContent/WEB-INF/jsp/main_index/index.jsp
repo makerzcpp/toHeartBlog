@@ -10,6 +10,11 @@
 <title>Bolg</title>
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- 头部和脚步 -->
+<link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/www/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main_1.css' type='text/css' media='all' />
+
 <!-- Bootstrap css -->
 <link type="text/css" rel='stylesheet' href="${BASE}/www/css/bootstrap.min.css">
 <link type="text/css" rel='stylesheet' href="${BASE}/www/css/pignose.parallaxslider.min.css">

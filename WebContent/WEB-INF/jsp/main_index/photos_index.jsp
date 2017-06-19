@@ -17,11 +17,13 @@
 		<link type="text/css" rel='stylesheet' href="${BASE}/www/css/showDialog/showDialog.css">
 		
 		
-		<!-- 头部和底部的css -->
-<link type="text/css" rel='stylesheet' href="${BASE}/www/css/bootstrap.min.css">
+
+<!-- 头部和脚步 -->
+<link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/www/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main_1.css' type='text/css' media='all' />
 <link type="text/css" data-themecolor="default" rel='stylesheet' href="${BASE}/www/css/main-default.css"> 
-<link type="text/css" rel='stylesheet' href="${BASE}/www/css/pignose.parallaxslider.min.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
 
 </head>
 <body>

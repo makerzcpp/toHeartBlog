@@ -1,47 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;"></div> removed by integration -->
-<header>
-  <div class="container b-header__box b-relative">
-	
-    <div class="b-header-r b-right b-header-r--icon">
-     
-      <div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide"><i class="fa fa-align-justify"></i></div>
-      <nav class="b-top-nav f-top-nav b-right j-top-nav">
-          <ul class="b-top-nav__1level_wrap">
-    <li class="b-top-nav__1level f-top-nav__1level is-active-top-nav__1level f-primary-b"><a href="${BASE}/index/home/${blogId}"><i class="fa fa-home b-menu-1level-ico"></i>主页 <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
-        
-    </li>
-    
-    <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-        <a href="${BASE}/index/photos/${blogId}"><i class="fa fa-picture-o b-menu-1level-ico"></i>图册 <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
-        
-    </li>
-    <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-        <a href="${BASE}/index/text/${blogId}"><i class="fa fa-code b-menu-1level-ico"></i>文章 <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
-        
-    </li>
- <!--    <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">
-        <a href="#"><i class="fa fa-cloud-download b-menu-1level-ico"></i>Pages<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
-     
-    </li> -->
-   
-    <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-        <a href="${BASE}/index/resource/${blogId}"><i class="fa fa-folder-open b-menu-1level-ico"></i>文件<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
-    </li>
-    
-</ul>
-
-      </nav>
-    </div>
-  </div>
+<header class="header">
+	<div class="container">
+		<div class="logo"><a href="#"><img src="${BASE}/www/images/blog-logo.png"></a></div>		
+		<ul class="site-nav site-navbar">			
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-10"><a href="#">首页</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="#">图博</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-21"><a href="#">论坛</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="#">资源</a></li>
+</li>
+							
+			            
+		</ul>
+        <span class="usercc">
+        								<a href="javascript:;" class="signin-loader">Hi, 请登录</a>
+				&nbsp; &nbsp; <a href="javascript:;" class="signup-loader">我要注册</a>
+				&nbsp; &nbsp; <a href="http://tslogo.com/iz/?page_id=8">找回密码</a>
+			        
+		</span>
+   		
+	</div>
 </header>
+
+
 <div class="j-menu-container"></div>
 
 <div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
   <div class="b-inner-page-header__content">
     <div class="container">
-      <h1 class="f-primary-l c-default">心博</h1>
+      <img src="${BASE}/www/images/guanggao.jpg">
     </div>
   </div>
 </div>

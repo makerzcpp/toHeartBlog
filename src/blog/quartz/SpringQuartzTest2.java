@@ -11,8 +11,8 @@ public class SpringQuartzTest2 extends QuartzJobBean{
 	@Override
 	protected void executeInternal(JobExecutionContext arg0) throws JobExecutionException {
 		// TODO Auto-generated method stub
-		this.work();
-		this.work2();
+		//this.work();
+		//this.work2();
 	}
 	
 	 /*业务实现*/

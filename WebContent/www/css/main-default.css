@@ -22,8 +22,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
+  font-family: "微软雅黑", sans-serif;
+  font-size: 12px;
   line-height: 1.2; }
 
 article,
@@ -2539,7 +2539,7 @@ UNUSED.fancybox-wrap-popup-close {
   border-color: #e26228; }
 
 .b-blog-listing__infoblock {
-  padding: 30px 28px 26px 20px; }
+  padding: 30px 28px 26px 0px; }
   .b-blog-listing__infoblock .b-infoblock-with-icon__icon {
     width: 49px;
     padding: 10px 5px; }
@@ -2764,7 +2764,7 @@ UNUSED.fancybox-wrap-popup-close {
 
 .b-infoblock-with-icon__info {
   overflow: hidden;
-  padding-left: 16px; }
+  padding-left: 0px; }
 
 .b-infoblock-with-icon__info_title {
   display: inline-block;

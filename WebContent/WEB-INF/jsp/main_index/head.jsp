@@ -9,10 +9,8 @@
 <li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="${BASE}/index/photoblog/${blogId}">图博</a></li>
 <li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-21"><a href="#">论坛</a></li>
 <li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="#">资源</a></li>
-</li>
-							
-			            
-		</ul>
+<li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="#">个人中心</a></li>
+	</ul>
         <span class="usercc">
         								<a href="${BASE}/index/login/${blogId}" class="signin-loader">Hi, 请登录</a>
 				&nbsp; &nbsp; <a href="${BASE}/index/login/${blogId}" class="signup-loader">我要注册</a>

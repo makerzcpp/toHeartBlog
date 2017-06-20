@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
-<mapper namespace="blog.dao.photoDao">
+<mapper namespace="blog.dao.PhotoDao">
 	
 	<!-- <select id="getAllTeacher"  resultType="Teacher">
 	select id,t_name as name,t_password as password,sex,description,pic_url as picUrl,school_name as schoolName,regist_date as registDate,remark 

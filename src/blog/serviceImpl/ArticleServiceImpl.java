@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import blog.bean.Article;
-import blog.bean.PhotosBox;
 import blog.dao.ArticleDao;
 import blog.service.ArticleService;
 import blog.utils.usuallyUtils;

@@ -1,14 +1,11 @@
 package blog.utils;
 
-import java.util.UUID;
-
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
 
 import blog.Constant;
-import blog.bean.User;
 
 public class shiroUtils {
 

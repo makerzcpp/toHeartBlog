@@ -13,7 +13,6 @@ import blog.bean.PhotosBox;
 import blog.dao.PhotoDao;
 import blog.service.photoService;
 import blog.utils.StringUtils;
-import blog.utils.shiroUtils;
 import blog.utils.usuallyUtils;
 
 @Service

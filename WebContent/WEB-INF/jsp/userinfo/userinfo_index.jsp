@@ -18,8 +18,12 @@
  <link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/www/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main_1.css' type='text/css' media='all' /> 
    <!--  end -->
+<link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main-default.css' type='text/css' media='all' /> 
+<link rel="stylesheet" href="${BASE}/www/css/blog_css/style.css" type="text/css" />
+   <script>var BASE = "${BASE}";</script>	
     </head>
 <body>
+<input type="hidden" id="blogId" value="${blogId}"/>
 <%@ include file="../main_index/head.jsp"%> 
 <main>
     <div class="container1">
@@ -77,7 +81,7 @@
 <nav class="secondary-nav">
     <ul class="nav-list">
                 <li class="active" data-index="0">
-            <a target="_self" href="#">文博</a>
+            <a target="_self" class="articleBlog">文博</a>
         </li>
                 <li class="" data-index="1">
             <a target="_self" href="#">图博</a>
@@ -100,9 +104,9 @@
     </div>
 </main>
  <%@ include file="../main_index/foot.jsp"%>
-
-<!--[if lt IE 10]>
-<script src="js/ie9_f9dac49.js"></script>
-<![endif]-->
+ 
+ 
+<script src="${BASE}/www/js/jquery/jquery-1.11.1.min.js"></script>	
+<script type="text/javascript" src="${BASE}/www/js/userinfo/userinfo.js"></script>
 </body>
 </html>

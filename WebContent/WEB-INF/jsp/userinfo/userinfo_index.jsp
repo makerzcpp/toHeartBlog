@@ -18,7 +18,6 @@
  <link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/www/css/bootstrap.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main_1.css' type='text/css' media='all' /> 
    <!--  end -->
-<link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main-default.css' type='text/css' media='all' /> 
 <link rel="stylesheet" href="${BASE}/www/css/blog_css/style.css" type="text/css" />
    <script>var BASE = "${BASE}";</script>	
     </head>

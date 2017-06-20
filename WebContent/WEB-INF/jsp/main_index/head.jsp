@@ -5,11 +5,11 @@
 	<div class="container">
 		<div class="logo"><a href="#"><img src="${BASE}/www/images/blog-logo.png"></a></div>		
 		<ul class="site-nav site-navbar">			
-<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-10"><a href="#">首页</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-10"><a href="${BASE}/index/home/${blogId}">首页</a></li>
 <li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="${BASE}/index/photoblog/${blogId}">图博</a></li>
 <li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-21"><a href="#">论坛</a></li>
-<li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="#">资源</a></li>
-<li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="#">个人中心</a></li>
+<!-- <li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="#">资源</a></li>  暂不开放，没那么大空间的服务器-->
+<li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="${BASE}/userinfo/index/${blogId}">个人中心</a></li>
 	</ul>
         <span class="usercc">
         								<a href="${BASE}/index/login/${blogId}" class="signin-loader">Hi, 请登录</a>

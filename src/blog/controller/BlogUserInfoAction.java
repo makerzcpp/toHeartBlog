@@ -15,19 +15,26 @@ import blog.service.userService;
 
 
 @Controller
-@RequestMapping("/baskstage")
-public class BlogBaskstageAction {
+@RequestMapping("/userinfo")
+public class BlogUserInfoAction {
 	@Autowired categoryService categoryservice;
 	@Autowired photoService photoservice;
 	@Autowired userService userservice;	
 	@Autowired ArticleService articleservice;	
 	
 
-@RequestMapping(value="/userinfo/{blogId}", method={RequestMethod.GET})
-	public ModelAndView toUserInfo(@PathVariable(value="blogId") String blogId) {
-		ModelAndView modelandview = new ModelAndView("/backstage/user_info");
+	@RequestMapping(value="/msgedit/{blogId}", method={RequestMethod.GET})
+	public ModelAndView toUserEdit(@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/userinfo/userinfo_edit");
 		modelandview.addObject("blogId", blogId);
 		return modelandview;
 	}
+
+	@RequestMapping(value="/index/{blogId}", method={RequestMethod.GET})
+	public ModelAndView toUserInfo(@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/userinfo/userinfo_index");
+		modelandview.addObject("blogId", blogId);
+		return modelandview;
+}
 	
 }

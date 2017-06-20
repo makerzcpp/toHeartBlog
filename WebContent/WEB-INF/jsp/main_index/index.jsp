@@ -27,6 +27,14 @@
 </head>
 <body>
  <%@ include file="head.jsp"%> 
+ <div class="j-menu-container"></div>
+<div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
+  <div class="b-inner-page-header__content">
+    <div class="container">
+      <img src="${BASE}/www/images/guanggao.jpg">
+    </div>
+  </div>
+</div>
 <div class="l-main-container">
 
     <div class="b-breadcrumbs f-breadcrumbs">

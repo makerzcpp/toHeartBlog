@@ -108,4 +108,11 @@ public class BlogIndexAction {
 		modelandview.addObject("blogId", blogId);
 		return modelandview;
 	}
+	
+	@RequestMapping(value="/photoblog/{blogId}", method={RequestMethod.GET})
+	public ModelAndView toPhotoBlogIndex(@PathVariable(value="blogId") String blogId) {
+		ModelAndView modelandview = new ModelAndView("/main_index/photoblog");
+		modelandview.addObject("blogId", blogId);
+		return modelandview;
+	}
 }

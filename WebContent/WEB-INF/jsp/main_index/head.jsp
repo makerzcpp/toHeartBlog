@@ -6,7 +6,7 @@
 		<div class="logo"><a href="#"><img src="${BASE}/www/images/blog-logo.png"></a></div>		
 		<ul class="site-nav site-navbar">			
 <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-10"><a href="#">首页</a></li>
-<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="#">图博</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="${BASE}/index/photoblog/${blogId}">图博</a></li>
 <li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-21"><a href="#">论坛</a></li>
 <li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="#">资源</a></li>
 </li>
@@ -14,9 +14,9 @@
 			            
 		</ul>
         <span class="usercc">
-        								<a href="javascript:;" class="signin-loader">Hi, 请登录</a>
-				&nbsp; &nbsp; <a href="javascript:;" class="signup-loader">我要注册</a>
-				&nbsp; &nbsp; <a href="http://tslogo.com/iz/?page_id=8">找回密码</a>
+        								<a href="${BASE}/index/login/${blogId}" class="signin-loader">Hi, 请登录</a>
+				&nbsp; &nbsp; <a href="${BASE}/index/login/${blogId}" class="signup-loader">我要注册</a>
+				&nbsp; &nbsp; <a href="#">找回密码</a>
 			        
 		</span>
    		
@@ -24,12 +24,4 @@
 </header>
 
 
-<div class="j-menu-container"></div>
 
-<div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
-  <div class="b-inner-page-header__content">
-    <div class="container">
-      <img src="${BASE}/www/images/guanggao.jpg">
-    </div>
-  </div>
-</div>

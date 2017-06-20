@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import blog.bean.Category;
-import blog.dao.categoryDao;
+import blog.dao.CategoryDao;
 import blog.service.categoryService;
 
 @Service
 public class categoryServiceImpl implements categoryService {
-	@Autowired categoryDao categorydao ; 
+	@Autowired CategoryDao categorydao ; 
 	
 	@Override
 	public List<Category> findCategoryList(String blogId) {

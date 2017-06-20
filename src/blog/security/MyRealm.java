@@ -15,11 +15,11 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import blog.bean.User;
-import blog.dao.userDao;
+import blog.dao.UserDao;
 
 public class MyRealm extends AuthorizingRealm {
 	
-	@Autowired userDao userDao;
+	@Autowired UserDao userDao;
 	
 	String pass;
 

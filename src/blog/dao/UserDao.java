@@ -2,7 +2,7 @@ package blog.dao;
 
 import blog.bean.User;
 
-public interface userDao {
+public interface UserDao {
 	
 public void addUser(User user);
 

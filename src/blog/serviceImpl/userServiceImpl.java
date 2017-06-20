@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import blog.bean.User;
-import blog.dao.userDao;
+import blog.dao.UserDao;
 import blog.service.userService;
 import blog.utils.usuallyUtils;
 
 @Service
 public class userServiceImpl implements userService {
-	@Autowired userDao userDao;
+	@Autowired UserDao userDao;
 	
 	@Override
 	public boolean addUser(Map<String,Object> map) {

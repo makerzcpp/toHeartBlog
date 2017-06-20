@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import blog.Constant;
 import blog.bean.Photos;
 import blog.bean.PhotosBox;
-import blog.dao.photoDao;
+import blog.dao.PhotoDao;
 import blog.service.photoService;
 import blog.utils.StringUtils;
 import blog.utils.shiroUtils;
@@ -19,7 +19,7 @@ import blog.utils.usuallyUtils;
 @Service
 public class photoServiceImpl implements photoService {
 
-	@Autowired photoDao photodao;
+	@Autowired PhotoDao photodao;
 
 	@Override
 	public void creatPhotoBox(String name,String text,int type,String blogId) {

@@ -5,7 +5,7 @@ import java.util.Map;
 
 import blog.bean.Article;
 
-public interface articleDao {
+public interface ArticleDao {
 
 	public void addArticle(Article article);
 	

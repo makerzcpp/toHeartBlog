@@ -6,7 +6,7 @@ import java.util.Map;
 import blog.bean.Photos;
 import blog.bean.PhotosBox;
 
-public interface photoDao {
+public interface PhotoDao {
 	
  public void creatBox(PhotosBox photosbox);
  

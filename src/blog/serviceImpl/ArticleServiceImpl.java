@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 import blog.bean.Article;
 import blog.bean.PhotosBox;
-import blog.dao.articleDao;
+import blog.dao.ArticleDao;
 import blog.service.ArticleService;
 import blog.utils.usuallyUtils;
 @Service
 public class ArticleServiceImpl implements ArticleService {
-	@Autowired articleDao articledao ;
+	@Autowired ArticleDao articledao ;
 	
 	@Override
 	public void addArticle(String blogId, String headName, String headLine, String text, String cateId) {

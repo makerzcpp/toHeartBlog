@@ -89,21 +89,6 @@ public class BlogArticleAction {
 	  		return new Result(true);
 	  	}
 	  	
-	  	@RequestMapping(value="/list/{blogId}", method={RequestMethod.POST})
-		public ModelAndView totestIndex(@PathVariable(value="blogId") String blogId,@RequestParam("pageNum") String pageNum,
-				@RequestParam("pageSize") String pageSize) {
-			ModelAndView modelandview = new ModelAndView("/article/article_list");
-			List<Article> arlist = new ArrayList<>();
-			if(pageNum==null||pageSize==null){
-				arlist = articleservice.getArticleList(blogId, 0, Constant.IndexBoxpageSzie);
-			}else{
-				arlist = articleservice.getArticleList(blogId, Integer.parseInt(pageNum)-1, Integer.parseInt(pageSize));
-			}
-			List<Category> cglist = categoryservice.findCategoryList(blogId);
-			modelandview.addObject("arlist", arlist);
-			modelandview.addObject("cglist", cglist);
-			modelandview.addObject("blogId", blogId);
-			return modelandview;
-		}
+
 	  	
 }

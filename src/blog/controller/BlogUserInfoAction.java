@@ -47,7 +47,7 @@ public class BlogUserInfoAction {
 	@RequestMapping(value="/articleblog/{blogId}", method={RequestMethod.POST})
 	public ModelAndView getArticle(@PathVariable(value="blogId") String blogId,@RequestParam("pageNum") String pageNum,
 			@RequestParam("pageSize") String pageSize) {
-		ModelAndView modelandview = new ModelAndView("/article/article_list");
+		ModelAndView modelandview = new ModelAndView("/userinfo/userinfo_article");
 		int artNum = articleservice.getAllArticleNum(blogId);		
 		List<Article> hotarlist = articleservice.getHotArticleList(blogId, 0, 3);
 		List<Article> arlist = new ArrayList<>();

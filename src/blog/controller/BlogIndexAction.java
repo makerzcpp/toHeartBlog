@@ -80,16 +80,7 @@ public class BlogIndexAction {
 		return modelandview;
 	}
 	
-	@RequestMapping(value="/text/{blogId}")
-	public ModelAndView totestIndex(@PathVariable(value="blogId") String blogId) {
-		ModelAndView modelandview = new ModelAndView("/article/article_index");		
-		int artNum = articleservice.getAllArticleNum(blogId);		
-		List<Article> hotarlist = articleservice.getHotArticleList(blogId, 0, 3);
-		modelandview.addObject("blogId", blogId);
-		modelandview.addObject("hotarlist", hotarlist);
-		modelandview.addObject("artNum", artNum);
-		return modelandview;
-	}
+
 	
 	@RequestMapping(value="/write/{blogId}/{articleId}", method={RequestMethod.GET})
 	public ModelAndView toWriteIndex(@PathVariable(value="articleId") String articleId,@PathVariable(value="blogId") String blogId) {

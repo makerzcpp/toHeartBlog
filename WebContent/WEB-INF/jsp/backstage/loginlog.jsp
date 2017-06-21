@@ -5,18 +5,18 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>友情链接 - 异清轩博客管理系统</title>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
-<link rel="shortcut icon" href="images/icon/favicon.ico">
-<script src="js/jquery-2.1.4.min.js"></script>
+<title>登录记录 - 异清轩博客管理系统</title>
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/style.css">
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/font-awesome.min.css">
+<link rel="apple-touch-icon-precomposed" href="${BASE}/www/images/backstage/icon/icon.png">
+<link rel="shortcut icon" href="${BASE}/www/images/backstage/icon/favicon.ico">
+<script src="${BASE}/www/js/backstage/jquery-2.1.4.min.js"></script>
 <!--[if gte IE 9]>
-  <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
-  <script src="js/html5shiv.min.js" type="text/javascript"></script>
-  <script src="js/respond.min.js" type="text/javascript"></script>
-  <script src="js/selectivizr-min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/html5shiv.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/respond.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/selectivizr-min.js" type="text/javascript"></script>
 <![endif]-->
 <!--[if lt IE 9]>
   <script>window.location.href='upgrade-browser.html';</script>
@@ -67,7 +67,7 @@
       </ul>
       <ul class="nav nav-sidebar">
         <li><a href="category.html">栏目</a></li>
-        <li class="active"><a class="dropdown-toggle" id="otherMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他</a>
+        <li><a class="dropdown-toggle" id="otherMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他</a>
           <ul class="dropdown-menu" aria-labelledby="otherMenu">
             <li><a href="flink.html">友情链接</a></li>
             <li><a href="loginlog.html">访问记录</a></li>
@@ -75,7 +75,7 @@
         </li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li><a class="dropdown-toggle" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">用户</a>
+        <li class="active"><a class="dropdown-toggle" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">用户</a>
           <ul class="dropdown-menu" aria-labelledby="userMenu">
             <li><a href="#">管理用户组</a></li>
             <li><a href="manage-user.html">管理用户</a></li>
@@ -96,40 +96,92 @@
       </ul>
     </aside>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
-      <form action="/Flink/checkAll" method="post" >
         <h1 class="page-header">操作</h1>
         <ol class="breadcrumb">
-          <li><a href="add-flink.html">增加友情链接</a></li>
+          <li><a href="/Loginlog/delete/action/all">清除所有登录记录</a></li>
+          <li><a href="/Loginlog/delete/action/current">清除本人登录记录</a></li>
         </ol>
-        <h1 class="page-header">管理 <span class="badge">1</span></h1>
+        <h1 class="page-header">管理 <span class="badge">9</span></h1>
         <div class="table-responsive">
           <table class="table table-striped table-hover">
             <thead>
               <tr>
-                <th><span class="glyphicon glyphicon-th-large"></span> <span class="visible-lg">选择</span></th>
-                <th><span class="glyphicon glyphicon-bookmark"></span> <span class="visible-lg">名称</span></th>
-                <th><span class="glyphicon glyphicon-link"></span> <span class="visible-lg">URL</span></th>
-                <th><span class="glyphicon glyphicon-pencil"></span> <span class="visible-lg">操作</span></th>
+                <th><span class="glyphicon glyphicon-th-large"></span> <span class="visible-lg">ID</span></th>
+                <th><span class="glyphicon glyphicon-user"></span> <span class="visible-lg">用户</span></th>
+                <th><span class="glyphicon glyphicon-time"></span> <span class="visible-lg">时间</span></th>
+                <th><span class="glyphicon glyphicon-adjust"></span> <span class="visible-lg">IP</span></th>
+                <th><span class="glyphicon glyphicon-remove"></span> <span class="visible-lg">删除</span></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><input type="checkbox" class="input-control" name="checkbox[]" value="" /></td>
-                <td class="article-title">异清轩</td>
-                <td>http://www.ylsat.com</td>
-                <td><a href="update-flink.html">修改</a> <a rel="6">删除</a></td>
+                <td>1</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="1">删除</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="2">删除</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="3">删除</a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="4">删除</a></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="5">删除</a></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="6">删除</a></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="7">删除</a></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="8">删除</a></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td class="article-title">admin</td>
+                <td>2016-1-11 15:09:11</td>
+                <td>192.168.1.1:1245</td>
+                <td><a rel="9">删除</a></td>
               </tr>
             </tbody>
           </table>
         </div>
         <footer class="message_footer">
           <nav>
-            <div class="btn-toolbar operation" role="toolbar">
-              <div class="btn-group" role="group"> <a class="btn btn-default" onClick="select()">全选</a> <a class="btn btn-default" onClick="reverse()">反选</a> <a class="btn btn-default" onClick="noselect()">不选</a> </div>
-              <div class="btn-group" role="group">
-                <button type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="删除全部选中" name="checkbox_delete">删除</button>
-              </div>
-            </div>
             <ul class="pagination pagenav">
               <li class="disabled"><a aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
               <li class="active"><a>1</a></li>
@@ -137,7 +189,6 @@
             </ul>
           </nav>
         </footer>
-      </form>
     </div>
   </div>
 </section>
@@ -249,7 +300,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="WeChatModalLabel" style="cursor:default;">微信扫一扫</h4>
       </div>
-      <div class="modal-body" style="text-align:center"> <img src="images/weixin.jpg" alt="" style="cursor:pointer"/> </div>
+      <div class="modal-body" style="text-align:center"> <img src="${BASE}/www/images/backstage/weixin.jpg" alt="" style="cursor:pointer"/> </div>
     </div>
   </div>
 </div>
@@ -261,7 +312,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="areDevelopingModalLabel" style="cursor:default;">该功能正在日以继夜的开发中…</h4>
       </div>
-      <div class="modal-body"> <img src="images/baoman/baoman_01.gif" alt="深思熟虑" />
+      <div class="modal-body"> <img src="${BASE}/www/images/backstage/baoman/baoman_01.gif" alt="深思熟虑" />
         <p style="padding:15px 15px 15px 100px; position:absolute; top:15px; cursor:default;">很抱歉，程序猿正在日以继夜的开发此功能，本程序将会在以后的版本中持续完善！</p>
       </div>
       <div class="modal-footer">
@@ -280,21 +331,21 @@
     <li class="list-group-item"><span>浏览器：</span>Chrome47</li>
   </ul>
 </div>
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/admin-scripts.js"></script> 
+<script src="${BASE}/www/js/backstage/bootstrap.min.js"></script> 
+<script src="${BASE}/www/js/backstage/admin-scripts.js"></script> 
 <script>
 //是否确认删除
 $(function(){   
 	$("#main table tbody tr td a").click(function(){
 		var name = $(this);
 		var id = name.attr("rel"); //对应id  
-		if (event.srcElement.outerText == "删除") 
+		if (event.srcElement.outerText === "删除") 
 		{
 			if(window.confirm("此操作不可逆，是否确认？"))
 			{
 				$.ajax({
 					type: "POST",
-					url: "/Flink/delete",
+					url: "/Loginlog/delete/action/one",
 					data: "id=" + id,
 					cache: false, //不缓存此页面   
 					success: function (data) {

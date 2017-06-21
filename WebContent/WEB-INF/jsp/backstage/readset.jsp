@@ -1,22 +1,27 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<html >
 <head>
-<meta charset="utf-8">
+<c:set var="BASE" value="${pageContext.request.contextPath}"/>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>管理用户 - 异清轩博客管理系统</title>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
-<link rel="shortcut icon" href="images/icon/favicon.ico">
-<script src="js/jquery-2.1.4.min.js"></script>
+<title>阅读设置 - 心博</title>
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/style.css">
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/font-awesome.min.css">
+<link rel="apple-touch-icon-precomposed" href="${BASE}/www/images/backstage/icon/icon.png">
+<link rel="shortcut icon" href="${BASE}/www/images/backstage/icon/favicon.ico">
+<script src="${BASE}/www/js/backstage/jquery-2.1.4.min.js"></script>
 <!--[if gte IE 9]>
-  <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
-  <script src="js/html5shiv.min.js" type="text/javascript"></script>
-  <script src="js/respond.min.js" type="text/javascript"></script>
-  <script src="js/selectivizr-min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/html5shiv.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/respond.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/selectivizr-min.js" type="text/javascript"></script>
 <![endif]-->
 <!--[if lt IE 9]>
   <script>window.location.href='upgrade-browser.html';</script>
@@ -75,7 +80,7 @@
         </li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li class="active"><a class="dropdown-toggle" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">用户</a>
+        <li><a class="dropdown-toggle" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">用户</a>
           <ul class="dropdown-menu" aria-labelledby="userMenu">
             <li><a href="#">管理用户组</a></li>
             <li><a href="manage-user.html">管理用户</a></li>
@@ -83,7 +88,7 @@
             <li><a href="loginlog.html">管理登录日志</a></li>
           </ul>
         </li>
-        <li><a class="dropdown-toggle" id="settingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">设置</a>
+        <li class="active"><a class="dropdown-toggle" id="settingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">设置</a>
           <ul class="dropdown-menu" aria-labelledby="settingMenu">
             <li><a href="setting.html">基本设置</a></li>
             <li><a href="readset.html">用户设置</a></li>
@@ -96,153 +101,74 @@
       </ul>
     </aside>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
-    <h1 class="page-header">操作</h1>
-        <ol class="breadcrumb">
-          <li><a data-toggle="modal" data-target="#addUser">增加用户</a></li>
-        </ol>
-        <h1 class="page-header">管理 <span class="badge">2</span></h1>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th><span class="glyphicon glyphicon-th-large"></span> <span class="visible-lg">ID</span></th>
-                <th><span class="glyphicon glyphicon-user"></span> <span class="visible-lg">用户名</span></th>
-                <th><span class="glyphicon glyphicon-bookmark"></span> <span class="visible-lg">姓名</span></th>
-                <th><span class="glyphicon glyphicon-pushpin"></span> <span class="visible-lg">文章</span></th>
-                <th><span class="glyphicon glyphicon-time"></span> <span class="visible-lg">上次登录时间</span></th>
-                <th><span class="glyphicon glyphicon-pencil"></span> <span class="visible-lg">操作</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>edit</td>
-                <td>编辑</td>
-                <td>4</td>
-                <td>2015-12-03 15:14:27</td>
-                <td><a rel="1" name="see">修改</a> <a rel="1" name="delete">删除</a> <a href="/User/checked/id/1/action/n">禁用</a></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>test</td>
-                <td>测试</td>
-                <td>3</td>
-                <td>2015-12-03 15:14:27</td>
-                <td><a rel="2" name="see">修改</a> <a rel="2" name="delete">删除</a> <a href="/User/checked/id/2/action/y">启用</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="row">
+        <form action="/Setting/read" method="post" autocomplete="off" draggable="false">
+          <div class="col-md-9">
+            <h1 class="page-header">用户设置</h1>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>站点标题</span></h2>
+              <div class="add-article-box-content">
+                <input type="text" name="title" class="form-control" placeholder="请输入站点标题" required autofocus autocomplete="off">
+              </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>副标题</span></h2>
+              <div class="add-article-box-content">
+                <input type="text" name="ftitle" class="form-control" placeholder="请输入站点副标题" autocomplete="off">
+                <span class="prompt-text">用简洁的文字描述本站点。</span> </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>站点地址（URL）</span></h2>
+              <div class="add-article-box-content">
+                <input type="text" name="siteurl" class="form-control" placeholder="在此处输入站点地址（URL）" required autocomplete="off">
+              </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>站点关键字</span></h2>
+              <div class="add-article-box-content">
+                <textarea class="form-control" name="keywords" autocomplete="off"></textarea>
+                <span class="prompt-text">关键字会出现在网页的keywords属性中。</span> </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>站点描述</span></h2>
+              <div class="add-article-box-content">
+                <textarea class="form-control" name="describe" rows="4" autocomplete="off"></textarea>
+                <span class="prompt-text">描述会出现在网页的description属性中。</span> </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h1 class="page-header">站点</h1>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>电子邮件地址</span></h2>
+              <div class="add-article-box-content">
+                <input type="email" name="email" class="form-control" placeholder="在此处输入邮箱" autocomplete="off" />
+                <span class="prompt-text">这个电子邮件地址仅为了管理方便而填写</span> </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>ICP备案号</span></h2>
+              <div class="add-article-box-content">
+                <input type="email" name="email" class="form-control" placeholder="在此处输入备案号" autocomplete="off" />
+              </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>保存</span></h2>
+              <div class="add-article-box-content">
+              <span class="prompt-text">请确定您对所有选项所做的更改</span>
+              </div>
+              <div class="add-article-box-footer">
+                <button class="btn btn-primary" type="submit" name="submit">更新</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
-<!--增加用户模态框-->
-<div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel">
-  <div class="modal-dialog" role="document" style="max-width:450px;">
-    <form action="/User/add" method="post" autocomplete="off" draggable="false">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" >增加用户</h4>
-        </div>
-        <div class="modal-body">
-          <table class="table" style="margin-bottom:0px;">
-            <thead>
-              <tr> </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td wdith="20%">姓名:</td>
-                <td width="80%"><input type="text" value="" class="form-control" name="truename" maxlength="10" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">用户名:</td>
-                <td width="80%"><input type="text" value="" class="form-control" name="username" maxlength="10" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">电话:</td>
-                <td width="80%"><input type="text" value="" class="form-control" name="usertel" maxlength="13" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">新密码:</td>
-                <td width="80%"><input type="password" class="form-control" name="password" maxlength="18" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">确认密码:</td>
-                <td width="80%"><input type="password" class="form-control" name="new_password" maxlength="18" autocomplete="off" /></td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr></tr>
-            </tfoot>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-          <button type="submit" class="btn btn-primary">提交</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-<!--用户信息模态框-->
-<div class="modal fade" id="seeUser" tabindex="-1" role="dialog" aria-labelledby="seeUserModalLabel">
-  <div class="modal-dialog" role="document" style="max-width:450px;">
-    <form action="/User/update" method="post" autocomplete="off" draggable="false">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">修改用户</h4>
-        </div>
-        <div class="modal-body">
-          <table class="table" style="margin-bottom:0px;">
-            <thead>
-              <tr> </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td wdith="20%">姓名:</td>
-                <td width="80%"><input type="text" value="" class="form-control" id="truename" name="truename" maxlength="10" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">用户名:</td>
-                <td width="80%"><input type="text" value="" class="form-control" id="username" name="username" maxlength="10" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">电话:</td>
-                <td width="80%"><input type="text" value="" class="form-control" id="usertel" name="usertel" maxlength="13" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">旧密码:</td>
-                <td width="80%"><input type="password" class="form-control" name="old_password" maxlength="18" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">新密码:</td>
-                <td width="80%"><input type="password" class="form-control" name="password" maxlength="18" autocomplete="off" /></td>
-              </tr>
-              <tr>
-                <td wdith="20%">确认密码:</td>
-                <td width="80%"><input type="password" class="form-control" name="new_password" maxlength="18" autocomplete="off" /></td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr></tr>
-            </tfoot>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <input type="hidden" name="userid" value="" />
-          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-          <button type="submit" class="btn btn-primary">提交</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
 <!--个人信息模态框-->
 <div class="modal fade" id="seeUserInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-    <form action="" method="post" autocomplete="off" draggable="false">
+    <form action="" method="post">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -347,7 +273,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="WeChatModalLabel" style="cursor:default;">微信扫一扫</h4>
       </div>
-      <div class="modal-body" style="text-align:center"> <img src="images/weixin.jpg" alt="" style="cursor:pointer"/> </div>
+      <div class="modal-body" style="text-align:center"> <img src="${BASE}/www/images/backstage/weixin.jpg" alt="" style="cursor:pointer"/> </div>
     </div>
   </div>
 </div>
@@ -359,7 +285,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="areDevelopingModalLabel" style="cursor:default;">该功能正在日以继夜的开发中…</h4>
       </div>
-      <div class="modal-body"> <img src="images/baoman/baoman_01.gif" alt="深思熟虑" />
+      <div class="modal-body"> <img src="${BASE}/www/images/backstage/baoman/baoman_01.gif" alt="深思熟虑" />
         <p style="padding:15px 15px 15px 100px; position:absolute; top:15px; cursor:default;">很抱歉，程序猿正在日以继夜的开发此功能，本程序将会在以后的版本中持续完善！</p>
       </div>
       <div class="modal-footer">
@@ -371,50 +297,14 @@
 <!--右键菜单列表-->
 <div id="rightClickMenu">
   <ul class="list-group rightClickMenuList">
-    <li class="list-group-item disabled">欢迎访问异清轩博客</li>
+    <li class="list-group-item disabled">欢迎访问心博</li>
     <li class="list-group-item"><span>IP：</span>172.16.10.129</li>
     <li class="list-group-item"><span>地址：</span>河南省郑州市</li>
     <li class="list-group-item"><span>系统：</span>Windows10 </li>
     <li class="list-group-item"><span>浏览器：</span>Chrome47</li>
   </ul>
 </div>
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/admin-scripts.js"></script> 
-<script>
-$(function () {
-    $("#main table tbody tr td a").click(function () {
-        var name = $(this);
-        var id = name.attr("rel"); //对应id   
-        if (name.attr("name") === "see") {
-            $.ajax({
-                type: "POST",
-                url: "/User/see",
-                data: "id=" + id,
-                cache: false, //不缓存此页面   
-                success: function (data) {
-                    var data = JSON.parse(data);
-					$('#truename').val(data.truename);
-					$('#username').val(data.username);
-					$('#usertel').val(data.usertel);
-					$('#userid').val(data.userid);
-                    $('#seeUser').modal('show');
-                }
-            });
-        } else if (name.attr("name") === "delete") {
-            if (window.confirm("此操作不可逆，是否确认？")) {
-                $.ajax({
-                    type: "POST",
-                    url: "/User/delete",
-                    data: "id=" + id,
-                    cache: false, //不缓存此页面   
-                    success: function (data) {
-                        window.location.reload();
-                    }
-                });
-            };
-        };
-    });
-});
-</script>
+<script src="${BASE}/www/js/backstage/bootstrap.min.js"></script> 
+<script src="${BASE}/www/js/backstage/admin-scripts.js"></script>
 </body>
 </html>

@@ -1,22 +1,27 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<html >
 <head>
-<meta charset="utf-8">
+<c:set var="BASE" value="${pageContext.request.contextPath}"/>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>常规设置 - 异清轩博客管理系统</title>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
-<link rel="shortcut icon" href="images/icon/favicon.ico">
-<script src="js/jquery-2.1.4.min.js"></script>
+<title>增加友情链接 - 心博</title>
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/style.css">
+<link rel="stylesheet" type="text/css" href="${BASE}/www/css/backstage/font-awesome.min.css">
+<link rel="apple-touch-icon-precomposed" href="${BASE}/www/images/backstage/icon/icon.png">
+<link rel="shortcut icon" href="${BASE}/www/images/backstage/icon/favicon.ico">
+<script src="${BASE}/www/js/backstage/jquery-2.1.4.min.js"></script>
 <!--[if gte IE 9]>
-  <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
-  <script src="js/html5shiv.min.js" type="text/javascript"></script>
-  <script src="js/respond.min.js" type="text/javascript"></script>
-  <script src="js/selectivizr-min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/html5shiv.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/respond.min.js" type="text/javascript"></script>
+  <script src="${BASE}/www/js/backstage/selectivizr-min.js" type="text/javascript"></script>
 <![endif]-->
 <!--[if lt IE 9]>
   <script>window.location.href='upgrade-browser.html';</script>
@@ -67,7 +72,7 @@
       </ul>
       <ul class="nav nav-sidebar">
         <li><a href="category.html">栏目</a></li>
-        <li><a class="dropdown-toggle" id="otherMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他</a>
+        <li class="active"><a class="dropdown-toggle" id="otherMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他</a>
           <ul class="dropdown-menu" aria-labelledby="otherMenu">
             <li><a href="flink.html">友情链接</a></li>
             <li><a href="loginlog.html">访问记录</a></li>
@@ -83,7 +88,7 @@
             <li><a href="loginlog.html">管理登录日志</a></li>
           </ul>
         </li>
-        <li class="active"><a class="dropdown-toggle" id="settingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">设置</a>
+        <li><a class="dropdown-toggle" id="settingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">设置</a>
           <ul class="dropdown-menu" aria-labelledby="settingMenu">
             <li><a href="setting.html">基本设置</a></li>
             <li><a href="readset.html">用户设置</a></li>
@@ -97,65 +102,52 @@
     </aside>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
       <div class="row">
-        <form action="/Setting/general" method="post" autocomplete="off" draggable="false">
+        <form action="/Flink/add" method="post" class="add-flink-form" autocomplete="off" draggable="false">
           <div class="col-md-9">
-            <h1 class="page-header">常规设置</h1>
+            <h1 class="page-header">增加友情链接</h1>
             <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>站点标题</span></h2>
+              <h2 class="add-article-box-title"><span>名称</span></h2>
               <div class="add-article-box-content">
-                <input type="text" name="title" class="form-control" placeholder="请输入站点标题" required autofocus autocomplete="off">
-              </div>
+                <input type="text" id="flink-name" name="name" class="form-control" placeholder="在此处输入名称" required autofocus autocomplete="off">
+                <span class="prompt-text">例如：心博</span> </div>
             </div>
             <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>副标题</span></h2>
+              <h2 class="add-article-box-title"><span>WEB地址</span></h2>
               <div class="add-article-box-content">
-                <input type="text" name="ftitle" class="form-control" placeholder="请输入站点副标题" autocomplete="off">
-                <span class="prompt-text">用简洁的文字描述本站点。</span> </div>
+                <input type="text" id="flink-url" name="url" class="form-control" placeholder="在此处输入URL地址" required autocomplete="off">
+                <span class="prompt-text">例子：<code>http://www.ylsat.com/</code>——不要忘了<code>http://</code></span> </div>
             </div>
             <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>站点地址（URL）</span></h2>
+              <h2 class="add-article-box-title"><span>图像地址</span></h2>
               <div class="add-article-box-content">
-                <input type="text" name="siteurl" class="form-control" placeholder="在此处输入站点地址（URL）" required autocomplete="off">
-              </div>
+                <input type="text" id="flink-imgurl" name="imgurl" class="form-control" placeholder="在此处输入图像地址" required autocomplete="off">
+                <span class="prompt-text">图像地址是可选的，可以为网站LOGO地址等</span> </div>
             </div>
             <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>站点关键字</span></h2>
+              <h2 class="add-article-box-title"><span>描述</span></h2>
               <div class="add-article-box-content">
-                <textarea class="form-control" name="keywords" autocomplete="off"></textarea>
-                <span class="prompt-text">关键字会出现在网页的keywords属性中。</span> </div>
-            </div>
-            <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>站点描述</span></h2>
-              <div class="add-article-box-content">
-                <textarea class="form-control" name="describe" rows="4" autocomplete="off"></textarea>
-                <span class="prompt-text">描述会出现在网页的description属性中。</span> </div>
+                <textarea class="form-control" name="describe" autocomplete="off"></textarea>
+                <span class="prompt-text">描述是可选的手工创建的内容总结</span> </div>
             </div>
           </div>
           <div class="col-md-3">
-            <h1 class="page-header">站点</h1>
-            <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>电子邮件地址</span></h2>
-              <div class="add-article-box-content">
-                <input type="email" name="email" class="form-control" placeholder="在此处输入邮箱" autocomplete="off" />
-                <span class="prompt-text">这个电子邮件地址仅为了管理方便而填写</span> </div>
-            </div>
-            <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>ICP备案号</span></h2>
-              <div class="add-article-box-content">
-                <input type="email" name="email" class="form-control" placeholder="在此处输入备案号" autocomplete="off" />
-              </div>
-            </div>
-            <div class="add-article-box">
-              <h2 class="add-article-box-title"><span>登录超时</span></h2>
-              <div class="add-article-box-content">
-                <input type="email" name="email" class="form-control" placeholder="在此处输入超时时间(s)" value="3600" required autocomplete="off" />
-                <span class="prompt-text">单位(秒),超时将强制退出</span> </div>
-            </div>
+            <h1 class="page-header">操作</h1>
             <div class="add-article-box">
               <h2 class="add-article-box-title"><span>保存</span></h2>
-              <div class="add-article-box-content"> <span class="prompt-text">请确定您对所有选项所做的更改</span> </div>
+              <div class="add-article-box-content">
+                <p>
+                  <label>状态：</label>
+                  <span class="article-status-display">未增加</span></p>
+                <p><label>target：</label><input type="radio" name="target" value="0" checked />_blank&nbsp;&nbsp;<input type="radio" name="target" value="1" />_self&nbsp;&nbsp;<input type="radio" name="target" value="2" />_top</p>
+                <p><label>rel：</label><input type="radio" name="rel" value="0" checked />nofollow&nbsp;&nbsp;<input type="radio" name="rel" value="1"/>none</p>
+                <p>
+                  <label>增加于：</label>
+                  <span class="article-time-display">
+                  <input style="border: none;" type="datetime" name="time" value="2016-01-09 17:29:37" />
+                  </span></p>
+              </div>
               <div class="add-article-box-footer">
-                <button class="btn btn-primary" type="submit" name="submit">更新</button>
+                <button class="btn btn-primary" type="submit" name="submit">增加</button>
               </div>
             </div>
           </div>
@@ -272,7 +264,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="WeChatModalLabel" style="cursor:default;">微信扫一扫</h4>
       </div>
-      <div class="modal-body" style="text-align:center"> <img src="images/weixin.jpg" alt="" style="cursor:pointer"/> </div>
+      <div class="modal-body" style="text-align:center"> <img src="${BASE}/www/images/backstage/weixin.jpg" alt="" style="cursor:pointer"/> </div>
     </div>
   </div>
 </div>
@@ -284,7 +276,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="areDevelopingModalLabel" style="cursor:default;">该功能正在日以继夜的开发中…</h4>
       </div>
-      <div class="modal-body"> <img src="images/baoman/baoman_01.gif" alt="深思熟虑" />
+      <div class="modal-body"> <img src="${BASE}/www/images/backstage/baoman/baoman_01.gif" alt="深思熟虑" />
         <p style="padding:15px 15px 15px 100px; position:absolute; top:15px; cursor:default;">很抱歉，程序猿正在日以继夜的开发此功能，本程序将会在以后的版本中持续完善！</p>
       </div>
       <div class="modal-footer">
@@ -296,14 +288,14 @@
 <!--右键菜单列表-->
 <div id="rightClickMenu">
   <ul class="list-group rightClickMenuList">
-    <li class="list-group-item disabled">欢迎访问异清轩博客</li>
+    <li class="list-group-item disabled">欢迎访问心博</li>
     <li class="list-group-item"><span>IP：</span>172.16.10.129</li>
     <li class="list-group-item"><span>地址：</span>河南省郑州市</li>
     <li class="list-group-item"><span>系统：</span>Windows10 </li>
     <li class="list-group-item"><span>浏览器：</span>Chrome47</li>
   </ul>
 </div>
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/admin-scripts.js"></script>
+<script src="${BASE}/www/js/backstage/bootstrap.min.js"></script> 
+<script src="${BASE}/www/js/backstage/admin-scripts.js"></script>
 </body>
 </html>

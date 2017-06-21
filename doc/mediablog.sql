@@ -137,3 +137,10 @@ CREATE TABLE `user` (
 -- ----------------------------
 INSERT INTO `user` VALUES ('a123456', 'aa60906841a9a91a3a7b0a42bb6f03f5', '2017年05月16日 19:42:04', null, '', null, '1654987@qq.com', null, null, null);
 INSERT INTO `user` VALUES ('a805748009', '7b88d36464c5ab08677ad3db2d64c3ec', '2017年05月18日 10:38:57', null, '822bac3a4f334db0bf05011cac284b14', null, '154212@qq.com', null, null, null);
+
+
+
+
+
+-- 新增字段  usercname-用户别名   hxy 2017-6-22
+alter table `user` add column `userCname` varchar(64);

@@ -7,6 +7,7 @@ private static final long serialVersionUID = -4287476886969445533L;
 
 
 private String userName;
+private String userCName;
 private String userPass;
 private String creatTime;
 private String blogName;//博客名字
@@ -17,33 +18,17 @@ private String Phone;
 private String Authentication;//是否认证
 private String headImg;//头像
 
-
-public User(String userName, String userPass, String creatTime, String blogName, String blogId, String friendId,
-		String email, String phone, String authentication, String headImg) {
-	super();
-	this.userName = userName;
-	this.userPass = userPass;
-	this.creatTime = creatTime;
-	this.blogName = blogName;
-	this.blogId = blogId;
-	this.friendId = friendId;
-	Email = email;
-	Phone = phone;
-	Authentication = authentication;
-	this.headImg = headImg;
-}
-
-
-public User() {
-	super();
-}
-
-
 public String getUserName() {
 	return userName;
 }
 public void setUserName(String userName) {
 	this.userName = userName;
+}
+public String getUserCName() {
+	return userCName;
+}
+public void setUserCName(String userCName) {
+	this.userCName = userCName;
 }
 public String getUserPass() {
 	return userPass;
@@ -62,6 +47,12 @@ public String getBlogName() {
 }
 public void setBlogName(String blogName) {
 	this.blogName = blogName;
+}
+public String getBlogId() {
+	return blogId;
+}
+public void setBlogId(String blogId) {
+	this.blogId = blogId;
 }
 public String getFriendId() {
 	return friendId;
@@ -93,19 +84,33 @@ public String getHeadImg() {
 public void setHeadImg(String headImg) {
 	this.headImg = headImg;
 }
-
-public String getBlogId() {
-	return blogId;
-}
-public void setBlogId(String blogId) {
+public User(String userName, String userCName, String userPass, String creatTime, String blogName, String blogId,
+		String friendId, String email, String phone, String authentication, String headImg) {
+	super();
+	this.userName = userName;
+	this.userCName = userCName;
+	this.userPass = userPass;
+	this.creatTime = creatTime;
+	this.blogName = blogName;
 	this.blogId = blogId;
+	this.friendId = friendId;
+	Email = email;
+	Phone = phone;
+	Authentication = authentication;
+	this.headImg = headImg;
 }
-
+public User() {
+	super();
+}
 @Override
 public String toString() {
-	return "User [userName=" + userName + ", userPass=" + userPass + ", creatTime=" + creatTime + ", blogName="
-			+ blogName + ", blogId=" + blogId + ", friendId=" + friendId + ", Email=" + Email + ", Phone=" + Phone
-			+ ", Authentication=" + Authentication + ", headImg=" + headImg + "]";
+	return "User [userName=" + userName + ", userCName=" + userCName + ", userPass=" + userPass + ", creatTime="
+			+ creatTime + ", blogName=" + blogName + ", blogId=" + blogId + ", friendId=" + friendId + ", Email="
+			+ Email + ", Phone=" + Phone + ", Authentication=" + Authentication + ", headImg=" + headImg + "]";
 }
+
+
+
+
 
 }

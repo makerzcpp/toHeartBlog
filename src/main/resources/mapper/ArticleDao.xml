@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="blog.dao.ArticleDao">
+
+	<select id="getArticleList" parameterType="java.util.Map" resultType="Article">
+	select 
+	articleId,articleName,creatTime,readNum,commentNum,categoryId,blogId,articleText,articleHead
+	from article where blogId =#{blogId}  ORDER BY creatTime DESC limit ${pageNum},${pageSize}
+	</select>
+	
+	<select id="getHotArticleList" parameterType="java.util.Map" resultType="Article">
+	select 
+	articleId,articleName,creatTime,readNum,commentNum,categoryId,blogId,articleText,articleHead
+	from article where blogId =#{blogId}  ORDER BY readNum DESC limit ${pageNum},${pageSize}
+	</select>
+	
+	<insert id="addArticle" parameterType="Article">
+		INSERT INTO article(articleId,articleName,creatTime,readNum,commentNum,categoryId,blogId,articleText,articleHead)
+		values ( #{articleId},#{articleName},#{creatTime},#{readNum},#{commentNum},#{categoryId},#{blogId},#{articleText},#{articleHead})
+	</insert>
+
+	<select id="getAllArticleNum" parameterType="java.lang.String" resultType="java.lang.Integer">  
+	select count(*) from article where blogId = #{blogId}
+	</select>
+
+</mapper>

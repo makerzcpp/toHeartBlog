@@ -12,14 +12,14 @@
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link href="//static.tuchong.net/images/favicon.ico" rel="shortcut icon" type="image/x-icon" >
-    <link rel="stylesheet" href="${BASE}/www/css/userinfo/userinfo_index1.css">
-	<link rel="stylesheet" href="${BASE}/www/css/userinfo/userinfo_index2.css">
+    <link rel="stylesheet" href="${BASE}/css/userinfo/userinfo_index1.css">
+	<link rel="stylesheet" href="${BASE}/css/userinfo/userinfo_index2.css">
   <!-- 头部和脚步 -->
- <link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/www/css/bootstrap.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main_1.css' type='text/css' media='all' /> 
+ <link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='${BASE}/css/main_1.css' type='text/css' media='all' />
    <!--  end -->
 
-<link rel="stylesheet" href="${BASE}/www/css/userinfo/userinfo_articlelist.css" type="text/css" /><!--    文博样式 -->
+<link rel="stylesheet" href="${BASE}/css/userinfo/userinfo_articlelist.css" type="text/css" /><!--    文博样式 -->
    <script>var BASE = "${BASE}";</script>	
     </head>
 <body>
@@ -30,10 +30,10 @@
         
         <div class="personal-integer">
     <div class="personal-banner" 
-                style="background-image: url(${BASE}/www/images/userinfo/site-bg-2.jpg)">
+                style="background-image: url(${BASE}/images/userinfo/site-bg-2.jpg)">
         <div class="posRelative personal-banner-info">
             <a href="javascript:;" class="personal-logo-link">
-                <img src="${BASE}/www/images/userinfo/logo_large.jpg">
+                <img src="${BASE}/images/userinfo/logo_large.jpg">
                                             </a>
             
             <div class="personal-info">
@@ -106,7 +106,7 @@
  <%@ include file="../main_index/foot.jsp"%>
  
  
-<script src="${BASE}/www/js/jquery/jquery-1.11.1.min.js"></script>	
-<script type="text/javascript" src="${BASE}/www/js/userinfo/userinfo.js"></script>
+<script src="${BASE}/js/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${BASE}/js/userinfo/userinfo.js"></script>
 </body>
 </html>

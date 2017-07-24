@@ -102,17 +102,17 @@ CREATE TABLE `photos_box` (
 -- ----------------------------
 -- Records of photos_box
 -- ----------------------------
-INSERT INTO `photos_box` VALUES ('35c54fffc31c41a280a85e0a8031d574', '0', '缴费', '飞', '2017年05月17日 22:42:19', '游客', '0', 'www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('360e2d4a48184c8f81ae44278cd99d89', '0', '的撒多', '大三', '2017年05月26日 13:15:51', '822bac3a4f334db0bf05011cac284b14', '0', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('9f9ce7ae2a1f47e9b483144a533d2c91', '0', '是你撒丁火', '大三12011111112121212121212', '2017年05月20日 15:02:13', '822bac3a4f334db0bf05011cac284b14', '1', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('bd524f4934b043539319ca0936c1a418', '0', '激光焊接后盖', '几个号结构化', '2017年05月26日 13:18:26', '822bac3a4f334db0bf05011cac284b14', '0', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('dd5202e4ba8e4266a3c14c13a1ba7bd4', '0', '好玩啊', '哇', '2017年05月20日 14:58:37', '822bac3a4f334db0bf05011cac284b14', '0', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('e6208383d5434f8fbf36665bfb5ef0b9', '0', '点胶机', '大三', '2017年05月17日 22:44:52', '游客', '0', 'www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('f3de220ef2974167b526668cfcca6633', '0', '打破军', '爱迪生', '2017年05月20日 15:02:02', '822bac3a4f334db0bf05011cac284b14', '1', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82be94d5d61', '0', 'hg', 'ds', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '0', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82be94ddd61', '1', 'sda', 'das', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '1', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82be94f5d61', '0', '游玩', '好玩', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '0', '/www/images/photosindex/page1_img1.jpg');
-INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82bed4ddd61', '1', '1dweqe', 'da', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '0', '/www/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('35c54fffc31c41a280a85e0a8031d574', '0', '缴费', '飞', '2017年05月17日 22:42:19', '游客', '0', 'images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('360e2d4a48184c8f81ae44278cd99d89', '0', '的撒多', '大三', '2017年05月26日 13:15:51', '822bac3a4f334db0bf05011cac284b14', '0', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('9f9ce7ae2a1f47e9b483144a533d2c91', '0', '是你撒丁火', '大三12011111112121212121212', '2017年05月20日 15:02:13', '822bac3a4f334db0bf05011cac284b14', '1', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('bd524f4934b043539319ca0936c1a418', '0', '激光焊接后盖', '几个号结构化', '2017年05月26日 13:18:26', '822bac3a4f334db0bf05011cac284b14', '0', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('dd5202e4ba8e4266a3c14c13a1ba7bd4', '0', '好玩啊', '哇', '2017年05月20日 14:58:37', '822bac3a4f334db0bf05011cac284b14', '0', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('e6208383d5434f8fbf36665bfb5ef0b9', '0', '点胶机', '大三', '2017年05月17日 22:44:52', '游客', '0', 'images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('f3de220ef2974167b526668cfcca6633', '0', '打破军', '爱迪生', '2017年05月20日 15:02:02', '822bac3a4f334db0bf05011cac284b14', '1', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82be94d5d61', '0', 'hg', 'ds', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '0', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82be94ddd61', '1', 'sda', 'das', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '1', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82be94f5d61', '0', '游玩', '好玩', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '0', '/images/photosindex/page1_img1.jpg');
+INSERT INTO `photos_box` VALUES ('f86e1a002fde4cb781c3a82bed4ddd61', '1', '1dweqe', 'da', '2017年05月20日 14:48:17', '822bac3a4f334db0bf05011cac284b14', '0', '/images/photosindex/page1_img1.jpg');
 
 -- ----------------------------
 -- Table structure for user

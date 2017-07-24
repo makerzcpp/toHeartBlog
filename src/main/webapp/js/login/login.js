@@ -116,14 +116,13 @@ $(function () {
             $.ajax({
                 type: "POST",
                 url: BASE + "/blog/login/toHome",
+                // url:"http://www.toheartblog.com/blog/login/islogin",
                 data: {'username': lousername, 'password': lopassword},
                 dataType: 'json',
                 success: function (data) {
                     if (data.success) {
-                        showInfo("登录成功", function () {
-                        }, 3);
-                        $("span.usercc").html("欢 迎 " + lousername);
-                        window.location.href = BASE + "/blog/index";1
+                        $(".usercc").html("欢 迎 " + lousername);
+                        window.location.href = BASE + "/blog/index";
                     } else {
                         showInfo("账号或密码错误，请重新输出", function () {
                         }, 3);
@@ -132,7 +131,7 @@ $(function () {
                 }
             });
         }
-    }
+    };
     $("#login").click(login);
 
-})
+});

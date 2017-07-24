@@ -13,10 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="apple-itunes-app" content="app-id=1073064739">
     <link href="//static.tuchong.net/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link rel="stylesheet" href="${BASE}/www/css/userinfo/userinfo_edit.css">
+    <link rel="stylesheet" href="${BASE}/css/userinfo/userinfo_edit.css">
   <!-- 头部和脚步 -->
-<link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/www/css/bootstrap.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='_main-css'  href='${BASE}/www/css/main_1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_bootstrap-css'  href='${BASE}/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='${BASE}/css/main_1.css' type='text/css' media='all' />
 
    <!--  end -->
     </head>

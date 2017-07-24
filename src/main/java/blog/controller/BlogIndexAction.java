@@ -58,8 +58,8 @@ public class BlogIndexAction {
         return mv;
     }
 
-    @RequestMapping(value = "/photos/{blogId}", method = {RequestMethod.GET})
-    public ModelAndView toPhotosIndex(@PathVariable(value = "blogId") String blogId) {
+    @RequestMapping(value = "/photos", method = {RequestMethod.GET})
+    public ModelAndView toPhotosIndex() {
         ModelAndView modelAndView = new ModelAndView("/main_index/photos_index");
         //页面博客主按钮显示
         String userblogId;
@@ -79,16 +79,16 @@ public class BlogIndexAction {
     }
 
 
-    @RequestMapping(value = "/resource/{blogId}", method = {RequestMethod.GET})
-    public ModelAndView toresourceIndex(@PathVariable(value = "blogId") String blogId) {
+    @RequestMapping(value = "/resource/", method = {RequestMethod.GET})
+    public ModelAndView toresourceIndex() {
         ModelAndView modelandview = new ModelAndView("/main_index/resource_index");
         modelandview.addObject("blogId", blogId);
         return modelandview;
     }
 
 
-    @RequestMapping(value = "/write/{blogId}/{articleId}", method = {RequestMethod.GET})
-    public ModelAndView toWriteIndex(@PathVariable(value = "articleId") String articleId, @PathVariable(value = "blogId") String blogId) {
+    @RequestMapping(value = "/write/{articleId}", method = {RequestMethod.GET})
+    public ModelAndView toWriteIndex(@PathVariable(value = "articleId") String articleId) {
         ModelAndView modelandview = new ModelAndView("/main_index/write_index");
         modelandview.addObject("articleId", articleId);
         modelandview.addObject("blogId", blogId);
@@ -98,12 +98,13 @@ public class BlogIndexAction {
         return modelandview;
     }
 
-    @RequestMapping(value = "/login/{blogId}", method = {RequestMethod.GET})
-    public ModelAndView toLoginIndex(@PathVariable(value = "blogId") String blogId) {
+    @RequestMapping(value = "/login", method = {RequestMethod.GET})
+    public ModelAndView toLoginIndex() {
         ModelAndView modelandview = new ModelAndView("/main_index/login");
         modelandview.addObject("blogId", blogId);
         return modelandview;
     }
+
 
 
 }
